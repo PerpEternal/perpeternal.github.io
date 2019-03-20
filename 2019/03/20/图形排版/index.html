@@ -98,20 +98,29 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="P&#39;s Blog">
-<meta property="og:url" content="http://perpeternal.github.com/archives/2019/index.html">
+  <meta name="description" content="题目小明需要在一篇文档中加入 N 张图片，其中第 i 张图片的宽度是 Wi，高度是 Hi。假设纸张的宽度是 M，小明使用的文档编辑工具会用以下方式对图片进行自动排版：  该工具会按照图片顺序，在宽度 M 以内，将尽可能多的图片排在一行。该行的高度是行内最高的图片的高度。例如在 M=10 的纸张上依次打印 3x4, 2x2, 3x3 三张图片，则效果如下图所示，这一行高度为4。(分割线以上为列标尺，">
+<meta name="keywords" content="data structures">
+<meta property="og:type" content="article">
+<meta property="og:title" content="图形排版">
+<meta property="og:url" content="http://perpeternal.github.com/2019/03/20/图形排版/index.html">
 <meta property="og:site_name" content="P&#39;s Blog">
+<meta property="og:description" content="题目小明需要在一篇文档中加入 N 张图片，其中第 i 张图片的宽度是 Wi，高度是 Hi。假设纸张的宽度是 M，小明使用的文档编辑工具会用以下方式对图片进行自动排版：  该工具会按照图片顺序，在宽度 M 以内，将尽可能多的图片排在一行。该行的高度是行内最高的图片的高度。例如在 M=10 的纸张上依次打印 3x4, 2x2, 3x3 三张图片，则效果如下图所示，这一行高度为4。(分割线以上为列标尺，">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://perpeternal.github.com/2019/03/20/图形排版/RequireFile-20190320231343264.do">
+<meta property="og:image" content="http://perpeternal.github.com/2019/03/20/图形排版/RequireFile-20190320231329922.do">
+<meta property="og:image" content="http://perpeternal.github.com/2019/03/20/图形排版/RequireFile.do">
+<meta property="og:updated_time" content="2019-03-20T16:06:45.716Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="P&#39;s Blog">
+<meta name="twitter:title" content="图形排版">
+<meta name="twitter:description" content="题目小明需要在一篇文档中加入 N 张图片，其中第 i 张图片的宽度是 Wi，高度是 Hi。假设纸张的宽度是 M，小明使用的文档编辑工具会用以下方式对图片进行自动排版：  该工具会按照图片顺序，在宽度 M 以内，将尽可能多的图片排在一行。该行的高度是行内最高的图片的高度。例如在 M=10 的纸张上依次打印 3x4, 2x2, 3x3 三张图片，则效果如下图所示，这一行高度为4。(分割线以上为列标尺，">
+<meta name="twitter:image" content="http://perpeternal.github.com/2019/03/20/图形排版/RequireFile-20190320231343264.do">
 
 
 
 
 
 
-  <link rel="canonical" href="http://perpeternal.github.com/archives/2019/">
+  <link rel="canonical" href="http://perpeternal.github.com/2019/03/20/图形排版/">
 
 
 
@@ -121,7 +130,7 @@
   };
 </script>
 
-  <title>Archive | P's Blog</title>
+  <title>图形排版 | P's Blog</title>
   
 
 
@@ -169,7 +178,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -275,7 +284,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -304,28 +313,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -372,288 +359,226 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.com/2019/03/20/图形排版/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="PerpEternal">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="P's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">图形排版
+
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-20 23:07:51" itemprop="dateCreated datePublished" datetime="2019-03-20T23:07:51+08:00">2019-03-20</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-21 00:06:45" itemprop="dateModified" datetime="2019-03-21T00:06:45+08:00">2019-03-21</time>
+              
+            
+          </span>
+
           
-        
-        Um..! 7 posts in total. Keep on posting.
-      </span>
-      
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/蓝桥杯/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a></span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/03/20/斐波那契/" itemprop="url">
+          
             
-              <span itemprop="name">斐波那契</span>
             
-          </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-20T23:20:36+08:00" content="2019-03-20">
-          03-20
-        </time>
-      </div>
+          
+          
 
-    </header>
-  </article>
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
+          
 
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/03/20/图形排版/" itemprop="url">
-            
-              <span itemprop="name">图形排版</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-20T23:07:51+08:00" content="2019-03-20">
-          03-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/03/20/格子刷油漆/" itemprop="url">
-            
-              <span itemprop="name">格子刷油漆</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-20T22:35:25+08:00" content="2019-03-20">
-          03-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>小明需要在一篇文档中加入 N 张图片，其中第 i 张图片的宽度是 Wi，高度是 Hi。假设纸张的宽度是 M，小明使用的文档编辑工具会用以下方式对图片进行自动排版：</p>
+<ol>
+<li><p>该工具会按照图片顺序，在宽度 M 以内，将尽可能多的图片排在一行。该行的高度是行内最高的图片的高度。例如在 M=10 的纸张上依次打印 3x4, 2x2, 3x3 三张图片，则效果如下图所示，这一行高度为4。(分割线以上为列标尺，分割线以下为排版区域；数字组成的矩形为第x张图片占用的版面)<br><img src="/2019/03/20/图形排版/RequireFile-20190320231343264.do" alt="img"></p>
+</li>
+<li><p>如果当前行剩余宽度大于0，并且小于下一张图片，则下一张图片会按比例缩放到宽度为当前行剩余宽度(高度向上取整)，然后放入当前行。例如再放入一张4x9的图片，由于剩余宽度是2，这张图片会被压缩到2x5，再被放入第一行的末尾。此时该行高度为5：<br><img src="/2019/03/20/图形排版/RequireFile-20190320231329922.do" alt="img"></p>
+</li>
+<li><p>如果当前行剩余宽度为0，该工具会从下一行开始继续对剩余的图片进行排版，直到所有图片都处理完毕。此时所有行的总高度和就是这 N 张图片的排版高度。例如再放入11x1, 5x5, 3x4 的图片后，效果如下图所示，总高度为11：<br><img src="/2019/03/20/图形排版/RequireFile.do" alt="img"></p>
+<p>现在由于排版高度过高，图片的先后顺序也不能改变，小明只好从 N 张图片中选择一张删除掉以降低总高度。他希望剩余N-1张图片按原顺序的排版高度最低，你能求出最低高度是多少么？</p>
+</li>
+</ol>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>预处理以第 i 张图为行首的最低高度，然后枚举删图。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> forl(i, l, r) for (int i = l; i &lt;= r; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> forr(i, r, l) for (int i = r; i &gt;= l; i--)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> for1(i, n) for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> for0(i, n) for (int i = 0; i &lt; n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> meminf(a) memset(a, inf, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem_1(a) memset(a, -1, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem0(a) memset(a, 0, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inlld(lld) scanf(<span class="meta-string">"%lld"</span>, &amp;lld)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inlf(f) scanf(<span class="meta-string">"%lf"</span>, &amp;f)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ind(d) scanf(<span class="meta-string">"%d"</span>, &amp;d)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ins(s) scanf(<span class="meta-string">"%s"</span>, s)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mp make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fi first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> se second</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">std</span>::pair&lt;<span class="keyword">long</span> <span class="keyword">long</span>, <span class="keyword">long</span> <span class="keyword">long</span>&gt; pll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; vll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">std</span>::pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; pii;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vii;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">double</span> db;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> db pi = <span class="built_in">acos</span>((db)<span class="number">-1</span>);</span><br><span class="line"><span class="keyword">const</span> ll inf =<span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">const</span> ll mod = <span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1.1e5</span>;</span><br><span class="line"><span class="keyword">const</span> db eps = <span class="number">1e-8</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sign</span><span class="params">(db a)</span> </span>&#123; <span class="keyword">return</span> a &lt; -eps ? <span class="number">-1</span> : a &gt; eps; &#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">db_cmp</span><span class="params">(db a, db b)</span></span>&#123; <span class="keyword">return</span> sign(a-b); &#125;</span><br><span class="line"></span><br><span class="line">pii a[N],b[N];</span><br><span class="line"><span class="keyword">int</span> suf[N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> PerpEternal</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/in.dat", "r", stdin);</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/out.dat", "w", stdout);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="comment">//ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);</span></span><br><span class="line">    <span class="keyword">int</span> m,n,w,h;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;m,&amp;n);</span><br><span class="line">    for0(i,n)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;w,&amp;h);</span><br><span class="line">        a[i]=pii(w,h);</span><br><span class="line">    &#125;</span><br><span class="line">    for0(i,n)&#123;</span><br><span class="line">        w=m; </span><br><span class="line">        h=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> len=i;</span><br><span class="line">        <span class="keyword">for</span>(;len&lt;n&amp;&amp;w;len++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(w&gt;=a[len].first)&#123;</span><br><span class="line">                w-=a[len].first;</span><br><span class="line">                h=max(h,a[len].second);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">int</span> th=<span class="built_in">ceil</span>(a[len].second*w*<span class="number">1.0</span>/a[len].first);</span><br><span class="line">                w=<span class="number">0</span>;</span><br><span class="line">                h=max(h,th);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// cout&lt;&lt;h&lt;&lt;endl;</span></span><br><span class="line">        b[i]=pii(len,h);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// puts("");</span></span><br><span class="line">    <span class="comment">// for0(i,n)cout&lt;&lt;b[i].first&lt;&lt;' '&lt;&lt;b[i].second&lt;&lt;endl;</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=n<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">        suf[i]=suf[b[i].first]+b[i].second;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// for0(i,n)cout&lt;&lt;suf[i]&lt;&lt;endl;</span></span><br><span class="line">    <span class="keyword">int</span> ans=inf,flag=<span class="number">0</span>,tot=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(flag&lt;n)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=flag;i&lt;b[flag].first;i++)&#123;</span><br><span class="line">            w=m; </span><br><span class="line">            h=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">int</span> len=flag;</span><br><span class="line">            <span class="keyword">for</span>(;len&lt;n&amp;&amp;w;len++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(len==i)<span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">if</span>(w&gt;=a[len].first)&#123;</span><br><span class="line">                    w-=a[len].first;</span><br><span class="line">                    h=max(h,a[len].second);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">int</span> th=<span class="built_in">ceil</span>(a[len].second*w*<span class="number">1.0</span>/a[len].first);</span><br><span class="line">                    w=<span class="number">0</span>;</span><br><span class="line">                    h=max(h,th);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            ans=min(ans,tot+h+suf[len]);</span><br><span class="line">        &#125;</span><br><span class="line">        tot+=b[flag].second;</span><br><span class="line">        flag=b[flag].first;</span><br><span class="line">        <span class="comment">// tot+=</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/03/20/高僧斗法/" itemprop="url">
-            
-              <span itemprop="name">高僧斗法</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-20T22:01:44+08:00" content="2019-03-20">
-          03-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/03/20/国王的烦恼/" itemprop="url">
-            
-              <span itemprop="name">国王的烦恼</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-20T21:45:27+08:00" content="2019-03-20">
-          03-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/03/02/CF1062/" itemprop="url">
-            
-              <span itemprop="name">CF1062</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-02T21:33:31+08:00" content="2019-03-02">
-          03-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/03/02/CF1076/" itemprop="url">
-            
-              <span itemprop="name">CF1076</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-02T21:17:02+08:00" content="2019-03-02">
-          03-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/data-structures/" rel="tag"># data structures</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/20/格子刷油漆/" rel="next" title="格子刷油漆">
+                <i class="fa fa-chevron-left"></i> 格子刷油漆
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/20/斐波那契/" rel="prev" title="斐波那契">
+                斐波那契 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -674,8 +599,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -761,6 +695,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -920,6 +871,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
 
   
 
@@ -930,6 +885,8 @@
 
   
 
+
+  
 
 
   
