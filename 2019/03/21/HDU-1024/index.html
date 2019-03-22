@@ -98,20 +98,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="P&#39;s Blog">
-<meta property="og:url" content="http://perpeternal.github.com/tags/graph/index.html">
+  <meta name="description" content="题意给你一个序列n个数组成，然后让你在里面找到m个子序列，让这m个子序列的和最大。 题解$dp[i][j]$表示的是第j个数字在第i个子序列时的当前最优值。$dp[i][j] = maxx(dp[i][j-1] + num[j] ,maxx(dp[i-1][k]) + num[j])$，k是从1到 $j-1$.可以这么理解这个转移方程，对于当前的这个数字，如果把他放到第i个子序列中有两种情况，一个">
+<meta name="keywords" content="dp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HDU-1024 Max Sum Plus Plus">
+<meta property="og:url" content="http://perpeternal.github.com/2019/03/21/HDU-1024/index.html">
 <meta property="og:site_name" content="P&#39;s Blog">
+<meta property="og:description" content="题意给你一个序列n个数组成，然后让你在里面找到m个子序列，让这m个子序列的和最大。 题解$dp[i][j]$表示的是第j个数字在第i个子序列时的当前最优值。$dp[i][j] = maxx(dp[i][j-1] + num[j] ,maxx(dp[i-1][k]) + num[j])$，k是从1到 $j-1$.可以这么理解这个转移方程，对于当前的这个数字，如果把他放到第i个子序列中有两种情况，一个">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-21T15:06:13.753Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="P&#39;s Blog">
+<meta name="twitter:title" content="HDU-1024 Max Sum Plus Plus">
+<meta name="twitter:description" content="题意给你一个序列n个数组成，然后让你在里面找到m个子序列，让这m个子序列的和最大。 题解$dp[i][j]$表示的是第j个数字在第i个子序列时的当前最优值。$dp[i][j] = maxx(dp[i][j-1] + num[j] ,maxx(dp[i-1][k]) + num[j])$，k是从1到 $j-1$.可以这么理解这个转移方程，对于当前的这个数字，如果把他放到第i个子序列中有两种情况，一个">
 
 
 
 
 
 
-  <link rel="canonical" href="http://perpeternal.github.com/tags/graph/">
+  <link rel="canonical" href="http://perpeternal.github.com/2019/03/21/HDU-1024/">
 
 
 
@@ -121,7 +126,7 @@
   };
 </script>
 
-  <title>Tag: graph | P's Blog</title>
+  <title>HDU-1024 Max Sum Plus Plus | P's Blog</title>
   
 
 
@@ -169,7 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -241,7 +246,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -305,28 +310,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -372,56 +355,198 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>graph<small>Tag</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.com/2019/03/21/HDU-1024/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="PerpEternal">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="P's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/03/21/城市建设/" itemprop="url">
-            
-              <span itemprop="name">城市建设</span>
-            
-          </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">HDU-1024 Max Sum Plus Plus
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-21T21:53:53+08:00" content="2019-03-21">
-          03-21
-        </time>
-      </div>
+              
+            
+          </h2>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-21 23:01:40 / Modified: 23:06:13" itemprop="dateCreated datePublished" datetime="2019-03-21T23:01:40+08:00">2019-03-21</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hdu/" itemprop="url" rel="index"><span itemprop="name">hdu</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>给你一个序列n个数组成，然后让你在里面找到m个子序列，让这m个子序列的和最大。</p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>$dp[i][j]$表示的是第j个数字在第i个子序列时的当前最优值。<br>$dp[i][j] = maxx(dp[i][j-1] + num[j] ,maxx(dp[i-1][k]) + num[j])$，k是从1到 $j-1$.<br>可以这么理解这个转移方程，对于当前的这个数字，如果把他放到第i个子序列中有两种情况，一个是他作为第i个子序列的第一个数字，另一个就是不作为第一个数字，作为第一个数字的时候是 $max(dp[i-2][k] + num[j]) ,1&lt;=k&lt;i $的意思是从之前的所有中找到 $i-1$ 个子序列的最大值+当前的值，不做为第一个的时候那么他前面的那个数字一定是i序列的，同一个子序列，又不是作为第一个，那么前面的那个货就一定是同一个子序列的，那么当前的值是$dp[i][j-1] + num[j]$,在两种决策中选择一个最有的就行了，还有就是$max(dp[i-1][k]+num[j])$的这个地方可以开一个数组记录下来，不能每次都跑，跑不起，再有就是这个题目没有给m的范围，所以开不了二维数组（目测不是很大，大的话会超时，但是肯定是先超内存在超时，所以为了保险，还是吧$dp[][]$压缩成一维的）那么状态转移就边成这样了$dp[j]$表示的是 j这个人在当前的这个子序列中的最优值，mk[j]表示的是在上一个子序列中1—j的dp的最大值，所以就变成 $dp[j] = maxx(dp[j-1] + num[j] ,mk[j-1]+num[j])$;还是 max(作为i个子序列的第一个元素，不是第一个元素取一个最大值)。在解释下代码的核心部分。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;strstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ull unsigned long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 0x3f3f3f3f</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mod (int)1e9+7</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> for0(i, n) for (int i = 0; i &lt; n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> for1(i, n) for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> forl(i, l, r) for (int i = l; i &lt;= r; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> forn(i, n) for (int i = n; i &gt;= 0; i--)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem0(a) memset(a, 0, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem_1(a) memset(a, -1, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> meminf(a) memset(a, inf, sizeof(a))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> d[<span class="number">1000006</span>],a[<span class="number">1000006</span>],pre_max[<span class="number">2</span>][<span class="number">1000006</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">cin</span>&gt;&gt;m&gt;&gt;n) &#123;</span><br><span class="line">        <span class="built_in">memset</span>(d, <span class="number">0</span>, <span class="keyword">sizeof</span>(d));</span><br><span class="line">        <span class="built_in">memset</span>(pre_max, <span class="number">0</span>, <span class="keyword">sizeof</span>(pre_max));</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">        <span class="keyword">int</span> maxx;</span><br><span class="line">        <span class="comment">//pre_max[0][0]=-99999999;pre_max[1][0]=-99999999;</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=m; i++) &#123;</span><br><span class="line">            maxx=<span class="number">-9999999</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=i; j&lt;=n; j++) &#123;</span><br><span class="line">                d[j]=max(d[j<span class="number">-1</span>]+a[j], pre_max[(i+<span class="number">1</span>)%<span class="number">2</span>][j<span class="number">-1</span>]+a[j]);</span><br><span class="line">                maxx=max(maxx, d[j]);</span><br><span class="line">                pre_max[i%<span class="number">2</span>][j]=maxx;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;pre_max[m%<span class="number">2</span>][n]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/dp/" rel="tag"># dp</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/21/POJ-2559/" rel="next" title="POJ-2559 Largest Rectangle in a Histogram">
+                <i class="fa fa-chevron-left"></i> POJ-2559 Largest Rectangle in a Histogram
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/21/POJ-1050/" rel="prev" title="POJ-1050 To the Max">
+                POJ-1050 To the Max <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -442,8 +567,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -531,6 +665,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -683,6 +834,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
 
   
 
@@ -693,6 +848,8 @@
 
   
 
+
+  
 
 
   
@@ -1030,6 +1187,43 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
   
 
 
