@@ -107,7 +107,7 @@
 <meta property="og:description" content="题意 求柱形图中的最大矩形面积。 题解法一: 求每个点左边连续比它大的最左边的下标，保存在l[]数组里,求每个点右边连续比它大的最右边的下标，保存在r[]数组里 法二: 维护一个单调栈, 如果h大于栈顶元素，则入栈, 否则，将栈内元素出栈，直到满足上面的条件。出栈时，我们要将出栈元素对之后问题的影响全部考虑进行处理，才能保证做法的正确性。 代码123456789101112131415161718">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://perpeternal.github.com/2019/03/21/POJ-2559/45660aba95464e61adfbbcc7cea2c44c.gif">
-<meta property="og:updated_time" content="2019-03-21T14:59:30.429Z">
+<meta property="og:updated_time" content="2019-03-22T03:02:47.337Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="POJ-2559 Largest Rectangle in a Histogram">
 <meta name="twitter:description" content="题意 求柱形图中的最大矩形面积。 题解法一: 求每个点左边连续比它大的最左边的下标，保存在l[]数组里,求每个点右边连续比它大的最右边的下标，保存在r[]数组里 法二: 维护一个单调栈, 如果h大于栈顶元素，则入栈, 否则，将栈内元素出栈，直到满足上面的条件。出栈时，我们要将出栈元素对之后问题的影响全部考虑进行处理，才能保证做法的正确性。 代码123456789101112131415161718">
@@ -416,12 +416,24 @@
                 
               
 
-              <time title="Created: 2019-03-21 22:42:01 / Modified: 22:59:30" itemprop="dateCreated datePublished" datetime="2019-03-21T22:42:01+08:00">2019-03-21</time>
+              <time title="Created: 2019-03-21 22:42:01" itemprop="dateCreated datePublished" datetime="2019-03-21T22:42:01+08:00">2019-03-21</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-22 11:02:47" itemprop="dateModified" datetime="2019-03-22T11:02:47+08:00">2019-03-22</time>
               
             
           </span>
@@ -452,6 +464,17 @@
           
 
           
+          
+            <span id="/2019/03/21/POJ-2559/" class="leancloud_visitors" data-flag-title="POJ-2559 Largest Rectangle in a Histogram">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -514,8 +537,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/21/CF1012/" rel="next" title="CF1012">
-                <i class="fa fa-chevron-left"></i> CF1012
+              <a href="/2019/03/21/CF-1012/" rel="next" title="CF-1012">
+                <i class="fa fa-chevron-left"></i> CF-1012
               </a>
             
           </div>
@@ -598,7 +621,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -619,7 +642,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -644,7 +671,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -710,6 +741,7 @@
 
   
 </div>
+
 
 
 
@@ -1173,6 +1205,66 @@
 
 
   
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log(`Failed to save Visitor num, with error message: ${responseJSON.error}`);
+              })
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'ClY3Bk77hIdRCfLylruxnBlP-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'ClY3Bk77hIdRCfLylruxnBlP-gzGzoHsz',
+                'X-LC-Key': 'Gj5eztTLPClpCSYnIrLmzUsR',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
 
   
 
