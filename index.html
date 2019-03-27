@@ -100,7 +100,7 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="P&#39;s Blog">
-<meta property="og:url" content="http://perpeternal.github.com/index.html">
+<meta property="og:url" content="http://perpeternal.github.io/index.html">
 <meta property="og:site_name" content="P&#39;s Blog">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
@@ -111,7 +111,7 @@
 
 
 
-  <link rel="canonical" href="http://perpeternal.github.com/">
+  <link rel="canonical" href="http://perpeternal.github.io/">
 
 
 
@@ -367,7 +367,181 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.com/2019/03/23/包子凑数/">
+    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/03/27/CF-883/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="PerpEternal">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="P's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/27/CF-883/" class="post-title-link" itemprop="url">CF-883</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-27 20:14:29 / Modified: 20:20:43" itemprop="dateCreated datePublished" datetime="2019-03-27T20:14:29+08:00">2019-03-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/cf/" itemprop="url" rel="index"><span itemprop="name">cf</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+            <span id="/2019/03/27/CF-883/" class="leancloud_visitors" data-flag-title="CF-883">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="I-Photo-Processing"><a href="#I-Photo-Processing" class="headerlink" title="I. Photo Processing"></a>I. Photo Processing</h2><h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>将 n 个数分堆，要保证每堆不少于 k 个数，每堆的值为这堆数中的最大值减去最小值，取这些值中的最大值，要是这个最大值最小。 </p>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>二分答案，dp 判断是否可行。$dp[i]$表示将 $1\sim i$ 划分成满足条件的区间，能划分最远的地方。</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> forl(i, l, r) for (int i = l; i &lt;= r; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> forr(i, r, l) for (int i = r; i &gt;= l; i--)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> for1(i, n) for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fro1(i, n) for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> for0(i, n) for (int i = 0; i &lt; n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fro0(i, n) for (int i = 0; i &lt; n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> meminf(a) memset(a, inf, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem_1(a) memset(a, -1, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem0(a) memset(a, 0, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> oper(type) bool operator &lt;(const type y)const</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mp make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fi first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> se second</span></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">long</span> <span class="keyword">long</span>, <span class="keyword">long</span> <span class="keyword">long</span>&gt; pll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; vll;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; pii;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vii;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">double</span> db;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> itn;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(<span class="keyword">int</span> &amp;a,<span class="keyword">int</span> &amp;b,<span class="keyword">int</span> &amp;c,<span class="keyword">int</span> &amp;d)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;a,&amp;b,&amp;c,&amp;d);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(<span class="keyword">int</span> &amp;a,<span class="keyword">int</span> &amp;b,<span class="keyword">int</span> &amp;c)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;c);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(<span class="keyword">int</span> &amp;a,<span class="keyword">int</span> &amp;b)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;a,&amp;b);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(ll &amp;a)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;a);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(<span class="keyword">int</span> &amp;a)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(<span class="keyword">char</span> *s)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%s"</span>,s);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(<span class="keyword">char</span> &amp;s)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%c"</span>,&amp;s);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(db &amp;a)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%Lf"</span>,&amp;a);&#125;</span><br><span class="line"><span class="keyword">const</span> db pi = <span class="built_in">acos</span>((db)<span class="number">-1</span>);</span><br><span class="line"><span class="keyword">const</span> ll inf =<span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">const</span> db eps = <span class="number">1e-8</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">3.1e5</span>;</span><br><span class="line"><span class="keyword">const</span> ll mod = <span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sign</span><span class="params">(db a)</span> </span>&#123; <span class="keyword">return</span> a &lt; -eps ? <span class="number">-1</span> : a &gt; eps; &#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">db_cmp</span><span class="params">(db a, db b)</span></span>&#123; <span class="keyword">return</span> sign(a-b); &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[N],n,k,dp[N];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> last=<span class="number">0</span>;</span><br><span class="line">    forl(i,k,n)&#123;</span><br><span class="line">        <span class="keyword">int</span> j=dp[i-k];</span><br><span class="line">        <span class="keyword">if</span>(a[i]-a[j+<span class="number">1</span>]&lt;=x)last=i;</span><br><span class="line">        dp[i]=last;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[n]==n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> PerpEternal</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/in.dat", "r", stdin);</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/out.dat", "w", stdout);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="comment">//ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);</span></span><br><span class="line">    in(n,k);</span><br><span class="line">    for1(i,n)in(a[i]);</span><br><span class="line">    sort(a+<span class="number">1</span>,a+<span class="number">1</span>+n);</span><br><span class="line">    <span class="keyword">int</span> l=<span class="number">0</span>,r=<span class="number">1e9</span>,mid;</span><br><span class="line">    <span class="keyword">while</span>(l&lt;=r)&#123;</span><br><span class="line">        mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(check(mid))r=mid<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">else</span> l=mid+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,l);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/03/23/包子凑数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="PerpEternal">
@@ -553,7 +727,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.com/2019/03/23/小朋友排队/">
+    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/03/23/小朋友排队/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="PerpEternal">
@@ -727,7 +901,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.com/2019/03/22/波动数列/">
+    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/03/22/波动数列/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="PerpEternal">
@@ -913,7 +1087,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.com/2019/03/22/蚂蚁感冒/">
+    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/03/22/蚂蚁感冒/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="PerpEternal">
@@ -1088,7 +1262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.com/2019/03/22/CF-11/">
+    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/03/22/CF-11/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="PerpEternal">
@@ -1263,7 +1437,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.com/2019/03/22/HDU-4651/">
+    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/03/22/HDU-4651/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="PerpEternal">
@@ -1439,7 +1613,7 @@ P(n)=\sum\limits_{k=1}^n(-1)^{k+1}\left [P\left( n-\frac 1 2k(3k-1)\right)+P\lef
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.com/2019/03/22/杂题/">
+    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/03/22/杂题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="PerpEternal">
@@ -1618,7 +1792,7 @@ P(n)=\sum\limits_{k=1}^n(-1)^{k+1}\left [P\left( n-\frac 1 2k(3k-1)\right)+P\lef
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.com/2019/03/22/HDU-4055/">
+    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/03/22/HDU-4055/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="PerpEternal">
@@ -1796,7 +1970,7 @@ P(n)=\sum\limits_{k=1}^n(-1)^{k+1}\left [P\left( n-\frac 1 2k(3k-1)\right)+P\lef
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.com/2019/03/22/LightOJ-1197/">
+    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/03/22/LightOJ-1197/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="PerpEternal">
@@ -1955,181 +2129,6 @@ P(n)=\sum\limits_{k=1}^n(-1)^{k+1}\left [P\left( n-\frac 1 2k(3k-1)\right)+P\lef
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.com/2019/03/22/POJ-3167/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="PerpEternal">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="P's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/22/POJ-3167/" class="post-title-link" itemprop="url">POJ-3167 Cow Patterns</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-22 10:28:52 / Modified: 11:03:55" itemprop="dateCreated datePublished" datetime="2019-03-22T10:28:52+08:00">2019-03-22</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/poj/" itemprop="url" rel="index"><span itemprop="name">poj</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-            <span id="/2019/03/22/POJ-3167/" class="leancloud_visitors" data-flag-title="POJ-3167 Cow Patterns">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Views: </span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>一个农场主有N头牛，每个牛都以它身上的斑点数作为标志，以斑点数作为标准对牛进行rank排序，定义牛的序列的相同性为第i头牛及其之前的牛的比他rank小的数量和与他rank相同的数量，比如：<br>1 4 4 3 2 1 和 2 10 10 7 3 2 是一样的模式串<br>要求数有多少个符合要求的模式串，并输出每个符合要求的子串的起始位置。</p>
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>定义一个函数getval(ch,str,l,r)，返回的值为ch在$str[l~r]$中的真实值，即将$str[l~r]​$中的值排序离散化后ch的值。则题意即为：在a串中找出一段长为m的区间[l,r]，使对任意的1≤i≤m，getval(a[l+i-1],a,l,r)均等于getval(b[i],b,1,m)getval的值，其实是返回某个数(数跟字符其实是一样的)在某堆数中的排名。是什么决定了一个数x的排名？是小于x的数的个数，等于x的数的个数。如果这两个个数与另一个y的两个个数都相等，那么x跟y在各自字符串的各自区间内的getval值就相等了 </p>
-<p><img src="/2019/03/22/POJ-3167/Image-7800823.tiff" alt="Image-7800823"></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> forl(i, l, r) for (int i = l; i &lt;= r; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> forr(i, r, l) for (int i = r; i &gt;= l; i--)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> for1(i, n) for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> for0(i, n) for (int i = 0; i &lt; n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> meminf(a) memset(a, inf, sizeof(a))n</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem_1(a) memset(a, -1, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem0(a) memset(a, 0, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inlld(lld) scanf(<span class="meta-string">"%lld"</span>,&amp;lld)</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inlf(f) scanf(<span class="meta-string">"%lf"</span>,&amp;f)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ind(d) scanf(<span class="meta-string">"%d"</span>,&amp;d)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ins(s) scanf(<span class="meta-string">"%s"</span>,s)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 0x3f3f3f3f</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pi acos(-1.0)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mod (int)(1e9+7)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N (int)(1.1e5)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> Next[N],sump[N][<span class="number">30</span>],now[<span class="number">30</span>],sums[N][<span class="number">30</span>],n,k;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;ans;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> sump[][<span class="number">30</span>],<span class="keyword">int</span> sums[][<span class="number">30</span>],<span class="keyword">int</span> *p,<span class="keyword">int</span>*s)</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> lep=<span class="number">0</span>,les=<span class="number">0</span>;</span><br><span class="line">  for1(i,p[l]<span class="number">-1</span>)lep+=sump[l][i];</span><br><span class="line">  for1(i,s[r]<span class="number">-1</span>)les+=sums[r][i]-sums[r-l][i];</span><br><span class="line">  <span class="keyword">if</span>(lep==les&amp;&amp;sump[l][p[l]]==sums[r][s[r]]-sums[r-l][s[r]])<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">kmp_pre</span><span class="params">(<span class="keyword">int</span> *p, <span class="keyword">int</span> p_len, <span class="keyword">int</span> Next[])</span> </span>&#123; <span class="comment">// Next[i] 为满足 p[i-z...i-1]=p[0...z-1] 的最大 z 值(就是 p的自身匹配)</span></span><br><span class="line">  <span class="keyword">int</span> i = <span class="number">0</span>, j = Next[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">  <span class="keyword">while</span> (i &lt; p_len) &#123;</span><br><span class="line">    <span class="keyword">while</span> (j != <span class="number">-1</span> &amp;&amp; !check(j,i,sump,sump,p,p)) j = Next[j];</span><br><span class="line">    Next[++i] = ++j;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">KMP</span><span class="params">(<span class="keyword">int</span> *p, <span class="keyword">int</span> *s)</span> </span>&#123;  <span class="comment">// p 是模式串，s 是主串</span></span><br><span class="line">  <span class="keyword">int</span>  i = <span class="number">0</span>, j = <span class="number">0</span>, p_len = k, s_len =n;</span><br><span class="line">  for1(i,p_len)&#123;</span><br><span class="line">    <span class="built_in">memcpy</span>(sump[i],sump[i<span class="number">-1</span>],<span class="number">30</span>*<span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br><span class="line">    sump[i][p[i<span class="number">-1</span>]]++;</span><br><span class="line">  &#125;</span><br><span class="line">  for1(i,s_len)&#123;</span><br><span class="line">    <span class="built_in">memcpy</span>(sums[i],sums[i<span class="number">-1</span>],<span class="keyword">sizeof</span>(sums[i]));</span><br><span class="line">    sums[i][s[i<span class="number">-1</span>]]++;</span><br><span class="line">  &#125;</span><br><span class="line">  kmp_pre(p, p_len, Next);</span><br><span class="line">  <span class="keyword">while</span> (i &lt; s_len) &#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">-1</span> != j &amp;&amp; !check(j,i,sump,sums,p,s)) j = Next[j];</span><br><span class="line">    i++;j++;</span><br><span class="line">    <span class="keyword">if</span> (j &gt;= p_len) &#123;</span><br><span class="line">      ans.push_back(i);</span><br><span class="line">      j = Next[j];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> p[N],S[N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">  <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/in.dat", "r", stdin);</span></span><br><span class="line">  <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/out.dat","w",stdout);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">  <span class="comment">//ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);</span></span><br><span class="line">  <span class="keyword">int</span> q;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;k,&amp;q);</span><br><span class="line">  for0(i,n)ind(S[i]);</span><br><span class="line">  for0(i,k)ind(p[i]);</span><br><span class="line">  KMP(p,S);</span><br><span class="line">  <span class="comment">//puts("");</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,(<span class="keyword">int</span>)ans.size());</span><br><span class="line">  for0(i,ans.size())<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans[i]-k+<span class="number">1</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2179,7 +2178,7 @@ P(n)=\sum\limits_{k=1}^n(-1)^{k+1}\left [P\left( n-\frac 1 2k(3k-1)\right)+P\lef
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2235,7 +2234,9 @@ P(n)=\sum\limits_{k=1}^n(-1)^{k+1}\left [P\left( n-\frac 1 2k(3k-1)\right)+P\lef
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -2820,9 +2821,9 @@ P(n)=\sum\limits_{k=1}^n(-1)^{k+1}\left [P\left( n-\frac 1 2k(3k-1)\right)+P\lef
   
     
       
-        
-      
     
+      
+        
       
     
       
