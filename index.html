@@ -367,6 +367,205 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/03/30/CF-1139/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="PerpEternal">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="P's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/30/CF-1139/" class="post-title-link" itemprop="url">CF-1139</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-30 21:00:47" itemprop="dateCreated datePublished" datetime="2019-03-30T21:00:47+08:00">2019-03-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-01 09:41:34" itemprop="dateModified" datetime="2019-04-01T09:41:34+08:00">2019-04-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/cf/" itemprop="url" rel="index"><span itemprop="name">cf</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+            <span id="/2019/03/30/CF-1139/" class="leancloud_visitors" data-flag-title="CF-1139">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="D-Steps-to-One"><a href="#D-Steps-to-One" class="headerlink" title="D. Steps to One"></a>D. Steps to One</h2><h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>每次从$1\sim m$从等概率的选择一个数, 直到所有选择的数的 gcd 为 1, 问操作的次数的期望是多少?</p>
+<h4 id="题解1"><a href="#题解1" class="headerlink" title="题解1"></a>题解1</h4><p>设$f[n]$表示当前 gcd 为 n 还需要的步数的期望</p>
+<script type="math/tex; mode=display">
+f[n]=1+\frac {\sum\limits_{i=1}^mf[gcd(i,n)]} m\\
+\sum\limits_{i=1}^mf[gcd(i,n)]=\sum\limits_{d|n}f[d]\sum\limits_{i=1}^me[gcd(i,n)==d]\\
+\sum\limits_{i=1}^me[gcd(i,n)==d]=\sum\limits_{i=1}^{\lfloor \frac m d\rfloor}\epsilon[gcd(i,\frac n d)]
+\\=\sum\limits_{i=1}^{\lfloor \frac m d\rfloor}\sum\limits_{t|gcd(i,\frac n d)}\mu(t)=\sum\limits_{t|\frac n d}\mu(t)\lfloor \frac m {dt}\rfloor\\
+接下来把右边f[n]的项提出来\\
+(m-\lfloor\frac m n\rfloor)f[n]=m+\sum\limits_{d|n,d\ne n}f[d]\sum\limits_{t|\frac n d}\mu(t)\lfloor \frac m {dt}\rfloor\\
+ans=1+\frac {\sum\limits_{i=1}^mf[i]} m</script><h4 id="题解2"><a href="#题解2" class="headerlink" title="题解2"></a>题解2</h4><p>设$E[n|i]$表示 gcd 为 n 的倍数的期望步数</p>
+<script type="math/tex; mode=display">
+k=\lfloor\frac m n\rfloor\\
+E[n|i]=\sum\limits_{j=1}^{\infty}j*\frac {k^j} {m^j}=\frac {\frac k m} {1-\frac k m}=\frac k {m-k}\\
+ans=1+E[i>1]=1+\sum_{j=2}^m-\mu(j)E[j|i]</script><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//解1</span></span><br><span class="line"><span class="keyword">int</span> f[N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> PerpEternal</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/in.dat", "r", stdin);</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/out.dat", "w", stdout);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="comment">//ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);</span></span><br><span class="line">    <span class="keyword">int</span> m;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;m;</span><br><span class="line">    for1(i,m)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j*j&lt;=i;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i%j==<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i/j==j)&#123;</span><br><span class="line">                    fac[i].pb(j);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    fac[i].pb(j);</span><br><span class="line">                    fac[i].pb(i/j);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    get_prime();</span><br><span class="line">    f[<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line">    ll tot=<span class="number">0</span>;</span><br><span class="line">    forl(n,<span class="number">2</span>,m)&#123;</span><br><span class="line">        ll t_tmp=m;</span><br><span class="line">        for0(j,fac[n].size())&#123;</span><br><span class="line">            ll d=fac[n][j];</span><br><span class="line">            <span class="keyword">if</span>(d==n)<span class="keyword">continue</span>;</span><br><span class="line">            ll cnt=<span class="number">0</span>;</span><br><span class="line">            for0(k,fac[n/d].size())&#123;</span><br><span class="line">                <span class="keyword">int</span> t=fac[n/d][k];</span><br><span class="line">                cnt=(cnt+(ll)mu[t]*(m/d/t)%mod)%mod;</span><br><span class="line">            &#125;</span><br><span class="line">            t_tmp=(t_tmp+f[d]*cnt%mod)%mod;</span><br><span class="line">        &#125;</span><br><span class="line">        f[n]=t_tmp*qPow(m-m/n,mod<span class="number">-2</span>,mod)%mod;</span><br><span class="line">        tot=(tot+f[n])%mod;</span><br><span class="line">        <span class="comment">// cout&lt;&lt;f[n]&lt;&lt;endl;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,(tot*qPow(m,mod<span class="number">-2</span>,mod)%mod+<span class="number">1</span>)%mod);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//解2</span></span><br><span class="line"><span class="keyword">bool</span> notPrime[N+<span class="number">1</span>];</span><br><span class="line"><span class="keyword">int</span> prime[N+<span class="number">1</span>],num_prime=<span class="number">0</span>,mu[N+<span class="number">1</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get_prime</span><span class="params">()</span></span>&#123;</span><br><span class="line">  	notPrime[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=N;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!notPrime[i]) &#123;</span><br><span class="line">            prime[num_prime++]=i;</span><br><span class="line">            mu[i]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;num_prime&amp;&amp;(ll)i*prime[j]&lt;=N;j++)&#123;</span><br><span class="line">            <span class="keyword">int</span> k = i*prime[j];</span><br><span class="line">            notPrime[k] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(i % prime[j] == <span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">else</span> mu[k]=mod-mu[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">qpow</span><span class="params">(ll a,ll b)</span></span>&#123;</span><br><span class="line">    ll ans=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(b)&#123;</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)ans=ans*a%mod;</span><br><span class="line">        a=a*a%mod;</span><br><span class="line">        b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> PerpEternal</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/in.dat", "r", stdin);</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/out.dat", "w", stdout);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="comment">//ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);</span></span><br><span class="line">    <span class="keyword">int</span> m;</span><br><span class="line">    in(m);</span><br><span class="line">    get_prime();</span><br><span class="line">    ll ans=<span class="number">1</span>;</span><br><span class="line">    forl(i,<span class="number">2</span>,m)&#123;</span><br><span class="line">        ll k=m/i;</span><br><span class="line">        ans=(ans+mu[i]*k%mod*qpow(m-k,mod<span class="number">-2</span>)%mod)%mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><p><a href="https://www.cnblogs.com/zyt1253679098/p/10584706.html" target="_blank" rel="noopener">https://www.cnblogs.com/zyt1253679098/p/10584706.html</a></p>
+<p><a href="https://blog.csdn.net/neuq_zsmj/article/details/88830388" target="_blank" rel="noopener">https://blog.csdn.net/neuq_zsmj/article/details/88830388</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/03/27/CF-883/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -784,12 +983,24 @@
                 
               
 
-              <time title="Created: 2019-03-23 01:20:00 / Modified: 01:26:39" itemprop="dateCreated datePublished" datetime="2019-03-23T01:20:00+08:00">2019-03-23</time>
+              <time title="Created: 2019-03-23 01:20:00" itemprop="dateCreated datePublished" datetime="2019-03-23T01:20:00+08:00">2019-03-23</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-28 16:26:12" itemprop="dateModified" datetime="2019-03-28T16:26:12+08:00">2019-03-28</time>
               
             
           </span>
@@ -1967,180 +2178,6 @@ P(n)=\sum\limits_{k=1}^n(-1)^{k+1}\left [P\left( n-\frac 1 2k(3k-1)\right)+P\lef
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/03/22/LightOJ-1197/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="PerpEternal">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="P's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/22/LightOJ-1197/" class="post-title-link" itemprop="url">LightOJ-1197 Help Hanzo</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-22 11:00:23 / Modified: 11:03:10" itemprop="dateCreated datePublished" datetime="2019-03-22T11:00:23+08:00">2019-03-22</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/lightoj/" itemprop="url" rel="index"><span itemprop="name">lightoj</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-            <span id="/2019/03/22/LightOJ-1197/" class="leancloud_visitors" data-flag-title="LightOJ-1197 Help Hanzo">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Views: </span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>求a~b间素数个数(1 ≤ a ≤ b &lt; 2^31, b - a ≤ 100000).</p>
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>b-a这个区间比较小，所以可以用区间素数筛选的办法解决这个题目。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ull unsigned long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 0x3f3f3f3f</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mod (int)1e9+7</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> for0(i, n) for (int i = 0; i &lt; n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> for1(i, n) for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> forl(i, l, r) for (int i = l; i &lt;= r; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> forn(i, n) for (int i = n; i &gt;= 0; i--)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem0(a) memset(a, 0, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem1(a) memset(a, 1 , sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem_1(a) memset(a, -1, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> meminf(a) memset(a, inf, sizeof(a))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">100005</span>;</span><br><span class="line"><span class="keyword">bool</span> a[N+<span class="number">1</span>];</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; prime;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getPrime</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(a,<span class="literal">true</span>,<span class="keyword">sizeof</span>(a));</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=N;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i]) prime.push_back(i);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;(<span class="keyword">int</span>)prime.size()&amp;&amp;i*prime[j]&lt;=N;j++)&#123;</span><br><span class="line">            a[i*prime[j]]=<span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">if</span>(!(i%prime[j])) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="comment">//ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);</span></span><br><span class="line">  <span class="comment">//freopen("in.txt", "r", stdin);</span></span><br><span class="line">  ll t,a,b;</span><br><span class="line">  <span class="keyword">bool</span> isprime[<span class="number">100005</span>];</span><br><span class="line">  getPrime();</span><br><span class="line">  <span class="comment">//cout&lt;&lt;prime.size();</span></span><br><span class="line">  <span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">  for1(k,t)&#123;</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">    mem1(isprime);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;prime[i]*prime[i]&lt;=b&amp;&amp;i&lt;(<span class="keyword">int</span>)prime.size();i++)&#123;</span><br><span class="line">      ll l=a/prime[i];</span><br><span class="line">      <span class="keyword">if</span> (l*prime[i]&lt;a) l++;</span><br><span class="line">      <span class="keyword">if</span> (l&lt;<span class="number">2</span>) l=<span class="number">2</span>;</span><br><span class="line">      <span class="keyword">for</span> (; l*prime[i]&lt;=b; l++) isprime[l*prime[i]-a]=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (a==<span class="number">1</span>) isprime[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    for0(i,b-a+<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">if</span> (isprime[i])ans++;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Case %d: %d\n"</span>,k,ans );</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2190,7 +2227,7 @@ P(n)=\sum\limits_{k=1}^n(-1)^{k+1}\left [P\left( n-\frac 1 2k(3k-1)\right)+P\lef
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">25</span>
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2248,7 +2285,9 @@ P(n)=\sum\limits_{k=1}^n(-1)^{k+1}\left [P\left( n-\frac 1 2k(3k-1)\right)+P\lef
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -2847,9 +2886,9 @@ P(n)=\sum\limits_{k=1}^n(-1)^{k+1}\left [P\left( n-\frac 1 2k(3k-1)\right)+P\lef
   
     
       
-    
-      
         
+      
+    
       
     
       
