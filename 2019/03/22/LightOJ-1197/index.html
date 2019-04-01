@@ -98,18 +98,18 @@
 
 
 
-  <meta name="description" content="题意求a~b间素数个数(1 ≤ a ≤ b &amp;lt; 2^31, b - a ≤ 100000). 题解b-a这个区间比较小，所以可以用区间素数筛选的办法解决这个题目。 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354#include &amp;lt;b">
+  <meta name="description" content="题意求a~b间素数个数(1 ≤ a ≤ b &amp;lt; 2^31, b - a ≤ 100000).">
 <meta name="keywords" content="math">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LightOJ-1197 Help Hanzo">
 <meta property="og:url" content="http://perpeternal.github.io/2019/03/22/LightOJ-1197/index.html">
 <meta property="og:site_name" content="P&#39;s Blog">
-<meta property="og:description" content="题意求a~b间素数个数(1 ≤ a ≤ b &amp;lt; 2^31, b - a ≤ 100000). 题解b-a这个区间比较小，所以可以用区间素数筛选的办法解决这个题目。 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354#include &amp;lt;b">
+<meta property="og:description" content="题意求a~b间素数个数(1 ≤ a ≤ b &amp;lt; 2^31, b - a ≤ 100000).">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-22T03:03:10.844Z">
+<meta property="og:updated_time" content="2019-04-01T07:13:19.146Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LightOJ-1197 Help Hanzo">
-<meta name="twitter:description" content="题意求a~b间素数个数(1 ≤ a ≤ b &amp;lt; 2^31, b - a ≤ 100000). 题解b-a这个区间比较小，所以可以用区间素数筛选的办法解决这个题目。 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354#include &amp;lt;b">
+<meta name="twitter:description" content="题意求a~b间素数个数(1 ≤ a ≤ b &amp;lt; 2^31, b - a ≤ 100000).">
 
 
 
@@ -414,12 +414,24 @@
                 
               
 
-              <time title="Created: 2019-03-22 11:00:23 / Modified: 11:03:10" itemprop="dateCreated datePublished" datetime="2019-03-22T11:00:23+08:00">2019-03-22</time>
+              <time title="Created: 2019-03-22 11:00:23" itemprop="dateCreated datePublished" datetime="2019-03-22T11:00:23+08:00">2019-03-22</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-01 15:13:19" itemprop="dateModified" datetime="2019-04-01T15:13:19+08:00">2019-04-01</time>
               
             
           </span>
@@ -483,6 +495,7 @@
 
       
         <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>求a~b间素数个数(1 ≤ a ≤ b &lt; 2^31, b - a ≤ 100000).</p>
+<a id="more"></a>
 <h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>b-a这个区间比较小，所以可以用区间素数筛选的办法解决这个题目。</p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ull unsigned long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 0x3f3f3f3f</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mod (int)1e9+7</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> for0(i, n) for (int i = 0; i &lt; n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> for1(i, n) for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> forl(i, l, r) for (int i = l; i &lt;= r; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> forn(i, n) for (int i = n; i &gt;= 0; i--)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem0(a) memset(a, 0, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem1(a) memset(a, 1 , sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem_1(a) memset(a, -1, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> meminf(a) memset(a, inf, sizeof(a))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">100005</span>;</span><br><span class="line"><span class="keyword">bool</span> a[N+<span class="number">1</span>];</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; prime;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getPrime</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(a,<span class="literal">true</span>,<span class="keyword">sizeof</span>(a));</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=N;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i]) prime.push_back(i);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;(<span class="keyword">int</span>)prime.size()&amp;&amp;i*prime[j]&lt;=N;j++)&#123;</span><br><span class="line">            a[i*prime[j]]=<span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">if</span>(!(i%prime[j])) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="comment">//ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);</span></span><br><span class="line">  <span class="comment">//freopen("in.txt", "r", stdin);</span></span><br><span class="line">  ll t,a,b;</span><br><span class="line">  <span class="keyword">bool</span> isprime[<span class="number">100005</span>];</span><br><span class="line">  getPrime();</span><br><span class="line">  <span class="comment">//cout&lt;&lt;prime.size();</span></span><br><span class="line">  <span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">  for1(k,t)&#123;</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">    mem1(isprime);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;prime[i]*prime[i]&lt;=b&amp;&amp;i&lt;(<span class="keyword">int</span>)prime.size();i++)&#123;</span><br><span class="line">      ll l=a/prime[i];</span><br><span class="line">      <span class="keyword">if</span> (l*prime[i]&lt;a) l++;</span><br><span class="line">      <span class="keyword">if</span> (l&lt;<span class="number">2</span>) l=<span class="number">2</span>;</span><br><span class="line">      <span class="keyword">for</span> (; l*prime[i]&lt;=b; l++) isprime[l*prime[i]-a]=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (a==<span class="number">1</span>) isprime[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    for0(i,b-a+<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">if</span> (isprime[i])ans++;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Case %d: %d\n"</span>,k,ans );</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -605,7 +618,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

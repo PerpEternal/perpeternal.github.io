@@ -109,7 +109,7 @@
 <meta property="og:image" content="http://perpeternal.github.io/2019/03/20/图形排版/RequireFile-20190320231343264.do">
 <meta property="og:image" content="http://perpeternal.github.io/2019/03/20/图形排版/RequireFile-20190320231329922.do">
 <meta property="og:image" content="http://perpeternal.github.io/2019/03/20/图形排版/RequireFile.do">
-<meta property="og:updated_time" content="2019-03-21T14:01:40.270Z">
+<meta property="og:updated_time" content="2019-04-01T07:13:43.631Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图形排版">
 <meta name="twitter:description" content="题意小明需要在一篇文档中加入 N 张图片，其中第 i 张图片的宽度是 Wi，高度是 Hi。假设纸张的宽度是 M，小明使用的文档编辑工具会用以下方式对图片进行自动排版：  该工具会按照图片顺序，在宽度 M 以内，将尽可能多的图片排在一行。该行的高度是行内最高的图片的高度。例如在 M=10 的纸张上依次打印 3x4, 2x2, 3x3 三张图片，则效果如下图所示，这一行高度为4。(分割线以上为列标尺，">
@@ -435,7 +435,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-21 22:01:40" itemprop="dateModified" datetime="2019-03-21T22:01:40+08:00">2019-03-21</time>
+                <time title="Modified: 2019-04-01 15:13:43" itemprop="dateModified" datetime="2019-04-01T15:13:43+08:00">2019-04-01</time>
               
             
           </span>
@@ -506,6 +506,7 @@
 </li>
 <li><p>如果当前行剩余宽度为0，该工具会从下一行开始继续对剩余的图片进行排版，直到所有图片都处理完毕。此时所有行的总高度和就是这 N 张图片的排版高度。例如再放入11x1, 5x5, 3x4 的图片后，效果如下图所示，总高度为11：<br><img src="/2019/03/20/图形排版/RequireFile.do" alt="img"></p>
 <p>现在由于排版高度过高，图片的先后顺序也不能改变，小明只好从 N 张图片中选择一张删除掉以降低总高度。他希望剩余N-1张图片按原顺序的排版高度最低，你能求出最低高度是多少么？</p>
+<a id="more"></a>
 </li>
 </ol>
 <h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>预处理以第 i 张图为行首的最低高度，然后枚举删图。</p>
@@ -630,7 +631,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

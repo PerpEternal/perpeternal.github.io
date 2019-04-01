@@ -98,18 +98,18 @@
 
 
 
-  <meta name="description" content="D. Steps to One题意每次从$1\sim m$从等概率的选择一个数, 直到所有选择的数的 gcd 为 1, 问操作的次数的期望是多少? 题解1设$f[n]$表示当前 gcd 为 n 还需要的步数的期望  f[n]=1+\frac {\sum\limits_{i=1}^mf[gcd(i,n)]} m\\ \sum\limits_{i=1}^mf[gcd(i,n)]=\sum\limits">
-<meta name="keywords" content="dp,math,number theory">
+  <meta name="description" content="D. Steps to One题意每次从$1\sim m$从等概率的选择一个数, 直到所有选择的数的 gcd 为 1, 问操作的次数的期望是多少?">
+<meta name="keywords" content="math,dp,number theory">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CF-1139">
 <meta property="og:url" content="http://perpeternal.github.io/2019/03/30/CF-1139/index.html">
 <meta property="og:site_name" content="P&#39;s Blog">
-<meta property="og:description" content="D. Steps to One题意每次从$1\sim m$从等概率的选择一个数, 直到所有选择的数的 gcd 为 1, 问操作的次数的期望是多少? 题解1设$f[n]$表示当前 gcd 为 n 还需要的步数的期望  f[n]=1+\frac {\sum\limits_{i=1}^mf[gcd(i,n)]} m\\ \sum\limits_{i=1}^mf[gcd(i,n)]=\sum\limits">
+<meta property="og:description" content="D. Steps to One题意每次从$1\sim m$从等概率的选择一个数, 直到所有选择的数的 gcd 为 1, 问操作的次数的期望是多少?">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-01T01:41:34.696Z">
+<meta property="og:updated_time" content="2019-04-01T07:04:05.703Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CF-1139">
-<meta name="twitter:description" content="D. Steps to One题意每次从$1\sim m$从等概率的选择一个数, 直到所有选择的数的 gcd 为 1, 问操作的次数的期望是多少? 题解1设$f[n]$表示当前 gcd 为 n 还需要的步数的期望  f[n]=1+\frac {\sum\limits_{i=1}^mf[gcd(i,n)]} m\\ \sum\limits_{i=1}^mf[gcd(i,n)]=\sum\limits">
+<meta name="twitter:description" content="D. Steps to One题意每次从$1\sim m$从等概率的选择一个数, 直到所有选择的数的 gcd 为 1, 问操作的次数的期望是多少?">
 
 
 
@@ -431,7 +431,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-01 09:41:34" itemprop="dateModified" datetime="2019-04-01T09:41:34+08:00">2019-04-01</time>
+                <time title="Modified: 2019-04-01 15:04:05" itemprop="dateModified" datetime="2019-04-01T15:04:05+08:00">2019-04-01</time>
               
             
           </span>
@@ -495,7 +495,8 @@
 
       
         <h2 id="D-Steps-to-One"><a href="#D-Steps-to-One" class="headerlink" title="D. Steps to One"></a>D. Steps to One</h2><h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>每次从$1\sim m$从等概率的选择一个数, 直到所有选择的数的 gcd 为 1, 问操作的次数的期望是多少?</p>
-<h4 id="题解1"><a href="#题解1" class="headerlink" title="题解1"></a>题解1</h4><p>设$f[n]$表示当前 gcd 为 n 还需要的步数的期望</p>
+<a id="more"></a>
+<h4 id="题解1"><a href="#题解1" class="headerlink" title="题解1"></a>题解1</h4><p>设$f[n]​$表示当前 gcd 为 n 还需要的步数的期望</p>
 <script type="math/tex; mode=display">
 f[n]=1+\frac {\sum\limits_{i=1}^mf[gcd(i,n)]} m\\
 \sum\limits_{i=1}^mf[gcd(i,n)]=\sum\limits_{d|n}f[d]\sum\limits_{i=1}^me[gcd(i,n)==d]\\
@@ -533,9 +534,9 @@ ans=1+E[i>1]=1+\sum_{j=2}^m-\mu(j)E[j|i]</script><h4 id="代码"><a href="#代�
       
         <div class="post-tags">
           
-            <a href="/tags/dp/" rel="tag"># dp</a>
-          
             <a href="/tags/math/" rel="tag"># math</a>
+          
+            <a href="/tags/dp/" rel="tag"># dp</a>
           
             <a href="/tags/number-theory/" rel="tag"># number theory</a>
           
@@ -559,6 +560,10 @@ ans=1+E[i>1]=1+\sum_{j=2}^m-\mu(j)E[j|i]</script><h4 id="代码"><a href="#代�
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/01/CF-1144/" rel="prev" title="CF-1144">
+                CF-1144 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -630,7 +635,7 @@ ans=1+E[i>1]=1+\sum_{j=2}^m-\mu(j)E[j|i]</script><h4 id="代码"><a href="#代�
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

@@ -98,18 +98,18 @@
 
 
 
-  <meta name="description" content="题意给你一个字符串s，s[i] = ‘D’表示排列中a[i] &amp;gt; a[i+1]，s[i] = ‘I’表示排列中a[i] &amp;lt; a[i+1]。 比如排列 {3, 1, 2, 7, 4, 6, 5} 表示为字符串 DIIDID。 题解很巧妙的DP做法，$dp[i][j]$表示前i个满足字符串条件的结尾为j的 i 的排列，注意是i的排列，前面并没有数大于i。那又是如何往下递推呢？ 如果s[i">
+  <meta name="description" content="题意给你一个字符串s，s[i] = ‘D’表示排列中a[i] &amp;gt; a[i+1]，s[i] = ‘I’表示排列中a[i] &amp;lt; a[i+1]。 比如排列 {3, 1, 2, 7, 4, 6, 5} 表示为字符串 DIIDID。">
 <meta name="keywords" content="dp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDU-4055 Number String">
 <meta property="og:url" content="http://perpeternal.github.io/2019/03/22/HDU-4055/index.html">
 <meta property="og:site_name" content="P&#39;s Blog">
-<meta property="og:description" content="题意给你一个字符串s，s[i] = ‘D’表示排列中a[i] &amp;gt; a[i+1]，s[i] = ‘I’表示排列中a[i] &amp;lt; a[i+1]。 比如排列 {3, 1, 2, 7, 4, 6, 5} 表示为字符串 DIIDID。 题解很巧妙的DP做法，$dp[i][j]$表示前i个满足字符串条件的结尾为j的 i 的排列，注意是i的排列，前面并没有数大于i。那又是如何往下递推呢？ 如果s[i">
+<meta property="og:description" content="题意给你一个字符串s，s[i] = ‘D’表示排列中a[i] &amp;gt; a[i+1]，s[i] = ‘I’表示排列中a[i] &amp;lt; a[i+1]。 比如排列 {3, 1, 2, 7, 4, 6, 5} 表示为字符串 DIIDID。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-22T03:07:29.181Z">
+<meta property="og:updated_time" content="2019-04-01T07:13:07.747Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDU-4055 Number String">
-<meta name="twitter:description" content="题意给你一个字符串s，s[i] = ‘D’表示排列中a[i] &amp;gt; a[i+1]，s[i] = ‘I’表示排列中a[i] &amp;lt; a[i+1]。 比如排列 {3, 1, 2, 7, 4, 6, 5} 表示为字符串 DIIDID。 题解很巧妙的DP做法，$dp[i][j]$表示前i个满足字符串条件的结尾为j的 i 的排列，注意是i的排列，前面并没有数大于i。那又是如何往下递推呢？ 如果s[i">
+<meta name="twitter:description" content="题意给你一个字符串s，s[i] = ‘D’表示排列中a[i] &amp;gt; a[i+1]，s[i] = ‘I’表示排列中a[i] &amp;lt; a[i+1]。 比如排列 {3, 1, 2, 7, 4, 6, 5} 表示为字符串 DIIDID。">
 
 
 
@@ -414,12 +414,24 @@
                 
               
 
-              <time title="Created: 2019-03-22 11:02:29 / Modified: 11:07:29" itemprop="dateCreated datePublished" datetime="2019-03-22T11:02:29+08:00">2019-03-22</time>
+              <time title="Created: 2019-03-22 11:02:29" itemprop="dateCreated datePublished" datetime="2019-03-22T11:02:29+08:00">2019-03-22</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-01 15:13:07" itemprop="dateModified" datetime="2019-04-01T15:13:07+08:00">2019-04-01</time>
               
             
           </span>
@@ -484,6 +496,7 @@
       
         <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>给你一个字符串s，s[i] = ‘D’表示排列中a[i] &gt; a[i+1]，s[i] = ‘I’表示排列中a[i] &lt; a[i+1]。</p>
 <p>比如排列 {3, 1, 2, 7, 4, 6, 5} 表示为字符串 DIIDID。</p>
+<a id="more"></a>
 <h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>很巧妙的DP做法，$dp[i][j]$表示前i个满足字符串条件的结尾为j的 i 的排列，注意是i的排列，前面并没有数大于i。那又是如何往下递推呢？</p>
 <p>如果s[i - 1]是’ I ‘，那么$dp[i][j] = dp[i-1][j-1] + dp[i-1][j-2] + .. + dp[i-1][1]$<br>如果s[i - 1]是‘D’，那么$dp[i][j] = dp[i-1][j] + dp[i-1][j+1] + … + dp[i-1][i]$，因为要令当前位为j，如果前面出现过j，就令前面的所有大于等于j的数+1，就能构造出新的排列了。</p>
 <p>比如{1, 3, 5, 2, 4}，要在第六位插入3,令 &gt;= 3的数都+1，于是就构造出新的 排列{1, 4, 6, 2, 5, 3}。然后代码的话处理出前缀和$sum[i][j]$，就不用$dp[i][j]$了。</p>
@@ -609,7 +622,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
