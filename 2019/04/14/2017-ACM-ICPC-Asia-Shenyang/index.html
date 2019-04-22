@@ -98,17 +98,18 @@
 
 
 
-  <meta name="description" content="A. BBP Formula题意 \pi=\sum_{k=0}^{\infty}\frac 1 {16^k}\left( \frac 4 {8k+1}-\frac 2 {8k+4}-\frac 1 {8k+5}-\frac 1 {8k+6}\right)求 $\pi​$ 十六进制表达的小数点后第 $n​$ 位. 题解求十进制小数的十六进制形式, 去掉整数部分, 小数部分乘 16 得到的数的整数部分">
+  <meta name="description" content="A. BBP Formula题意 \pi=\sum_{k=0}^{\infty}\frac 1 {16^k}\left( \frac 4 {8k+1}-\frac 2 {8k+4}-\frac 1 {8k+5}-\frac 1 {8k+6}\right)求 $\pi$ 十六进制表达的小数点后第 $n$ 位.">
+<meta name="keywords" content="math">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2017-ACM-ICPC-Asia-Shenyang">
 <meta property="og:url" content="http://perpeternal.github.io/2019/04/14/2017-ACM-ICPC-Asia-Shenyang/index.html">
 <meta property="og:site_name" content="P&#39;s Blog">
-<meta property="og:description" content="A. BBP Formula题意 \pi=\sum_{k=0}^{\infty}\frac 1 {16^k}\left( \frac 4 {8k+1}-\frac 2 {8k+4}-\frac 1 {8k+5}-\frac 1 {8k+6}\right)求 $\pi​$ 十六进制表达的小数点后第 $n​$ 位. 题解求十进制小数的十六进制形式, 去掉整数部分, 小数部分乘 16 得到的数的整数部分">
+<meta property="og:description" content="A. BBP Formula题意 \pi=\sum_{k=0}^{\infty}\frac 1 {16^k}\left( \frac 4 {8k+1}-\frac 2 {8k+4}-\frac 1 {8k+5}-\frac 1 {8k+6}\right)求 $\pi$ 十六进制表达的小数点后第 $n$ 位.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-19T09:37:21.234Z">
+<meta property="og:updated_time" content="2019-04-22T13:11:53.468Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017-ACM-ICPC-Asia-Shenyang">
-<meta name="twitter:description" content="A. BBP Formula题意 \pi=\sum_{k=0}^{\infty}\frac 1 {16^k}\left( \frac 4 {8k+1}-\frac 2 {8k+4}-\frac 1 {8k+5}-\frac 1 {8k+6}\right)求 $\pi​$ 十六进制表达的小数点后第 $n​$ 位. 题解求十进制小数的十六进制形式, 去掉整数部分, 小数部分乘 16 得到的数的整数部分">
+<meta name="twitter:description" content="A. BBP Formula题意 \pi=\sum_{k=0}^{\infty}\frac 1 {16^k}\left( \frac 4 {8k+1}-\frac 2 {8k+4}-\frac 1 {8k+5}-\frac 1 {8k+6}\right)求 $\pi$ 十六进制表达的小数点后第 $n$ 位.">
 
 
 
@@ -430,11 +431,29 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-19 17:37:21" itemprop="dateModified" datetime="2019-04-19T17:37:21+08:00">2019-04-19</time>
+                <time title="Modified: 2019-04-22 21:11:53" itemprop="dateModified" datetime="2019-04-22T21:11:53+08:00">2019-04-22</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/icpc/" itemprop="url" rel="index"><span itemprop="name">icpc</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -476,12 +495,13 @@
 
       
         <h2 id="A-BBP-Formula"><a href="#A-BBP-Formula" class="headerlink" title="A. BBP Formula"></a>A. BBP Formula</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><script type="math/tex; mode=display">
-\pi=\sum_{k=0}^{\infty}\frac 1 {16^k}\left( \frac 4 {8k+1}-\frac 2 {8k+4}-\frac 1 {8k+5}-\frac 1 {8k+6}\right)</script><p>求 $\pi​$ 十六进制表达的小数点后第 $n​$ 位.</p>
+\pi=\sum_{k=0}^{\infty}\frac 1 {16^k}\left( \frac 4 {8k+1}-\frac 2 {8k+4}-\frac 1 {8k+5}-\frac 1 {8k+6}\right)</script><p>求 $\pi$ 十六进制表达的小数点后第 $n$ 位.</p>
+<a id="more"></a>
 <h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>求十进制小数的十六进制形式, 去掉整数部分, 小数部分乘 16 得到的数的整数部分就是小数点后第一位的十六进制值, 以此类推.</p>
 <script type="math/tex; mode=display">
 16^n\sum_{k=0}^{\infty}\frac 1 {16^k} \frac 4 {8k+1}
 =\sum_{k=0}^{n}\frac {4*16^{n-k}\%(8k+1)} {8k+1}+\sum_{k=n+1}^{\infty}\frac 4 {16^{k-n}(8k+1)}</script><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> forl(i, l, r) for (int i = l; i &lt;= r; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> forr(i, r, l) for (int i = r; i &gt;= l; i--)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> for1(i, n) for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fro1(i, n) for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> for0(i, n) for (int i = 0; i &lt; n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fro0(i, n) for (int i = 0; i &lt; n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> meminf(a) memset(a, inf, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem_1(a) memset(a, -1, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem0(a) memset(a, 0, sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> oper(type) bool operator &lt;(const type y)const</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mp make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fi first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> se second</span></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">long</span> <span class="keyword">long</span>, <span class="keyword">long</span> <span class="keyword">long</span>&gt; pll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; vll;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; pii;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vii;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">double</span> db;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> itn;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(<span class="keyword">int</span> &amp;a,<span class="keyword">int</span> &amp;b,<span class="keyword">int</span> &amp;c,<span class="keyword">int</span> &amp;d)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;a,&amp;b,&amp;c,&amp;d);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(<span class="keyword">int</span> &amp;a,<span class="keyword">int</span> &amp;b,<span class="keyword">int</span> &amp;c)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;c);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(<span class="keyword">int</span> &amp;a,<span class="keyword">int</span> &amp;b)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;a,&amp;b);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(ll &amp;a)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;a);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(<span class="keyword">int</span> &amp;a)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(<span class="keyword">char</span> *s)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%s"</span>,s);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(<span class="keyword">char</span> &amp;s)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%c"</span>,&amp;s);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">in</span><span class="params">(db &amp;a)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%Lf"</span>,&amp;a);&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">out</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;<span class="built_in">printf</span>(<span class="string">"%d"</span>,a);&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">outln</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,a);&#125;</span><br><span class="line"><span class="keyword">const</span> db pi = <span class="built_in">acos</span>((db)<span class="number">-1</span>);</span><br><span class="line"><span class="keyword">const</span> ll inf =<span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">const</span> db eps = <span class="number">1e-8</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1.1e5</span>;</span><br><span class="line"><span class="keyword">const</span> ll mod = <span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sign</span><span class="params">(db a)</span> </span>&#123; <span class="keyword">return</span> a &lt; -eps ? <span class="number">-1</span> : a &gt; eps;&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">db_cmp</span><span class="params">(db a, db b)</span></span>&#123; <span class="keyword">return</span> sign(a-b); &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="function">ll <span class="title">qPow</span><span class="params">(ll a, ll b, ll c)</span> </span>&#123;  <span class="comment">//求(a^b) % c</span></span><br><span class="line">    ll ret = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (b) &#123;</span><br><span class="line">        <span class="keyword">if</span> (b &amp; <span class="number">0x1</span>) ret = ret * a % c;</span><br><span class="line">        a = a * a % c;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">db <span class="title">fun</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    db ans=<span class="number">0</span>;</span><br><span class="line">    for0(i,n+<span class="number">1</span>)&#123;</span><br><span class="line">        ll w=a*qPow(<span class="number">16</span>,n-i,<span class="number">8</span>*i+b)%(<span class="number">8</span>*i+b);</span><br><span class="line">        ans+=(db)w/(<span class="number">8</span>*i+b);</span><br><span class="line">    &#125;</span><br><span class="line">    ll ppow=<span class="number">1</span>;</span><br><span class="line">    for1(i,<span class="number">15</span>)&#123;</span><br><span class="line">        ppow*=<span class="number">16</span>;</span><br><span class="line">        <span class="comment">// cout&lt;&lt;ppow&lt;&lt;endl;</span></span><br><span class="line">        ans+=(db)a/ppow/(<span class="number">8</span>*(i+n)+b);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> PerpEternal</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/in.dat", "r", stdin);</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/out.dat", "w", stdout);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="comment">//ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);</span></span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    in(t);</span><br><span class="line">    for1(ca,t)&#123;</span><br><span class="line">        in(n);</span><br><span class="line">        n--;</span><br><span class="line">        db ans=fun(<span class="number">4</span>,<span class="number">1</span>)-fun(<span class="number">2</span>,<span class="number">4</span>)-fun(<span class="number">1</span>,<span class="number">5</span>)-fun(<span class="number">1</span>,<span class="number">6</span>);</span><br><span class="line">        <span class="comment">// cout&lt;&lt;ans&lt;&lt;endl;</span></span><br><span class="line">        <span class="keyword">while</span>(ans&lt;<span class="number">0</span>)ans++;</span><br><span class="line">        <span class="keyword">while</span>(ans&gt;<span class="number">1</span>)ans--;</span><br><span class="line">        <span class="comment">// cout&lt;&lt;ans&lt;&lt;endl;</span></span><br><span class="line">        <span class="keyword">int</span> k=ans*<span class="number">16</span>;</span><br><span class="line">        <span class="comment">// cout&lt;&lt;k&lt;&lt;endl;</span></span><br><span class="line">        <span class="keyword">if</span>(k&gt;=<span class="number">10</span>)<span class="built_in">printf</span>(<span class="string">"Case #%d: %d %c\n"</span>,ca,n+<span class="number">1</span>,k<span class="number">-10</span>+<span class="string">'A'</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"Case #%d: %d %d\n"</span>,ca,n+<span class="number">1</span>,k);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="F-Heron-and-His-Triangle"><a href="#F-Heron-and-His-Triangle" class="headerlink" title="F. Heron and His Triangle"></a>F. Heron and His Triangle</h2><h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>设三角形的三条边为 $t-1,t,t+1​$ ，给一个 $n(1\le n\le 1e30)​$ ，求大于 $n​$ 且三角形面积为整数的最小 $t​$</p>
+<h2 id="F-Heron-and-His-Triangle"><a href="#F-Heron-and-His-Triangle" class="headerlink" title="F. Heron and His Triangle"></a>F. Heron and His Triangle</h2><h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>设三角形的三条边为 $t-1,t,t+1$ ，给一个 $n(1\le n\le 1e30)$ ，求大于 $n$ 且三角形面积为整数的最小 $t$</p>
 <h3 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h3><p>由海伦公式得</p>
 <script type="math/tex; mode=display">
 S=\sqrt {p(p-a)(p-b)(p-c)}\ ,p=\frac {a+b+c}2\\
@@ -509,6 +529,12 @@ x_n=4x_{n-1}-x_{n-2}</script><h3 id="代码-1"><a href="#代码-1" class="header
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/math/" rel="tag"># math</a>
+          
+        </div>
       
 
       
@@ -628,7 +654,9 @@ x_n=4x_{n-1}-x_{n-2}</script><h3 id="代码-1"><a href="#代码-1" class="header
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -663,7 +691,9 @@ x_n=4x_{n-1}-x_{n-2}</script><h3 id="代码-1"><a href="#代码-1" class="header
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1289,6 +1319,43 @@ x_n=4x_{n-1}-x_{n-2}</script><h3 id="代码-1"><a href="#代码-1" class="header
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
   
 
 
