@@ -98,17 +98,17 @@
 
 
 
-  <meta name="description" content="E. K Multiple Longest Commom Subsequence题意两个数组 $1\le k,n,m\le 1e3$, 问最长 $k$ 倍公共子序列是多少,  $k$ 倍子序列指的是, 将子序列等分, 每份为 $k$ 个数, 且这 $k$ 个数相同. 如 $1,1,2,2$ 是一个 $2$ 倍子序列 题解$\text{pre_a[i]}$ 表示从 $i$ 开始往前数, 第 $k$">
+  <meta name="description" content="E. K Multiple Longest Commom Subsequence题意两个数组 $1\le k,n,m\le 1e3$, 问最长 $k$ 倍公共子序列是多少,  $k$ 倍子序列指的是, 将子序列等分, 每份为 $k$ 个数, 且这 $k$ 个数相同. 如 $1,1,2,2$ 是一个 $2$ 倍子序列">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2018河北省省赛">
 <meta property="og:url" content="http://perpeternal.github.io/2019/05/01/2018河北省省赛/index.html">
 <meta property="og:site_name" content="P&#39;s Blog">
-<meta property="og:description" content="E. K Multiple Longest Commom Subsequence题意两个数组 $1\le k,n,m\le 1e3$, 问最长 $k$ 倍公共子序列是多少,  $k$ 倍子序列指的是, 将子序列等分, 每份为 $k$ 个数, 且这 $k$ 个数相同. 如 $1,1,2,2$ 是一个 $2$ 倍子序列 题解$\text{pre_a[i]}$ 表示从 $i$ 开始往前数, 第 $k$">
+<meta property="og:description" content="E. K Multiple Longest Commom Subsequence题意两个数组 $1\le k,n,m\le 1e3$, 问最长 $k$ 倍公共子序列是多少,  $k$ 倍子序列指的是, 将子序列等分, 每份为 $k$ 个数, 且这 $k$ 个数相同. 如 $1,1,2,2$ 是一个 $2$ 倍子序列">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-01T13:21:12.957Z">
+<meta property="og:updated_time" content="2019-06-12T05:20:22.076Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2018河北省省赛">
-<meta name="twitter:description" content="E. K Multiple Longest Commom Subsequence题意两个数组 $1\le k,n,m\le 1e3$, 问最长 $k$ 倍公共子序列是多少,  $k$ 倍子序列指的是, 将子序列等分, 每份为 $k$ 个数, 且这 $k$ 个数相同. 如 $1,1,2,2$ 是一个 $2$ 倍子序列 题解$\text{pre_a[i]}$ 表示从 $i$ 开始往前数, 第 $k$">
+<meta name="twitter:description" content="E. K Multiple Longest Commom Subsequence题意两个数组 $1\le k,n,m\le 1e3$, 问最长 $k$ 倍公共子序列是多少,  $k$ 倍子序列指的是, 将子序列等分, 每份为 $k$ 个数, 且这 $k$ 个数相同. 如 $1,1,2,2$ 是一个 $2$ 倍子序列">
 
 
 
@@ -413,12 +413,24 @@
                 
               
 
-              <time title="Created: 2019-05-01 20:44:15 / Modified: 21:21:12" itemprop="dateCreated datePublished" datetime="2019-05-01T20:44:15+08:00">2019-05-01</time>
+              <time title="Created: 2019-05-01 20:44:15" itemprop="dateCreated datePublished" datetime="2019-05-01T20:44:15+08:00">2019-05-01</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-12 13:20:22" itemprop="dateModified" datetime="2019-06-12T13:20:22+08:00">2019-06-12</time>
               
             
           </span>
@@ -482,6 +494,7 @@
 
       
         <h2 id="E-K-Multiple-Longest-Commom-Subsequence"><a href="#E-K-Multiple-Longest-Commom-Subsequence" class="headerlink" title="E. K Multiple Longest Commom Subsequence"></a>E. K Multiple Longest Commom Subsequence</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>两个数组 $1\le k,n,m\le 1e3$, 问最长 $k$ 倍公共子序列是多少,  $k$ 倍子序列指的是, 将子序列等分, 每份为 $k$ 个数, 且这 $k$ 个数相同. 如 $1,1,2,2$ 是一个 $2$ 倍子序列</p>
+<a id="more"></a>
 <h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>$\text{pre_a[i]}$ 表示从 $i$ 开始往前数, 第 $k$ 个 $a[i]$ 的下标</p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> pre_a[N],pre_b[N];</span><br><span class="line"><span class="keyword">int</span> t,k,n,m,x,a[N],b[N],cnt[N],dp[N][N];</span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;que[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    in(t);</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        in(k,n,m);</span><br><span class="line">        mem0(pre_a);</span><br><span class="line">        mem0(pre_b);</span><br><span class="line">        for1(i,<span class="number">1000</span>)<span class="keyword">while</span>(que[i].size())que[i].pop();</span><br><span class="line">        for1(i,n)&#123;</span><br><span class="line">            in(x);</span><br><span class="line">            a[i]=x;</span><br><span class="line">            que[x].push(i);</span><br><span class="line">            <span class="keyword">if</span>(que[x].size()==k)&#123;</span><br><span class="line">                <span class="keyword">int</span> qw=que[x].front();</span><br><span class="line">                que[x].pop();</span><br><span class="line">                pre_a[i]=qw;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for1(i,<span class="number">1000</span>)<span class="keyword">while</span>(que[i].size())que[i].pop();</span><br><span class="line">        for1(i,m)&#123;</span><br><span class="line">            in(x);</span><br><span class="line">            b[i]=x;</span><br><span class="line">            que[x].push(i);</span><br><span class="line">            <span class="keyword">if</span>(que[x].size()==k)&#123;</span><br><span class="line">                <span class="keyword">int</span> qw=que[x].front();</span><br><span class="line">                que[x].pop();</span><br><span class="line">                pre_b[i]=qw;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        mem0(dp);</span><br><span class="line">        for1(i,n)</span><br><span class="line">        for1(j,m)&#123;</span><br><span class="line">            dp[i][j]=max(dp[i][j],max(dp[i<span class="number">-1</span>][j],dp[i][j<span class="number">-1</span>]));</span><br><span class="line">            <span class="keyword">if</span>(a[i]==b[j])&#123;</span><br><span class="line">                <span class="keyword">if</span>(pre_a[i]&amp;&amp;pre_b[j])</span><br><span class="line">                dp[i][j]=max(dp[i][j],dp[ pre_a[i]<span class="number">-1</span> ][ pre_b[j]<span class="number">-1</span> ]+<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        outln(dp[n][m]*k);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="F-Defending-Plan-Support"><a href="#F-Defending-Plan-Support" class="headerlink" title="F. Defending Plan Support"></a>F. Defending Plan Support</h2><h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>给一棵树, 每个点有权值 $\omega(i)$, 每条边有权值 $d(i,j)$, 找一个点 $x$ 使 $F(x)=\sum \omega(i)\times d(x,i)$ 最小</p>
@@ -614,7 +627,7 @@ x=p_1^{a_1}*p_2^{a_2}\cdots p_m^{a_m}</script><p>对方案数来说, 不同素�
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">40</span>
+                    <span class="site-state-item-count">41</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -643,7 +656,9 @@ x=p_1^{a_1}*p_2^{a_2}\cdots p_m^{a_m}</script><p>对方案数来说, 不同素�
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>

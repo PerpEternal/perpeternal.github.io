@@ -98,18 +98,18 @@
 
 
 
-  <meta name="description" content="题意在一个 $n$ 个点的完全图中，第 $i$ 个点的权值为 $2^i$，选择一些边，需要选择一些点使得所有边至少有一个端点被覆盖，同时权值之和最小。在上述情况下，给出选择的点的权值和，问有多少种选择边的方案符合这种选点。 题解对于每一个选定的点, 总有一条边连着它和权值比它大的未被选的点, 设数量为 $cnt1$, 权值比它小的点可取可不取, 设数量为 $cnt2$, 则该点的贡献为  (2^{">
+  <meta name="description" content="题意在一个 $n$ 个点的完全图中，第 $i$ 个点的权值为 $2^i$，选择一些边，需要选择一些点使得所有边至少有一个端点被覆盖，同时权值之和最小。在上述情况下，给出选择的点的权值和，问有多少种选择边的方案符合这种选点。">
 <meta name="keywords" content="graph,combination">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDU-6285">
 <meta property="og:url" content="http://perpeternal.github.io/2019/06/03/HDU-6285/index.html">
 <meta property="og:site_name" content="P&#39;s Blog">
-<meta property="og:description" content="题意在一个 $n$ 个点的完全图中，第 $i$ 个点的权值为 $2^i$，选择一些边，需要选择一些点使得所有边至少有一个端点被覆盖，同时权值之和最小。在上述情况下，给出选择的点的权值和，问有多少种选择边的方案符合这种选点。 题解对于每一个选定的点, 总有一条边连着它和权值比它大的未被选的点, 设数量为 $cnt1$, 权值比它小的点可取可不取, 设数量为 $cnt2$, 则该点的贡献为  (2^{">
+<meta property="og:description" content="题意在一个 $n$ 个点的完全图中，第 $i$ 个点的权值为 $2^i$，选择一些边，需要选择一些点使得所有边至少有一个端点被覆盖，同时权值之和最小。在上述情况下，给出选择的点的权值和，问有多少种选择边的方案符合这种选点。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-07T05:55:38.654Z">
+<meta property="og:updated_time" content="2019-06-12T05:21:00.981Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDU-6285">
-<meta name="twitter:description" content="题意在一个 $n$ 个点的完全图中，第 $i$ 个点的权值为 $2^i$，选择一些边，需要选择一些点使得所有边至少有一个端点被覆盖，同时权值之和最小。在上述情况下，给出选择的点的权值和，问有多少种选择边的方案符合这种选点。 题解对于每一个选定的点, 总有一条边连着它和权值比它大的未被选的点, 设数量为 $cnt1$, 权值比它小的点可取可不取, 设数量为 $cnt2$, 则该点的贡献为  (2^{">
+<meta name="twitter:description" content="题意在一个 $n$ 个点的完全图中，第 $i$ 个点的权值为 $2^i$，选择一些边，需要选择一些点使得所有边至少有一个端点被覆盖，同时权值之和最小。在上述情况下，给出选择的点的权值和，问有多少种选择边的方案符合这种选点。">
 
 
 
@@ -431,7 +431,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-06-07 13:55:38" itemprop="dateModified" datetime="2019-06-07T13:55:38+08:00">2019-06-07</time>
+                <time title="Modified: 2019-06-12 13:21:00" itemprop="dateModified" datetime="2019-06-12T13:21:00+08:00">2019-06-12</time>
               
             
           </span>
@@ -495,6 +495,7 @@
 
       
         <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>在一个 $n$ 个点的完全图中，第 $i$ 个点的权值为 $2^i$，选择一些边，需要选择一些点使得所有边至少有一个端点被覆盖，同时权值之和最小。<br>在上述情况下，给出选择的点的权值和，问有多少种选择边的方案符合这种选点。</p>
+<a id="more"></a>
 <h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>对于每一个选定的点, 总有一条边连着它和权值比它大的未被选的点, 设数量为 $cnt1$, 权值比它小的点可取可不取, 设数量为 $cnt2$, 则该点的贡献为</p>
 <script type="math/tex; mode=display">
 (2^{cnt1}-1)\times2^{cnt2}</script><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"></span><br><span class="line">ll f[N];</span><br><span class="line"><span class="function">ll <span class="title">fun</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    ll qq=(f[a]<span class="number">-1</span>+mod)%mod;</span><br><span class="line">    <span class="keyword">return</span> qq*f[b]%mod;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> PerpEternal</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/in.dat", "r", stdin);</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/out.dat", "w", stdout);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    ios::sync_with_stdio(<span class="number">0</span>); <span class="built_in">cin</span>.tie(<span class="number">0</span>); <span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">int</span> n,a,b;</span><br><span class="line">    f[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    for1(i,<span class="number">100005</span>)&#123;</span><br><span class="line">        f[i]=f[i<span class="number">-1</span>]*<span class="number">2</span>%mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;s)&#123;</span><br><span class="line">        a=b=<span class="number">0</span>;</span><br><span class="line">        ll ans=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.size();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i]==<span class="string">'1'</span>)a++;</span><br><span class="line">        &#125;</span><br><span class="line">        n-=s.size();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=s.size()<span class="number">-1</span>,j=<span class="number">0</span>;i&gt;=<span class="number">0</span>;i--,j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i]==<span class="string">'1'</span>)&#123;</span><br><span class="line">                b++;</span><br><span class="line">                ans=fun(n+i-a+b,j)*ans%mod;</span><br><span class="line">                <span class="comment">// cout&lt;&lt;n+i-a+b&lt;&lt;' '&lt;&lt;j&lt;&lt;endl;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        outln(ans);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -620,7 +621,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">40</span>
+                    <span class="site-state-item-count">41</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -649,7 +650,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
