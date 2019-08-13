@@ -98,18 +98,18 @@
 
 
 
-  <meta name="description" content="题意$f(x)$为斐波那契数列，求$\large\left(\sum\limits_{i=1}^nf(i)\right) mod f(m) mod  p​$ $0&amp;lt;n,m,p&amp;lt;1e18$">
+  <meta name="description" content="题意$f(x)$为斐波那契数列，求$\large\left(\sum\limits_{i=1}^nf(i)\right) mod f(m) mod  p$ $0&amp;lt;n,m,p&amp;lt;1e18$">
 <meta name="keywords" content="math">
 <meta property="og:type" content="article">
 <meta property="og:title" content="斐波那契">
 <meta property="og:url" content="http://perpeternal.github.io/2019/03/20/斐波那契/index.html">
 <meta property="og:site_name" content="P&#39;s Blog">
-<meta property="og:description" content="题意$f(x)$为斐波那契数列，求$\large\left(\sum\limits_{i=1}^nf(i)\right) mod f(m) mod  p​$ $0&amp;lt;n,m,p&amp;lt;1e18$">
+<meta property="og:description" content="题意$f(x)$为斐波那契数列，求$\large\left(\sum\limits_{i=1}^nf(i)\right) mod f(m) mod  p$ $0&amp;lt;n,m,p&amp;lt;1e18$">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-01T07:13:55.000Z">
+<meta property="og:updated_time" content="2019-08-10T10:24:33.132Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="斐波那契">
-<meta name="twitter:description" content="题意$f(x)$为斐波那契数列，求$\large\left(\sum\limits_{i=1}^nf(i)\right) mod f(m) mod  p​$ $0&amp;lt;n,m,p&amp;lt;1e18$">
+<meta name="twitter:description" content="题意$f(x)$为斐波那契数列，求$\large\left(\sum\limits_{i=1}^nf(i)\right) mod f(m) mod  p$ $0&amp;lt;n,m,p&amp;lt;1e18$">
 
 
 
@@ -222,7 +222,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Accueil</a>
 
   </li>
         
@@ -239,7 +239,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>A propos</a>
 
   </li>
         
@@ -301,7 +301,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>recherche</a>
         </li>
       
     </ul>
@@ -407,14 +407,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Posté le</span>
               
 
               
                 
               
 
-              <time title="Created: 2019-03-20 23:20:36" itemprop="dateCreated datePublished" datetime="2019-03-20T23:20:36+08:00">2019-03-20</time>
+              <time title="Post created: 2019-03-20 23:20:36" itemprop="dateCreated datePublished" datetime="2019-03-20T23:20:36+08:00">2019-03-20</time>
             
 
             
@@ -431,7 +431,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-01 15:13:55" itemprop="dateModified" datetime="2019-04-01T15:13:55+08:00">2019-04-01</time>
+                <time title="Updated at: 2019-08-10 18:24:33" itemprop="dateModified" datetime="2019-08-10T18:24:33+08:00">2019-08-10</time>
               
             
           </span>
@@ -494,7 +494,7 @@
       
 
       
-        <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>$f(x)$为斐波那契数列，求$\large\left(\sum\limits_{i=1}^nf(i)\right) mod f(m) mod  p​$</p>
+        <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>$f(x)$为斐波那契数列，求$\large\left(\sum\limits_{i=1}^nf(i)\right) mod f(m) mod  p$</p>
 <p>$0&lt;n,m,p&lt;1e18$</p>
 <a id="more"></a>
 <h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><script type="math/tex; mode=display">
@@ -506,19 +506,19 @@ f(n)^2=(-1)^{n+1}+f(n-1)f(n+1)\\
 f(m-1)^2\ mod\ f(m)=(-1)^m</script><ol>
 <li><p>m 为偶数</p>
 <ul>
-<li>$\frac n m​$为偶数，$f(n) mod f(m)=f(n\%m)​$</li>
-<li>$\frac n m​$为奇数，$f(n) mod f(m)=f(m-1)f(n\%m) mod f(m)​$</li>
+<li>$\frac n m$为偶数，$f(n) mod f(m)=f(n\%m)$</li>
+<li>$\frac n m$为奇数，$f(n) mod f(m)=f(m-1)f(n\%m) mod f(m)$</li>
 </ul>
 </li>
 <li><p>m 为奇数</p>
 <ul>
 <li>$\frac n m$为偶数，$\frac n {2m}$为偶数，$f(n) mod f(m)=f(n\%m)$</li>
 <li>$\frac n m$为偶数，$\frac n {2m}$为奇数，$f(n) mod f(m)=f(m)-f(n\%m)$</li>
-<li>$\frac n m​$为奇数，$\frac n {2m}​$为偶数，$f(n) mod f(m)=f(m-1)f(n\%m) mod f(m)​$</li>
+<li>$\frac n m$为奇数，$\frac n {2m}$为偶数，$f(n) mod f(m)=f(m-1)f(n\%m) mod f(m)$</li>
 <li>$\frac n m$为奇数，$\frac n {2m}$为奇数，$f(n) mod f(m)=f(m)-f(m-1)f(n\%m) mod f(m)$</li>
 </ul>
 </li>
-<li><p>简化$f(m-1)f(n\%m) mod f(m)​$</p>
+<li><p>简化$f(m-1)f(n\%m) mod f(m)$</p>
 <p>性质：若$n\ge1,r\ge2$，则$f(n)f(n+r-1)-f(n+1)f(n+r-2)=(-1)^{n+1}f(r-2)$</p>
 <p>令$k=n\%m,k=n+1,m-1=n+r-2$，则$f(n)f(k-1)-f(m-1)f(k)=(-1)^kf(m-k)$</p>
 <p>所以$f(m-1)f(k) mod  f(m)=(-1)^{k+1}f(m-k) mod f(m)$</p>
@@ -625,10 +625,10 @@ f(m-1)^2\ mod\ f(m)=(-1)^m</script><ol>
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Table Des Matières
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Ensemble
           </li>
         </ul>
       
@@ -650,8 +650,8 @@ f(m-1)^2\ mod\ f(m)=(-1)^m</script><ol>
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">56</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-count">57</span>
+                    <span class="site-state-item-name">articles</span>
                   </a>
                 </div>
               
