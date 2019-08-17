@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="C++数据范围int $ -2.1410^9 \sim 2.1410^9$ unsigned int  $0\sim4.29 *10^ 9$ long long  $-9.2210^{18}\sim9.22 10^ {18}$ unsigned long long  $0\sim1.84 *10^ {19}$ float $-3.4010^{38}\sim3.40 10^ {38}$  6~7 d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++">
+<meta property="og:url" content="http://perpeternal.github.io/2019/08/17/C++/index.html">
+<meta property="og:site_name" content="P&#39;s Blog">
+<meta property="og:description" content="C++数据范围int $ -2.1410^9 \sim 2.1410^9$ unsigned int  $0\sim4.29 *10^ 9$ long long  $-9.2210^{18}\sim9.22 10^ {18}$ unsigned long long  $0\sim1.84 *10^ {19}$ float $-3.4010^{38}\sim3.40 10^ {38}$  6~7 d">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-17T12:48:35.448Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++">
+<meta name="twitter:description" content="C++数据范围int $ -2.1410^9 \sim 2.1410^9$ unsigned int  $0\sim4.29 *10^ 9$ long long  $-9.2210^{18}\sim9.22 10^ {18}$ unsigned long long  $0\sim1.84 *10^ {19}$ float $-3.4010^{38}\sim3.40 10^ {38}$  6~7 d">
+
+
+
+
+
+
+  <link rel="canonical" href="http://perpeternal.github.io/2019/08/17/C++/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>C++ | P's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">P's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>Über</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Suche</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/08/17/C++/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="PerpEternal">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="P's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">C++
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-08-17 17:32:04 / Updated at: 20:48:35" itemprop="dateCreated datePublished" datetime="2019-08-17T17:32:04+08:00">2019-08-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/模板/" itemprop="url" rel="index"><span itemprop="name">模板</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+            <span id="/2019/08/17/C++/" class="leancloud_visitors" data-flag-title="C++">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h1><h2 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h2><p>int $ -2.14<em>10^9 \sim 2.14</em>10^9$</p>
+<p>unsigned int  $0\sim4.29 *10^ 9$</p>
+<p>long long  $-9.22<em>10^{18}\sim9.22 </em>10^ {18}$</p>
+<p>unsigned long long  $0\sim1.84 *10^ {19}$</p>
+<p>float $-3.40<em>10^{38}\sim3.40 </em>10^ {38}$  6~7</p>
+<p>double $-1.79<em>10^{308}\sim1.79 </em>10^ {308}$  15~16</p>
+<p>long double $-1.2<em>10^{4932}~1.2</em>10^{4932}$  18~19</p>
+<h2 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h2><p>memset只管后面的两个字符，然后前面的直接就复制过去, 所以 memset( a,0x3f,sizeof(a) ) 效果等同于 memset( a,0x3f3f3f3f,sizeof(a) )</p>
+<p>strlen()的时间复杂度为O(n)</p>
+<p>s.size()的返回值为unsigned long </p>
+<h2 id="动态数组"><a href="#动态数组" class="headerlink" title="动态数组"></a>动态数组</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">50</span>]</span><br><span class="line"><span class="keyword">delete</span> [] a;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> (*a)[<span class="number">50</span>] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>][<span class="number">50</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> **p= <span class="keyword">new</span> <span class="keyword">int</span>*[size];<span class="comment">//定义指针数组 </span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;size;i++)&#123;</span><br><span class="line">	p[i]=<span class="keyword">new</span> <span class="keyword">int</span>[Column];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;size;i++)&#123;</span><br><span class="line">	<span class="keyword">delete</span> [] p[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> *p = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">100</span>); </span><br><span class="line"><span class="built_in">free</span>(p);</span><br></pre></td></tr></table></figure>
+<h2 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h2><h3 id="scanf"><a href="#scanf" class="headerlink" title="scanf"></a>scanf</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">%f <span class="keyword">float</span></span><br><span class="line">%lf <span class="keyword">double</span></span><br><span class="line">%Lf <span class="keyword">long</span> <span class="keyword">double</span></span><br><span class="line"><span class="built_in">sscanf</span>(<span class="string">"3.42"</span>,<span class="string">"%lf"</span>,&amp;b);     <span class="comment">//将字符串转换为数值double</span></span><br></pre></td></tr></table></figure>
+<h3 id="printf"><a href="#printf" class="headerlink" title="printf"></a>printf</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- 左对齐</span><br><span class="line"><span class="number">0</span> 右对齐时，用<span class="number">0</span>填充左边未使用的列</span><br><span class="line">+ 当一个数为正数时，前面加上一个+号</span><br><span class="line"><span class="string">' '</span> 当一个数为正数时，前面加上一个空格</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a = %08.3Lf"</span>,a);     <span class="comment">//右对齐，开头补零，字符宽度8位，精度3位，以long double型输出。</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%*d"</span>,width,num);</span><br><span class="line"><span class="built_in">sprintf</span>(buf,<span class="string">"%.2f"</span>,a);       <span class="comment">//将double型数值转换为字符串</span></span><br></pre></td></tr></table></figure>
+<h3 id="整行读入"><a href="#整行读入" class="headerlink" title="整行读入"></a>整行读入</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//scanf()读入char[]</span></span><br><span class="line"><span class="keyword">char</span> str[<span class="number">1024</span>];</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%[^\n]"</span>,&amp;str);</span><br><span class="line">getchar();</span><br><span class="line"></span><br><span class="line"><span class="comment">//getchar()读入char[]</span></span><br><span class="line"><span class="keyword">char</span> str[<span class="number">1024</span>];</span><br><span class="line"><span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span>((str[i]=getchar())!=<span class="string">'\n'</span>)</span><br><span class="line">    i++;</span><br><span class="line">getchar();</span><br><span class="line"></span><br><span class="line"><span class="comment">//gets()读入char[]</span></span><br><span class="line"><span class="keyword">char</span> str[<span class="number">1024</span>];</span><br><span class="line">gets(str);</span><br><span class="line"></span><br><span class="line"><span class="comment">//getline()</span></span><br><span class="line"><span class="built_in">string</span> str;</span><br><span class="line">getline(<span class="built_in">cin</span>,str);<span class="comment">//读入string</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> str2[<span class="number">1024</span>];</span><br><span class="line"><span class="built_in">cin</span>.getline(str2,<span class="number">1024</span>);<span class="comment">//读入char数组</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//get()读入char[]</span></span><br><span class="line"><span class="keyword">char</span> str3[<span class="number">1024</span>];</span><br><span class="line"><span class="built_in">cin</span>.get(str3,<span class="number">1024</span>);<span class="comment">//读入char数组</span></span><br><span class="line"><span class="built_in">cin</span>.get(str,<span class="number">1024</span>).get();</span><br></pre></td></tr></table></figure>
+<h3 id="文件输入输出"><a href="#文件输入输出" class="headerlink" title="文件输入输出"></a>文件输入输出</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">freopen(<span class="string">"/Users/perpeternal/Downloads/test.in"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);	</span><br><span class="line">freopen(<span class="string">"/Users/perpeternal/Downloads/test.out"</span>, <span class="string">"w"</span>, <span class="built_in">stdout</span>);</span><br><span class="line"></span><br><span class="line">FILE *in = fopen(<span class="string">"/Users/perpeternal/Downloads/test.in"</span>,<span class="string">"r"</span>);</span><br><span class="line">FILE *out = fopen(<span class="string">"/Users/perpeternal/Downloads/test.out"</span>, <span class="string">"w"</span>);</span><br><span class="line"><span class="built_in">fscanf</span>(in,<span class="string">"%d"</span>,&amp;n);</span><br><span class="line"><span class="built_in">fprintf</span>(out,<span class="string">"%d"</span>,n);</span><br><span class="line">fclose(in);fclose(out);</span><br></pre></td></tr></table></figure>
+<h2 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">out</span><span class="params">(<span class="keyword">int</span> count,...)</span></span>&#123;</span><br><span class="line">    va_list ap;  <span class="comment">//声明一个va_list变量</span></span><br><span class="line">	va_start(ap, count);  <span class="comment">//第二个参数表示形参的个数</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;<span class="built_in">printf</span>(<span class="string">"%d "</span>,va_arg(ap, <span class="keyword">int</span>));&#125;</span><br><span class="line">	va_end(ap);  <span class="comment">//用于清理</span></span><br><span class="line">&#125;</span><br><span class="line">out(<span class="number">4</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">out</span><span class="params">(<span class="built_in">initializer_list</span>&lt;<span class="keyword">int</span>&gt; <span class="built_in">list</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> ptr = <span class="built_in">list</span>.begin(); ptr != <span class="built_in">list</span>.end(); ptr++)  <span class="built_in">printf</span>(<span class="string">"%d "</span>,*ptr);</span><br><span class="line">&#125;</span><br><span class="line">out(&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="手动优化"><a href="#手动优化" class="headerlink" title="手动优化"></a>手动优化</h2><h4 id="手动加栈"><a href="#手动加栈" class="headerlink" title="手动加栈"></a>手动加栈</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> comment(linker, “/STACK:1024000000,1024000000”)</span></span><br></pre></td></tr></table></figure>
+<h4 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h4><p>-O0 表示无优化状态 </p>
+<p>-O1 表示对代码进行了优化</p>
+<p>-O2 表示减小目标文件大小 </p>
+<p>-O3 表示减小代码段及栈空间的大小</p>
+<p>全局：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize (“O2”)</span></span><br></pre></td></tr></table></figure>
+<p>部分：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC push_options </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize (“O0”)</span></span><br><span class="line">	...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC pop_options</span></span><br></pre></td></tr></table></figure>
+<h2 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这是两个预定义类（类型），定义的变量可以用重载好的 () 运算符获取随机数</span></span><br><span class="line"><span class="function">mt19937 <span class="title">gen</span><span class="params">(time(<span class="number">0</span>))</span></span>; <span class="comment">//生成 [0, 2^32-1]</span></span><br><span class="line"><span class="function">mt19937_64 <span class="title">gen</span><span class="params">(time(<span class="number">0</span>))</span></span>; <span class="comment">//生成 [0, 2^64-1]</span></span><br><span class="line">gen(); <span class="comment">//生成随机数</span></span><br></pre></td></tr></table></figure>
+<h2 id="assert"><a href="#assert" class="headerlink" title="assert"></a>assert</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">assert(<span class="number">0</span>); <span class="comment">//终止程序，报re</span></span><br></pre></td></tr></table></figure>
+<h2 id="inf-amp-nan"><a href="#inf-amp-nan" class="headerlink" title="inf&amp;nan"></a>inf&amp;nan</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isfinite</span><span class="params">(x)</span></span>; 判断x是否有限，是返回<span class="number">1</span>，其它返回<span class="number">0</span>；</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isnormal</span><span class="params">(x)</span></span>; 判断x是否为一个数（非inf或nan），是返回<span class="number">1</span>，其它返回<span class="number">0</span>；</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isnan</span><span class="params">(x)</span></span>; 当x时nan返回<span class="number">1</span>，其它返回<span class="number">0</span>；</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isinf</span><span class="params">(x)</span></span>; 当x是正无穷是返回<span class="number">1</span>，当x是负无穷时返回<span class="number">-1</span>，其它返回<span class="number">0</span>。有些编译器不区分。</span><br></pre></td></tr></table></figure>
+<h2 id="priority-queue"><a href="#priority-queue" class="headerlink" title="priority_queue"></a>priority_queue</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在结构体外重载结构体小于运算符</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Time</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> start, end;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span> &lt;(<span class="keyword">const</span> Time&amp; a,<span class="keyword">const</span> Time&amp; b)&#123;</span><br><span class="line">    <span class="keyword">return</span> a.start &gt; b.start;</span><br><span class="line">&#125;<span class="comment">//只能重载小于，这里以大于重载小于是因为默认情况下，优先队列是以大的作为队首，这样一反，就可以再默认情况下使得小的作为队首</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//在结构体中重载小于运算符</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Time</span>&#123;</span>  </span><br><span class="line">    <span class="keyword">int</span> start, end;  </span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> Time&amp; t)<span class="keyword">const</span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> start &gt; t.start;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">priority_queue&lt;Time&gt; pq;</span><br></pre></td></tr></table></figure>
+<h2 id="set-amp-map"><a href="#set-amp-map" class="headerlink" title="set &amp; map"></a>set &amp; map</h2><h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span>  </span><br><span class="line">    <span class="keyword">int</span> x,y;  </span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> node&amp; t)<span class="keyword">const</span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> x &gt; t.x;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">set</span>&lt;node&gt; SET;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">cmp</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> &amp;k1,<span class="keyword">const</span> <span class="keyword">int</span> &amp;k2)</span><span class="keyword">const</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> k1&gt;k2; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">int</span>,cmp&gt;s;</span><br></pre></td></tr></table></figure>
+<h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">UrlKey</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">uint64_t</span> dwBussID;</span><br><span class="line">    <span class="keyword">uint64_t</span> dwVersion;</span><br><span class="line">    <span class="keyword">uint64_t</span> dwHashUrl;</span><br><span class="line">&#125;UrlKey;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//自定义map的value</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">UrlValue</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="built_in">string</span> strUrl;</span><br><span class="line">&#125;UrlValue;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">cmp_key</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">const</span> UrlKey &amp;k1, <span class="keyword">const</span> UrlKey &amp;k2)</span><span class="keyword">const</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(k1.dwBussID != k2.dwBussID)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> k1.dwBussID &lt; k2.dwBussID;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">if</span>(k1.dwVersion != k2.dwVersion)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> k1.dwVersion &lt; k2.dwVersion;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(k1.dwHashUrl != k2.dwHashUrl)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> k1.dwHashUrl &lt; k2.dwHashUrl;</span><br><span class="line">        &#125;</span><br><span class="line">　　　　　　　　  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">map</span>&lt;UrlKey, UrlValue, cmp_key&gt; UrlMap;</span><br></pre></td></tr></table></figure>
+<h3 id="unordered-set"><a href="#unordered-set" class="headerlink" title="unordered_set"></a>unordered_set</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="built_in">string</span> s;</span><br><span class="line">    <span class="keyword">int</span> step;</span><br><span class="line">    node(<span class="built_in">string</span> _s):s(_s),step(<span class="number">0</span>)&#123;&#125;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> == (<span class="keyword">const</span> node y)<span class="keyword">const</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> s==y.s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Hash</span>&#123;</span></span><br><span class="line">    <span class="keyword">size_t</span> <span class="keyword">operator</span> () (<span class="keyword">const</span> node y)<span class="keyword">const</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> hash&lt;<span class="built_in">string</span>&gt;()(y.s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">unordered_set</span>&lt;node,Hash&gt;us;</span><br></pre></td></tr></table></figure>
+<h3 id="multiset"><a href="#multiset" class="headerlink" title="multiset"></a>multiset</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cont/mset1.cpp</span></span><br><span class="line"></span><br><span class="line">   <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line">   <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line">   <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="comment">/*type of the collection:</span></span><br><span class="line"><span class="comment">        *-duplicates allowed</span></span><br><span class="line"><span class="comment">        *-elements are integral values</span></span><br><span class="line"><span class="comment">        *-descending order</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">       <span class="keyword">typedef</span> <span class="built_in">multiset</span>&lt;<span class="keyword">int</span>,greater&lt;<span class="keyword">int</span>&gt; &gt; IntSet;</span><br><span class="line"></span><br><span class="line">       IntSet coll1,        <span class="comment">// empty multiset container</span></span><br><span class="line"></span><br><span class="line">       <span class="comment">//insert elements in random order</span></span><br><span class="line">       coll1.insert(<span class="number">4</span>);</span><br><span class="line">       coll1.insert(<span class="number">3</span>);</span><br><span class="line">       coll1.insert(<span class="number">5</span>);</span><br><span class="line">       coll1.insert(l);</span><br><span class="line">       coll1.insert(<span class="number">6</span>);</span><br><span class="line">       coll1.insert(<span class="number">2</span>);</span><br><span class="line">       coll1.insert(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">       <span class="comment">//iterate over all elements and print them</span></span><br><span class="line">       IntSet::iterator pos;</span><br><span class="line">       <span class="keyword">for</span> (pos = coll1.begin(); pos != coll1.end(); ++pos) &#123;</span><br><span class="line">           <span class="built_in">cout</span> &lt;&lt; *pos &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">       <span class="comment">//insert 4 again and process return value</span></span><br><span class="line">       IntSet::iterator ipos = coll1.insert(<span class="number">4</span>);</span><br><span class="line">       <span class="built_in">cout</span> &lt;&lt; <span class="string">"4 inserted as element "</span></span><br><span class="line">            &lt;&lt; distance (coll1.begin(),ipos) + <span class="number">1</span></span><br><span class="line">            &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">       <span class="comment">//assign elements to another multiset with ascending order</span></span><br><span class="line">       <span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt; coll2(coll1.begin(),coll1.end());</span><br><span class="line"></span><br><span class="line">       <span class="comment">//print all elements of the copy</span></span><br><span class="line">       copy (coll2.begin(), coll2.end(),</span><br><span class="line">             ostream_iterator&lt;<span class="keyword">int</span>&gt;(<span class="built_in">cout</span>,<span class="string">" "</span>));</span><br><span class="line">       <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">       <span class="comment">//remove all elements up to element with value 3</span></span><br><span class="line">       coll2.erase (coll2.begin(), coll2.find(<span class="number">3</span>));</span><br><span class="line"></span><br><span class="line">       <span class="comment">//remove all elements with value 5</span></span><br><span class="line">       <span class="keyword">int</span> num;</span><br><span class="line">       num = coll2.erase (<span class="number">5</span>);</span><br><span class="line">       <span class="built_in">cout</span> &lt;&lt; num &lt;&lt; <span class="string">" element(s) removed"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">       <span class="comment">//print all elements</span></span><br><span class="line">       copy (coll2.begin(), coll2.end(),</span><br><span class="line">             ostream_iterator&lt;<span class="keyword">int</span>&gt;(<span class="built_in">cout</span>,<span class="string">" "</span>));</span><br><span class="line">       <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="string"><a href="#string" class="headerlink" title="string"></a>string</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(str)</span> <span class="comment">//拷贝构造函数 生成str的复制品</span></span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(str,stridx)</span> <span class="comment">//将字符串str内“始于位置stridx”的部分当作字符串的初值</span></span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(str,stridx,<span class="built_in">strlen</span>)</span> <span class="comment">//将字符串str内“始于stridx且长度顶多strlen”的部分作为字符串的初值</span></span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(cstr)</span> <span class="comment">//将C字符串作为s的初值</span></span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(chars,chars_len)</span> <span class="comment">//将chars字符串前chars_len个字符作为字符串s的初值。</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line">s.assign(str); //不说</span><br><span class="line">s.assign(str,<span class="number">1</span>,<span class="number">3</span>);<span class="comment">//如果str是”iamangel” 就是把”ama”赋给字符串</span></span><br><span class="line">s.assign(str,<span class="number">2</span>,<span class="built_in">string</span>::npos);<span class="comment">//把字符串str从索引值2开始到结尾赋给s</span></span><br><span class="line">s.assign(“gaint”); <span class="comment">//不说</span></span><br><span class="line">s.assign(“nico”,<span class="number">5</span>);<span class="comment">//把’n’ ‘I’ ‘c’ ‘o’ ‘\0’赋给字符串</span></span><br><span class="line">s.assign(<span class="number">5</span>,’x’);<span class="comment">//把五个x赋给字符串</span></span><br><span class="line"></span><br><span class="line">s.append(str);</span><br><span class="line">s.append(str,<span class="number">1</span>,<span class="number">3</span>);<span class="comment">//不解释了 同前面的函数参数assign的解释</span></span><br><span class="line">s.append(str,<span class="number">2</span>,<span class="built_in">string</span>::npos)<span class="comment">//不解释了</span></span><br><span class="line">s.append(“my name is jiayp”);</span><br><span class="line">s.append(“nico”,<span class="number">5</span>);</span><br><span class="line">s.append(<span class="number">5</span>,’x’);</span><br><span class="line">s.push_back(‘a’);<span class="comment">//这个函数只能增加单个字符 对STL熟悉的理解起来很简单</span></span><br><span class="line"></span><br><span class="line">s.insert(<span class="number">0</span>,”my name”);</span><br><span class="line">s.insert(<span class="number">1</span>,str);</span><br><span class="line"></span><br><span class="line">s.replace(<span class="number">1</span>,<span class="number">2</span>,”nternationalizatio”);<span class="comment">//从索引1开始的2个替换成后面的C_string</span></span><br><span class="line"></span><br><span class="line">s.erase(<span class="number">13</span>);<span class="comment">//从索引13开始往后全删除</span></span><br><span class="line">s.erase(<span class="number">7</span>,<span class="number">5</span>);<span class="comment">//从索引7开始往后删5个</span></span><br><span class="line"></span><br><span class="line">s.substr();<span class="comment">//返回s的全部内容</span></span><br><span class="line">s.substr(<span class="number">11</span>);<span class="comment">//从索引11往后的子串</span></span><br><span class="line">s.substr(<span class="number">5</span>,<span class="number">6</span>);<span class="comment">//从索引5开始6个字符</span></span><br><span class="line"></span><br><span class="line">返回符合搜索条件的字符区间内的第一个字符的索引，没找到目标就返回npos</span><br><span class="line">第一个参数是被搜寻的对象。第二个参数（可有可无）指出<span class="built_in">string</span>内的搜寻起点索引，第三个参数（可有可无）指出搜寻的字符个数。</span><br><span class="line">find()</span><br><span class="line">rfind() <span class="comment">//从后向前</span></span><br><span class="line">find_first_of()</span><br><span class="line">find_last_of()</span><br><span class="line">find_first_not_of()返回在字符串中首次出现的不匹配str中的任何一个字符的首字符索引, 从index开始搜索, 如果全部匹配则返回<span class="built_in">string</span>::npos。</span><br><span class="line">find_last_not_of()</span><br><span class="line"></span><br><span class="line">s.c_str() 返回 <span class="keyword">char</span>*</span><br><span class="line"></span><br><span class="line"><span class="built_in">strcmp</span>(<span class="keyword">const</span> <span class="keyword">char</span> *s1,<span class="keyword">const</span> <span class="keyword">char</span> * s2)<span class="comment">//若str1=str2，则返回零；若str1&lt;str2，则返回负数；若str1&gt;str2，则返回正数。</span></span><br></pre></td></tr></table></figure>
+<h2 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h2><h3 id="compile"><a href="#compile" class="headerlink" title="compile"></a>compile</h3><p>test.cpp - 预处理(Pre-processing) - test.i - 编译(Compiling) - test.s - 汇编(Assembling) - test.o - 链接(Linking) - test</p>
+<h3 id="Pre-processing"><a href="#Pre-processing" class="headerlink" title="Pre-processing"></a>Pre-processing</h3><p>-E 选项使用g++/gcc将源代码预处理后不执行其他动作。<br>下面的命令将test.cpp预处理，并在标准输出中显示：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -E test.cpp</span><br></pre></td></tr></table></figure>
+<p>后面加上 -o 选项表示将源代码预处理后输出在指定文件中，比如test.i：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -E test.cpp -o test.i</span><br></pre></td></tr></table></figure>
+<h3 id="Compiling"><a href="#Compiling" class="headerlink" title="Compiling"></a>Compiling</h3><p>-S 选项使用g++/gcc将预处理后的文件编译，翻译成汇编代码。只编译不汇编<br>下面的命令将会编译test.i文件，并自动在当前文件夹生成test.s文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -S test.i</span><br></pre></td></tr></table></figure>
+<p>若要指定其他输出名，则需 -o 指定，比如生成名为xxx.s的汇编代码文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -S test.i -o xxx.s</span><br></pre></td></tr></table></figure>
+<h3 id="Assembling"><a href="#Assembling" class="headerlink" title="Assembling"></a>Assembling</h3><p>-c 选项将编译生成的test.s文件生成二进制目标代码<br>下面的命令将在当前文件夹自动生成test.o的二进制目标代码文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -c test.s</span><br></pre></td></tr></table></figure>
+<p>如果要指定输出文件名，则需 -o 指定，比如生成xxx.o的二进制目标代码文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -c test.s -o xxx.o</span><br></pre></td></tr></table></figure>
+<h3 id="Linking"><a href="#Linking" class="headerlink" title="Linking"></a>Linking</h3><p>链接阶段是将相关的目标文件链接起来，形成一个整体，生成可执行文件<br>无选项链接<br>下面的命令会把二进制目标文件test.o所需的相关文件链接成一个整体，并在当前文件夹自动生成一个名为a.out的可执行文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ test.o</span><br></pre></td></tr></table></figure>
+<p>如果要执行这个可执行文件，需要输入命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./a.out</span><br></pre></td></tr></table></figure>
+<p>当然也可以指定生成的可执行文件的文件名</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ test.o -o test.exe</span><br></pre></td></tr></table></figure>
+<h3 id="单个源文件直接生成可执行文件"><a href="#单个源文件直接生成可执行文件" class="headerlink" title="单个源文件直接生成可执行文件"></a>单个源文件直接生成可执行文件</h3><p>当然g++/gcc也可以直接把源代码直接生成可执行文件<br>下面的命令将test.cpp直接在当前文件夹生成a.out可执行文件，若要指定文件名，可使用 -o 选项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">g++ test.cpp</span><br><span class="line">g++ test.cpp -o test.exe</span><br></pre></td></tr></table></figure>
+<h3 id="多个源文件直接生成可执行文件"><a href="#多个源文件直接生成可执行文件" class="headerlink" title="多个源文件直接生成可执行文件"></a>多个源文件直接生成可执行文件</h3><p>也可以将多个源代码编译链接成一个可执行文件<br>下面的命令将test.cpp直接在当前文件夹生成a.out可执行文件，若要指定文件名，可使用 -o 选项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">g++ test1.cpp test2.cpp </span><br><span class="line">g++ test1.cpp test2.cpp -o test.exe</span><br></pre></td></tr></table></figure>
+<h3 id="使用C-11标准编译"><a href="#使用C-11标准编译" class="headerlink" title="使用C++11标准编译"></a>使用C++11标准编译</h3><p>如果要使用C++11版本特性，则需要使用 -std=c++11 选项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -std=c++11 test.cpp -o test.exe</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/17/Combination & Sequence/" rel="next" title="Combination & Sequence">
+                <i class="fa fa-chevron-left"></i> Combination & Sequence
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="PerpEternal">
+            
+              <p class="site-author-name" itemprop="name">PerpEternal</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">66</span>
+                    <span class="site-state-item-name">Artikel</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">Kategorien</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-name">Tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://g-islands.github.io" title="http://g-islands.github.io" rel="noopener" target="_blank">GuYF's Blog</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C"><span class="nav-number">1.</span> <span class="nav-text">C++</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据范围"><span class="nav-number">1.1.</span> <span class="nav-text">数据范围</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#易错点"><span class="nav-number">1.2.</span> <span class="nav-text">易错点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态数组"><span class="nav-number">1.3.</span> <span class="nav-text">动态数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO"><span class="nav-number">1.4.</span> <span class="nav-text">IO</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#scanf"><span class="nav-number">1.4.1.</span> <span class="nav-text">scanf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#printf"><span class="nav-number">1.4.2.</span> <span class="nav-text">printf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整行读入"><span class="nav-number">1.4.3.</span> <span class="nav-text">整行读入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件输入输出"><span class="nav-number">1.4.4.</span> <span class="nav-text">文件输入输出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可变参数"><span class="nav-number">1.5.</span> <span class="nav-text">可变参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#手动优化"><span class="nav-number">1.6.</span> <span class="nav-text">手动优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#手动加栈"><span class="nav-number">1.6.0.1.</span> <span class="nav-text">手动加栈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优化"><span class="nav-number">1.6.0.2.</span> <span class="nav-text">优化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#随机数"><span class="nav-number">1.7.</span> <span class="nav-text">随机数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#assert"><span class="nav-number">1.8.</span> <span class="nav-text">assert</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#inf-amp-nan"><span class="nav-number">1.9.</span> <span class="nav-text">inf&amp;nan</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#priority-queue"><span class="nav-number">1.10.</span> <span class="nav-text">priority_queue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#set-amp-map"><span class="nav-number">1.11.</span> <span class="nav-text">set &amp; map</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#set"><span class="nav-number">1.11.1.</span> <span class="nav-text">set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map"><span class="nav-number">1.11.2.</span> <span class="nav-text">map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unordered-set"><span class="nav-number">1.11.3.</span> <span class="nav-text">unordered_set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multiset"><span class="nav-number">1.11.4.</span> <span class="nav-text">multiset</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#string"><span class="nav-number">1.12.</span> <span class="nav-text">string</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译过程"><span class="nav-number">1.13.</span> <span class="nav-text">编译过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#compile"><span class="nav-number">1.13.1.</span> <span class="nav-text">compile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pre-processing"><span class="nav-number">1.13.2.</span> <span class="nav-text">Pre-processing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Compiling"><span class="nav-number">1.13.3.</span> <span class="nav-text">Compiling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Assembling"><span class="nav-number">1.13.4.</span> <span class="nav-text">Assembling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linking"><span class="nav-number">1.13.5.</span> <span class="nav-text">Linking</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单个源文件直接生成可执行文件"><span class="nav-number">1.13.6.</span> <span class="nav-text">单个源文件直接生成可执行文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个源文件直接生成可执行文件"><span class="nav-number">1.13.7.</span> <span class="nav-text">多个源文件直接生成可执行文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用C-11标准编译"><span class="nav-number">1.13.8.</span> <span class="nav-text">使用C++11标准编译</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">PerpEternal</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+  <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="Total Visitors">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log(`Failed to save Visitor num, with error message: ${responseJSON.error}`);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'ClY3Bk77hIdRCfLylruxnBlP-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'ClY3Bk77hIdRCfLylruxnBlP-gzGzoHsz',
+                'X-LC-Key': 'Gj5eztTLPClpCSYnIrLmzUsR',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
+  
+
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; 
+      }
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
