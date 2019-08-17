@@ -98,17 +98,17 @@
 
 
 
-  <meta name="description" content="DP背包数位 $1-n$ 所有数中，数位 $0-9$ 的数量   $f[i]$ 表示前 $i$ 位出现的数码次数   12345678910111213141516171819202122232425262728ll f[20],cnt[10];void fun(ll n)&amp;#123;    mem0(cnt);    if(!n)return;    if(!f[1])&amp;#123;">
+  <meta name="description" content="背包数位 $1-n$ 所有数中，数位 $0-9$ 的数量   $f[i]$ 表示前 $i$ 位出现的数码次数   12345678910111213141516171819202122232425262728ll f[20],cnt[10];void fun(ll n)&amp;#123;    mem0(cnt);    if(!n)return;    if(!f[1])&amp;#123;        f">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DP">
 <meta property="og:url" content="http://perpeternal.github.io/2019/08/17/DP/index.html">
 <meta property="og:site_name" content="P&#39;s Blog">
-<meta property="og:description" content="DP背包数位 $1-n$ 所有数中，数位 $0-9$ 的数量   $f[i]$ 表示前 $i$ 位出现的数码次数   12345678910111213141516171819202122232425262728ll f[20],cnt[10];void fun(ll n)&amp;#123;    mem0(cnt);    if(!n)return;    if(!f[1])&amp;#123;">
+<meta property="og:description" content="背包数位 $1-n$ 所有数中，数位 $0-9$ 的数量   $f[i]$ 表示前 $i$ 位出现的数码次数   12345678910111213141516171819202122232425262728ll f[20],cnt[10];void fun(ll n)&amp;#123;    mem0(cnt);    if(!n)return;    if(!f[1])&amp;#123;        f">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-17T12:47:44.100Z">
+<meta property="og:updated_time" content="2019-08-17T12:56:38.362Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DP">
-<meta name="twitter:description" content="DP背包数位 $1-n$ 所有数中，数位 $0-9$ 的数量   $f[i]$ 表示前 $i$ 位出现的数码次数   12345678910111213141516171819202122232425262728ll f[20],cnt[10];void fun(ll n)&amp;#123;    mem0(cnt);    if(!n)return;    if(!f[1])&amp;#123;">
+<meta name="twitter:description" content="背包数位 $1-n$ 所有数中，数位 $0-9$ 的数量   $f[i]$ 表示前 $i$ 位出现的数码次数   12345678910111213141516171819202122232425262728ll f[20],cnt[10];void fun(ll n)&amp;#123;    mem0(cnt);    if(!n)return;    if(!f[1])&amp;#123;        f">
 
 
 
@@ -413,7 +413,7 @@
                 
               
 
-              <time title="Post created: 2019-08-17 17:32:04 / Updated at: 20:47:44" itemprop="dateCreated datePublished" datetime="2019-08-17T17:32:04+08:00">2019-08-17</time>
+              <time title="Post created: 2019-08-17 17:32:04 / Updated at: 20:56:38" itemprop="dateCreated datePublished" datetime="2019-08-17T17:32:04+08:00">2019-08-17</time>
             
 
             
@@ -481,7 +481,7 @@
       
 
       
-        <h1 id="DP"><a href="#DP" class="headerlink" title="DP"></a>DP</h1><h2 id="背包"><a href="#背包" class="headerlink" title="背包"></a>背包</h2><h2 id="数位"><a href="#数位" class="headerlink" title="数位"></a>数位</h2><ul>
+        <h2 id="背包"><a href="#背包" class="headerlink" title="背包"></a>背包</h2><h2 id="数位"><a href="#数位" class="headerlink" title="数位"></a>数位</h2><ul>
 <li><p>$1-n$ 所有数中，数位 $0-9$ 的数量</p>
 <p>  $f[i]$ 表示前 $i$ 位出现的数码次数</p>
   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">ll f[<span class="number">20</span>],cnt[<span class="number">10</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(ll n)</span></span>&#123;</span><br><span class="line">    mem0(cnt);</span><br><span class="line">    <span class="keyword">if</span>(!n)<span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span>(!f[<span class="number">1</span>])&#123;</span><br><span class="line">        f[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">        ll s=<span class="number">10</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;<span class="number">20</span>;i++)f[i]=f[i<span class="number">-1</span>]*<span class="number">10</span>+s,s*=<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ll k=n,m;</span><br><span class="line">    <span class="keyword">int</span> w=<span class="number">0</span>,i,j,sum[<span class="number">15</span>];</span><br><span class="line">    <span class="keyword">while</span>(k) sum[++w]=k%<span class="number">10</span>,k/=<span class="number">10</span>;</span><br><span class="line">    <span class="keyword">for</span> (m=<span class="number">1</span>,i=<span class="number">1</span>; i&lt;w; i++)&#123;</span><br><span class="line">        cnt[<span class="number">0</span>]+=f[i<span class="number">-1</span>]*<span class="number">9</span>;</span><br><span class="line">        <span class="keyword">for</span> (j=<span class="number">1</span>; j&lt;=<span class="number">9</span>; j++) cnt[j]+=f[i<span class="number">-1</span>]*<span class="number">9</span>+m;</span><br><span class="line">        m*=<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    k=n-sum[w]*m;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">1</span>; i&lt;sum[w]; i++) cnt[i]+=m;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;=<span class="number">9</span>; i++) cnt[i]+=f[w<span class="number">-1</span>]*(sum[w]<span class="number">-1</span>);</span><br><span class="line">    cnt[sum[w]]+=k+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (i=w<span class="number">-1</span>; i; i--)&#123;</span><br><span class="line">        m/=<span class="number">10</span>,k-=sum[i]*m;</span><br><span class="line">        <span class="keyword">for</span> (j=<span class="number">0</span>; j&lt;sum[i]; j++) cnt[j]+=m;</span><br><span class="line">        <span class="keyword">for</span> (j=<span class="number">0</span>; j&lt;=<span class="number">9</span>; j++) cnt[j]+=f[i<span class="number">-1</span>]*sum[i];</span><br><span class="line">        cnt[sum[i]]+=k+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -739,7 +739,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DP"><span class="nav-number">1.</span> <span class="nav-text">DP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#背包"><span class="nav-number">1.1.</span> <span class="nav-text">背包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数位"><span class="nav-number">1.2.</span> <span class="nav-text">数位</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背包"><span class="nav-number">1.</span> <span class="nav-text">背包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数位"><span class="nav-number">2.</span> <span class="nav-text">数位</span></a></li></ol></div>
             
 
           </div>
