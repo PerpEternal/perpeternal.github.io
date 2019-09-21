@@ -99,14 +99,14 @@
 
 
   <meta name="description" content="D. Steps to One题意每次从$1\sim m$从等概率的选择一个数, 直到所有选择的数的 gcd 为 1, 问操作的次数的期望是多少?">
-<meta name="keywords" content="dp,math,number theory">
+<meta name="keywords" content="math,dp,number theory">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CF-1139">
 <meta property="og:url" content="http://perpeternal.github.io/2019/03/30/CF-1139/index.html">
 <meta property="og:site_name" content="P&#39;s Blog">
 <meta property="og:description" content="D. Steps to One题意每次从$1\sim m$从等概率的选择一个数, 直到所有选择的数的 gcd 为 1, 问操作的次数的期望是多少?">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-14T13:45:02.000Z">
+<meta property="og:updated_time" content="2019-09-20T15:00:17.827Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CF-1139">
 <meta name="twitter:description" content="D. Steps to One题意每次从$1\sim m$从等概率的选择一个数, 直到所有选择的数的 gcd 为 1, 问操作的次数的期望是多少?">
@@ -222,7 +222,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Accueil</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
 
   </li>
         
@@ -239,7 +239,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>A propos</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
 
   </li>
         
@@ -301,7 +301,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>recherche</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
         </li>
       
     </ul>
@@ -407,14 +407,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Post created: 2019-03-30 21:00:47" itemprop="dateCreated datePublished" datetime="2019-03-30T21:00:47+08:00">2019-03-30</time>
+              <time title="Created: 2019-03-30 21:00:47" itemprop="dateCreated datePublished" datetime="2019-03-30T21:00:47+08:00">2019-03-30</time>
             
 
             
@@ -431,7 +431,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2019-04-14 21:45:02" itemprop="dateModified" datetime="2019-04-14T21:45:02+08:00">2019-04-14</time>
+                <time title="Modified: 2019-09-20 23:00:17" itemprop="dateModified" datetime="2019-09-20T23:00:17+08:00">2019-09-20</time>
               
             
           </span>
@@ -496,7 +496,7 @@
       
         <h2 id="D-Steps-to-One"><a href="#D-Steps-to-One" class="headerlink" title="D. Steps to One"></a>D. Steps to One</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>每次从$1\sim m$从等概率的选择一个数, 直到所有选择的数的 gcd 为 1, 问操作的次数的期望是多少?</p>
 <a id="more"></a>
-<h3 id="题解1"><a href="#题解1" class="headerlink" title="题解1"></a>题解1</h3><p>设$f[n]​$表示当前 gcd 为 n 还需要的步数的期望</p>
+<h3 id="题解1"><a href="#题解1" class="headerlink" title="题解1"></a>题解1</h3><p>设$f[n]$表示当前 gcd 为 n 还需要的步数的期望</p>
 <script type="math/tex; mode=display">
 f[n]=1+\frac {\sum\limits_{i=1}^mf[gcd(i,n)]} m\\
 \sum\limits_{i=1}^mf[gcd(i,n)]=\sum\limits_{d|n}f[d]\sum\limits_{i=1}^me[gcd(i,n)==d]\\
@@ -508,7 +508,7 @@ ans=1+\frac {\sum\limits_{i=1}^mf[i]} m</script><h3 id="题解2"><a href="#题�
 <script type="math/tex; mode=display">
 k=\lfloor\frac m n\rfloor\\
 E[n|i]=\sum\limits_{j=1}^{\infty}j*\frac {k^j} {m^j}=\frac {\frac k m} {1-\frac k m}=\frac k {m-k}\\
-ans=1+E[i>1]=1+\sum_{j=2}^m-\mu(j)E[j|i]</script><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//解1</span></span><br><span class="line"><span class="keyword">int</span> f[N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> PerpEternal</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/in.dat", "r", stdin);</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/out.dat", "w", stdout);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="comment">//ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);</span></span><br><span class="line">    <span class="keyword">int</span> m;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;m;</span><br><span class="line">    for1(i,m)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j*j&lt;=i;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i%j==<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i/j==j)&#123;</span><br><span class="line">                    fac[i].pb(j);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    fac[i].pb(j);</span><br><span class="line">                    fac[i].pb(i/j);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    get_prime();</span><br><span class="line">    f[<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line">    ll tot=<span class="number">0</span>;</span><br><span class="line">    forl(n,<span class="number">2</span>,m)&#123;</span><br><span class="line">        ll t_tmp=m;</span><br><span class="line">        for0(j,fac[n].size())&#123;</span><br><span class="line">            ll d=fac[n][j];</span><br><span class="line">            <span class="keyword">if</span>(d==n)<span class="keyword">continue</span>;</span><br><span class="line">            ll cnt=<span class="number">0</span>;</span><br><span class="line">            for0(k,fac[n/d].size())&#123;</span><br><span class="line">                <span class="keyword">int</span> t=fac[n/d][k];</span><br><span class="line">                cnt=(cnt+(ll)mu[t]*(m/d/t)%mod)%mod;</span><br><span class="line">            &#125;</span><br><span class="line">            t_tmp=(t_tmp+f[d]*cnt%mod)%mod;</span><br><span class="line">        &#125;</span><br><span class="line">        f[n]=t_tmp*qPow(m-m/n,mod<span class="number">-2</span>,mod)%mod;</span><br><span class="line">        tot=(tot+f[n])%mod;</span><br><span class="line">        <span class="comment">// cout&lt;&lt;f[n]&lt;&lt;endl;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,(tot*qPow(m,mod<span class="number">-2</span>,mod)%mod+<span class="number">1</span>)%mod);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//解2</span></span><br><span class="line"><span class="keyword">bool</span> notPrime[N+<span class="number">1</span>];</span><br><span class="line"><span class="keyword">int</span> prime[N+<span class="number">1</span>],num_prime=<span class="number">0</span>,mu[N+<span class="number">1</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get_prime</span><span class="params">()</span></span>&#123;</span><br><span class="line">  	notPrime[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=N;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!notPrime[i]) &#123;</span><br><span class="line">            prime[num_prime++]=i;</span><br><span class="line">            mu[i]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;num_prime&amp;&amp;(ll)i*prime[j]&lt;=N;j++)&#123;</span><br><span class="line">            <span class="keyword">int</span> k = i*prime[j];</span><br><span class="line">            notPrime[k] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(i % prime[j] == <span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">else</span> mu[k]=mod-mu[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">qpow</span><span class="params">(ll a,ll b)</span></span>&#123;</span><br><span class="line">    ll ans=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(b)&#123;</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)ans=ans*a%mod;</span><br><span class="line">        a=a*a%mod;</span><br><span class="line">        b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> PerpEternal</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/in.dat", "r", stdin);</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/out.dat", "w", stdout);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="comment">//ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);</span></span><br><span class="line">    <span class="keyword">int</span> m;</span><br><span class="line">    in(m);</span><br><span class="line">    get_prime();</span><br><span class="line">    ll ans=<span class="number">1</span>;</span><br><span class="line">    forl(i,<span class="number">2</span>,m)&#123;</span><br><span class="line">        ll k=m/i;</span><br><span class="line">        ans=(ans+mu[i]*k%mod*qpow(m-k,mod<span class="number">-2</span>)%mod)%mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ans=1+E[i>1]=1+\sum_{j=2}^m-\mu(j)E[j|i]</script><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//解1</span></span><br><span class="line"><span class="keyword">int</span> f[N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;m;</span><br><span class="line">    for1(i,m)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j*j&lt;=i;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i%j==<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i/j==j)&#123;</span><br><span class="line">                    fac[i].pb(j);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    fac[i].pb(j);</span><br><span class="line">                    fac[i].pb(i/j);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    get_prime();</span><br><span class="line">    f[<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line">    ll tot=<span class="number">0</span>;</span><br><span class="line">    forl(n,<span class="number">2</span>,m)&#123;</span><br><span class="line">        ll t_tmp=m;</span><br><span class="line">        for0(j,fac[n].size())&#123;</span><br><span class="line">            ll d=fac[n][j];</span><br><span class="line">            <span class="keyword">if</span>(d==n)<span class="keyword">continue</span>;</span><br><span class="line">            ll cnt=<span class="number">0</span>;</span><br><span class="line">            for0(k,fac[n/d].size())&#123;</span><br><span class="line">                <span class="keyword">int</span> t=fac[n/d][k];</span><br><span class="line">                cnt=(cnt+(ll)mu[t]*(m/d/t)%mod)%mod;</span><br><span class="line">            &#125;</span><br><span class="line">            t_tmp=(t_tmp+f[d]*cnt%mod)%mod;</span><br><span class="line">        &#125;</span><br><span class="line">        f[n]=t_tmp*qPow(m-m/n,mod<span class="number">-2</span>,mod)%mod;</span><br><span class="line">        tot=(tot+f[n])%mod;</span><br><span class="line">        <span class="comment">// cout&lt;&lt;f[n]&lt;&lt;endl;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,(tot*qPow(m,mod<span class="number">-2</span>,mod)%mod+<span class="number">1</span>)%mod);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//解2</span></span><br><span class="line"><span class="keyword">bool</span> notPrime[N+<span class="number">1</span>];</span><br><span class="line"><span class="keyword">int</span> prime[N+<span class="number">1</span>],num_prime=<span class="number">0</span>,mu[N+<span class="number">1</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get_prime</span><span class="params">()</span></span>&#123;</span><br><span class="line">  	notPrime[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=N;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!notPrime[i]) &#123;</span><br><span class="line">            prime[num_prime++]=i;</span><br><span class="line">            mu[i]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;num_prime&amp;&amp;(ll)i*prime[j]&lt;=N;j++)&#123;</span><br><span class="line">            <span class="keyword">int</span> k = i*prime[j];</span><br><span class="line">            notPrime[k] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(i % prime[j] == <span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">else</span> mu[k]=mod-mu[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">qpow</span><span class="params">(ll a,ll b)</span></span>&#123;</span><br><span class="line">    ll ans=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(b)&#123;</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)ans=ans*a%mod;</span><br><span class="line">        a=a*a%mod;</span><br><span class="line">        b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> PerpEternal</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/in.dat", "r", stdin);</span></span><br><span class="line">    <span class="comment">// freopen("/Users/perpeternal/Documents/Sketch/data/out.dat", "w", stdout);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="comment">//ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);</span></span><br><span class="line">    <span class="keyword">int</span> m;</span><br><span class="line">    in(m);</span><br><span class="line">    get_prime();</span><br><span class="line">    ll ans=<span class="number">1</span>;</span><br><span class="line">    forl(i,<span class="number">2</span>,m)&#123;</span><br><span class="line">        ll k=m/i;</span><br><span class="line">        ans=(ans+mu[i]*k%mod*qpow(m-k,mod<span class="number">-2</span>)%mod)%mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><blockquote>
 <p><a href="https://www.cnblogs.com/zyt1253679098/p/10584706.html" target="_blank" rel="noopener">https://www.cnblogs.com/zyt1253679098/p/10584706.html</a><br><a href="https://blog.csdn.net/neuq_zsmj/article/details/88830388" target="_blank" rel="noopener">https://blog.csdn.net/neuq_zsmj/article/details/88830388</a></p>
 </blockquote>
@@ -535,9 +535,9 @@ ans=1+E[i>1]=1+\sum_{j=2}^m-\mu(j)E[j|i]</script><h3 id="代码"><a href="#代�
       
         <div class="post-tags">
           
-            <a href="/tags/dp/" rel="tag"># dp</a>
-          
             <a href="/tags/math/" rel="tag"># math</a>
+          
+            <a href="/tags/dp/" rel="tag"># dp</a>
           
             <a href="/tags/number-theory/" rel="tag"># number theory</a>
           
@@ -611,10 +611,10 @@ ans=1+E[i>1]=1+\sum_{j=2}^m-\mu(j)E[j|i]</script><h3 id="代码"><a href="#代�
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table Des Matières
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Ensemble
+            Overview
           </li>
         </ul>
       
@@ -636,8 +636,8 @@ ans=1+E[i>1]=1+\sum_{j=2}^m-\mu(j)E[j|i]</script><h3 id="代码"><a href="#代�
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">78</span>
-                    <span class="site-state-item-name">articles</span>
+                    <span class="site-state-item-count">68</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -671,9 +671,7 @@ ans=1+E[i>1]=1+\sum_{j=2}^m-\mu(j)E[j|i]</script><h3 id="代码"><a href="#代�
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -738,7 +736,9 @@ ans=1+E[i>1]=1+\sum_{j=2}^m-\mu(j)E[j|i]</script><h3 id="代码"><a href="#代�
                     
                       
                     
-                    <span class="site-state-item-count">26</span>
+                      
+                    
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
