@@ -98,17 +98,17 @@
 
 
 
-  <meta name="description" content="最长公共子串$dp[i][j]$表示前 $i$ 个 $a$ 和前 $j$ 个 $b$ 组成的最长公共子串长度  dp[i][j]=\left\{\begin{array}{c} 0&amp;i=0||j=0\\ dp[i-1][j-1]+1&amp;a[i]=b[j]\\ 0&amp;a[i]\ne b[j] \end{array}\right.最长公共子序列$dp[i][j]$表示的前 $i$ 个 $a$ 和前 $j$">
+  <meta name="description" content="String最长公共子串$dp[i][j]$表示前 $i$ 个 $a$ 和前 $j$ 个 $b$ 组成的最长公共子串长度  dp[i][j]=\left\{\begin{array}{c} 0&amp;i=0||j=0\\ dp[i-1][j-1]+1&amp;a[i]=b[j]\\ 0&amp;a[i]\ne b[j] \end{array}\right.最长公共子序列$dp[i][j]$表示的前 $i$ 个 $a$">
 <meta property="og:type" content="article">
 <meta property="og:title" content="String">
 <meta property="og:url" content="http://perpeternal.github.io/2019/08/17/String/index.html">
 <meta property="og:site_name" content="P&#39;s Blog">
-<meta property="og:description" content="最长公共子串$dp[i][j]$表示前 $i$ 个 $a$ 和前 $j$ 个 $b$ 组成的最长公共子串长度  dp[i][j]=\left\{\begin{array}{c} 0&amp;i=0||j=0\\ dp[i-1][j-1]+1&amp;a[i]=b[j]\\ 0&amp;a[i]\ne b[j] \end{array}\right.最长公共子序列$dp[i][j]$表示的前 $i$ 个 $a$ 和前 $j$">
+<meta property="og:description" content="String最长公共子串$dp[i][j]$表示前 $i$ 个 $a$ 和前 $j$ 个 $b$ 组成的最长公共子串长度  dp[i][j]=\left\{\begin{array}{c} 0&amp;i=0||j=0\\ dp[i-1][j-1]+1&amp;a[i]=b[j]\\ 0&amp;a[i]\ne b[j] \end{array}\right.最长公共子序列$dp[i][j]$表示的前 $i$ 个 $a$">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-29T13:40:09.092Z">
+<meta property="og:updated_time" content="2019-09-21T12:12:15.790Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="String">
-<meta name="twitter:description" content="最长公共子串$dp[i][j]$表示前 $i$ 个 $a$ 和前 $j$ 个 $b$ 组成的最长公共子串长度  dp[i][j]=\left\{\begin{array}{c} 0&amp;i=0||j=0\\ dp[i-1][j-1]+1&amp;a[i]=b[j]\\ 0&amp;a[i]\ne b[j] \end{array}\right.最长公共子序列$dp[i][j]$表示的前 $i$ 个 $a$ 和前 $j$">
+<meta name="twitter:description" content="String最长公共子串$dp[i][j]$表示前 $i$ 个 $a$ 和前 $j$ 个 $b$ 组成的最长公共子串长度  dp[i][j]=\left\{\begin{array}{c} 0&amp;i=0||j=0\\ dp[i-1][j-1]+1&amp;a[i]=b[j]\\ 0&amp;a[i]\ne b[j] \end{array}\right.最长公共子序列$dp[i][j]$表示的前 $i$ 个 $a$">
 
 
 
@@ -221,7 +221,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Accueil</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
 
   </li>
         
@@ -238,7 +238,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>A propos</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>Über</a>
 
   </li>
         
@@ -272,7 +272,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien</a>
 
   </li>
         
@@ -289,7 +289,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
 
   </li>
 
@@ -300,7 +300,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>recherche</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Suche</a>
         </li>
       
     </ul>
@@ -406,7 +406,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
@@ -430,7 +430,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2019-08-29 21:40:09" itemprop="dateModified" datetime="2019-08-29T21:40:09+08:00">2019-08-29</time>
+                <time title="Updated at: 2019-09-21 20:12:15" itemprop="dateModified" datetime="2019-09-21T20:12:15+08:00">2019-09-21</time>
               
             
           </span>
@@ -444,7 +444,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/模板/" itemprop="url" rel="index"><span itemprop="name">模板</span></a></span>
@@ -493,7 +493,7 @@
       
 
       
-        <h2 id="最长公共子串"><a href="#最长公共子串" class="headerlink" title="最长公共子串"></a>最长公共子串</h2><p>$dp[i][j]$表示前 $i$ 个 $a$ 和前 $j$ 个 $b$ 组成的最长公共子串长度</p>
+        <h1 id="String"><a href="#String" class="headerlink" title="String"></a>String</h1><h2 id="最长公共子串"><a href="#最长公共子串" class="headerlink" title="最长公共子串"></a>最长公共子串</h2><p>$dp[i][j]$表示前 $i$ 个 $a$ 和前 $j$ 个 $b$ 组成的最长公共子串长度</p>
 <script type="math/tex; mode=display">
 dp[i][j]=\left\{\begin{array}{c}
 0&i=0||j=0\\
@@ -532,7 +532,7 @@ max(LPS[i,j-1],LPS[i+1,j])&S_i\ne S_j
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> C = <span class="number">26</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Palindromic_Tree</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> next[N][C] ;<span class="comment">//next指针，next指针和字典树类似，指向的串为当前串两端加上同一个字符构成</span></span><br><span class="line">    <span class="keyword">int</span> fail[N] ;<span class="comment">//fail指针，失配后跳转到fail指针指向的节点</span></span><br><span class="line">    <span class="keyword">int</span> cnt[N] ;<span class="comment">//cnt[i]表示节点i表示的本质不同的串的个数（建树时求出的不是完全的，最后count()函数跑一遍以后才是正确的）</span></span><br><span class="line">    <span class="keyword">int</span> num[N] ;<span class="comment">//num[i]表示以节点i表示的最长回文串的最右端点为回文串结尾的回文串个数。</span></span><br><span class="line">    <span class="keyword">int</span> len[N] ;<span class="comment">//len[i]表示节点i表示的回文串的长度</span></span><br><span class="line">    <span class="keyword">int</span> S[N] ;<span class="comment">//存放添加的字符</span></span><br><span class="line">    <span class="keyword">int</span> last ;<span class="comment">//指向上一个字符所在的节点，方便下一次add</span></span><br><span class="line">    <span class="keyword">int</span> n ;<span class="comment">//字符数组指针</span></span><br><span class="line">    <span class="keyword">int</span> p ;<span class="comment">//节点指针</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">newnode</span> <span class="params">( <span class="keyword">int</span> l )</span> </span>&#123;<span class="comment">//新建节点</span></span><br><span class="line">        <span class="keyword">for</span> ( <span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; C ; ++ i ) next[p][i] = <span class="number">0</span> ;</span><br><span class="line">        cnt[p] = <span class="number">0</span> ;</span><br><span class="line">        num[p] = <span class="number">0</span> ;</span><br><span class="line">        len[p] = l ;</span><br><span class="line">        <span class="keyword">return</span> p ++ ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span> <span class="params">()</span> </span>&#123;<span class="comment">//初始化</span></span><br><span class="line">        p = <span class="number">0</span> ;</span><br><span class="line">        newnode (  <span class="number">0</span> ) ;</span><br><span class="line">        newnode ( <span class="number">-1</span> ) ;</span><br><span class="line">        last = <span class="number">0</span> ;</span><br><span class="line">        n = <span class="number">0</span> ;</span><br><span class="line">        S[n] = <span class="number">-1</span> ;<span class="comment">//开头放一个字符集中没有的字符，减少特判</span></span><br><span class="line">        fail[<span class="number">0</span>] = <span class="number">1</span> ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">get_fail</span> <span class="params">( <span class="keyword">int</span> x )</span> </span>&#123;<span class="comment">//和KMP一样，失配后找一个尽量最长的</span></span><br><span class="line">        <span class="keyword">while</span> ( S[n - len[x] - <span class="number">1</span>] != S[n] ) x = fail[x] ;</span><br><span class="line">        <span class="keyword">return</span> x ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">add</span> <span class="params">( <span class="keyword">int</span> c )</span> </span>&#123;</span><br><span class="line">        c -= <span class="string">'a'</span> ;</span><br><span class="line">        S[++ n] = c ;</span><br><span class="line">        <span class="keyword">int</span> cur = get_fail ( last ) ;<span class="comment">//通过上一个回文串找这个回文串的匹配位置</span></span><br><span class="line">        <span class="keyword">if</span> ( !next[cur][c] ) &#123;<span class="comment">//如果这个回文串没有出现过，说明出现了一个新的本质不同的回文串</span></span><br><span class="line">            <span class="keyword">int</span> now = newnode ( len[cur] + <span class="number">2</span> ) ;<span class="comment">//新建节点</span></span><br><span class="line">            fail[now] = next[get_fail ( fail[cur] )][c] ;<span class="comment">//和AC自动机一样建立fail指针，以便失配后跳转</span></span><br><span class="line">            next[cur][c] = now ;</span><br><span class="line">            num[now] = num[fail[now]] + <span class="number">1</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        last = next[cur][c] ;</span><br><span class="line">        cnt[last] ++ ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">count</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span> ( <span class="keyword">int</span> i = p - <span class="number">1</span> ; i &gt;= <span class="number">0</span> ; -- i ) cnt[fail[i]] += cnt[i] ;</span><br><span class="line">		<span class="comment">//父亲累加儿子的cnt，因为如果fail[v]=u，则u一定是v的子回文串！</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125; PAM;</span><br></pre></td></tr></table></figure>
 <h2 id="字符串哈希"><a href="#字符串哈希" class="headerlink" title="字符串哈希"></a>字符串哈希</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">ull P = <span class="number">1313131</span>;</span><br><span class="line">ull sqr[N/<span class="number">2</span>],has[N/<span class="number">2</span>],V[N];</span><br><span class="line"><span class="keyword">int</span> Laxt[N],Next[N],cnt=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MOD = <span class="number">2e6</span>+<span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> _insert(ull Now)&#123;</span><br><span class="line">    <span class="keyword">int</span> u=Now%MOD;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=Laxt[u];i;i=Next[i])&#123;</span><br><span class="line">        <span class="keyword">if</span>(V[i]==Now) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Next[++cnt]=Laxt[u];</span><br><span class="line">    Laxt[u]=cnt;</span><br><span class="line">    V[cnt]=Now;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">void</span> _hash(<span class="keyword">int</span> x,<span class="keyword">int</span> y)&#123;</span><br><span class="line">    ull Now=has[y]-has[x<span class="number">-1</span>]*sqr[y-x+<span class="number">1</span>];<span class="comment">//求s[x]···s[y]的hash值 </span></span><br><span class="line">    <span class="keyword">if</span>(_insert(Now)) ++ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">char</span> *s,<span class="keyword">int</span> Len)</span></span>&#123;<span class="comment">//s 从1开始</span></span><br><span class="line">    sqr[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=Len;i++)&#123;</span><br><span class="line">        sqr[i]=sqr[i<span class="number">-1</span>]*P;</span><br><span class="line">        has[i]=has[i<span class="number">-1</span>]*P+s[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="序列自动机"><a href="#序列自动机" class="headerlink" title="序列自动机"></a>序列自动机</h2><p>$nxt[i][j]$ 表示在原串 $s$ (从 $1$ 开始) 第 $i$ 位后面的第一个 $j$ 出现的位置，设串长为 $n$ ,字符集大小为 $a$，预处理时间复杂度为 $O(n*a)$ </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=n;i;i--)&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=a;j++) nxt[i<span class="number">-1</span>][j]=nxt[i][j];</span><br><span class="line">  	nxt[i<span class="number">-1</span>][s[i]-<span class="string">'a'</span>]=i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=n;i;i--)&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">26</span>;j++) nxt[i<span class="number">-1</span>][j]=nxt[i][j];</span><br><span class="line">  	nxt[i<span class="number">-1</span>][s[i]-<span class="string">'a'</span>]=i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>求子序列个数</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(f[x]) <span class="keyword">return</span> f[x];</span><br><span class="line">	<span class="keyword">for</span>(r <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=a;i++)</span><br><span class="line">		<span class="keyword">if</span>(next[x][i]) f[x]+=dfs(next[x][i]);</span><br><span class="line">	<span class="keyword">return</span> ++f[x];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用：dfs(0);</span></span><br></pre></td></tr></table></figure>
 <p>求回文子序列或两个串的公共子序列个数等</p>
@@ -626,8 +626,8 @@ LCP(suffix(SA[i]),suffix(SA[i-1]))&i>0
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/17/Others/" rel="next" title="Others">
-                <i class="fa fa-chevron-left"></i> Others
+              <a href="/2019/08/17/ex模板/" rel="next" title="ex模板">
+                <i class="fa fa-chevron-left"></i> ex模板
               </a>
             
           </div>
@@ -636,8 +636,8 @@ LCP(suffix(SA[i]),suffix(SA[i-1]))&i>0
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/17/NumberTheory/" rel="prev" title="NumberTheory">
-                NumberTheory <i class="fa fa-chevron-right"></i>
+              <a href="/2019/08/17/Others/" rel="prev" title="Others">
+                Others <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -685,10 +685,10 @@ LCP(suffix(SA[i]),suffix(SA[i-1]))&i>0
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table Des Matières
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Ensemble
+            Übersicht
           </li>
         </ul>
       
@@ -710,8 +710,8 @@ LCP(suffix(SA[i]),suffix(SA[i-1]))&i>0
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">78</span>
-                    <span class="site-state-item-name">articles</span>
+                    <span class="site-state-item-count">81</span>
+                    <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
               
@@ -748,7 +748,7 @@ LCP(suffix(SA[i]),suffix(SA[i-1]))&i>0
                       
                     
                     <span class="site-state-item-count">12</span>
-                    <span class="site-state-item-name">categories</span>
+                    <span class="site-state-item-name">Kategorien</span>
                   </a>
                 </div>
               
@@ -812,8 +812,10 @@ LCP(suffix(SA[i]),suffix(SA[i-1]))&i>0
                     
                       
                     
-                    <span class="site-state-item-count">26</span>
-                    <span class="site-state-item-name">tags</span>
+                      
+                    
+                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-name">Tags</span>
                   </a>
                 </div>
               
@@ -862,7 +864,7 @@ LCP(suffix(SA[i]),suffix(SA[i-1]))&i>0
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#最长公共子串"><span class="nav-number">1.</span> <span class="nav-text">最长公共子串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最长公共子序列"><span class="nav-number">2.</span> <span class="nav-text">最长公共子序列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最长上升公共子序列"><span class="nav-number">3.</span> <span class="nav-text">最长上升公共子序列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最长回文子序列"><span class="nav-number">4.</span> <span class="nav-text">最长回文子序列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最长回文子串"><span class="nav-number">5.</span> <span class="nav-text">最长回文子串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回文自动机"><span class="nav-number">6.</span> <span class="nav-text">回文自动机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串哈希"><span class="nav-number">7.</span> <span class="nav-text">字符串哈希</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#序列自动机"><span class="nav-number">8.</span> <span class="nav-text">序列自动机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KMP"><span class="nav-number">9.</span> <span class="nav-text">KMP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展KMP"><span class="nav-number">9.0.1.</span> <span class="nav-text">扩展KMP</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#字典树"><span class="nav-number">10.</span> <span class="nav-text">字典树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC自动机"><span class="nav-number">11.</span> <span class="nav-text">AC自动机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后缀数组"><span class="nav-number">12.</span> <span class="nav-text">后缀数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#倍增算法-O-n-logn"><span class="nav-number">12.1.</span> <span class="nav-text">倍增算法 $O(n*logn)$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DC3算法-O-n"><span class="nav-number">12.2.</span> <span class="nav-text">DC3算法 $O(n)$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用"><span class="nav-number">12.3.</span> <span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后缀自动机"><span class="nav-number">13.</span> <span class="nav-text">后缀自动机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模板"><span class="nav-number">13.1.</span> <span class="nav-text">模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#广义后缀自动机"><span class="nav-number">13.2.</span> <span class="nav-text">广义后缀自动机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用-1"><span class="nav-number">13.3.</span> <span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本质不同回文串"><span class="nav-number">14.</span> <span class="nav-text">本质不同回文串</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#String"><span class="nav-number">1.</span> <span class="nav-text">String</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#最长公共子串"><span class="nav-number">1.1.</span> <span class="nav-text">最长公共子串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最长公共子序列"><span class="nav-number">1.2.</span> <span class="nav-text">最长公共子序列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最长上升公共子序列"><span class="nav-number">1.3.</span> <span class="nav-text">最长上升公共子序列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最长回文子序列"><span class="nav-number">1.4.</span> <span class="nav-text">最长回文子序列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最长回文子串"><span class="nav-number">1.5.</span> <span class="nav-text">最长回文子串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回文自动机"><span class="nav-number">1.6.</span> <span class="nav-text">回文自动机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串哈希"><span class="nav-number">1.7.</span> <span class="nav-text">字符串哈希</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#序列自动机"><span class="nav-number">1.8.</span> <span class="nav-text">序列自动机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KMP"><span class="nav-number">1.9.</span> <span class="nav-text">KMP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展KMP"><span class="nav-number">1.9.0.1.</span> <span class="nav-text">扩展KMP</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典树"><span class="nav-number">1.10.</span> <span class="nav-text">字典树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC自动机"><span class="nav-number">1.11.</span> <span class="nav-text">AC自动机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后缀数组"><span class="nav-number">1.12.</span> <span class="nav-text">后缀数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#倍增算法-O-n-logn"><span class="nav-number">1.12.1.</span> <span class="nav-text">倍增算法 $O(n*logn)$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DC3算法-O-n"><span class="nav-number">1.12.2.</span> <span class="nav-text">DC3算法 $O(n)$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用"><span class="nav-number">1.12.3.</span> <span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后缀自动机"><span class="nav-number">1.13.</span> <span class="nav-text">后缀自动机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模板"><span class="nav-number">1.13.1.</span> <span class="nav-text">模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#广义后缀自动机"><span class="nav-number">1.13.2.</span> <span class="nav-text">广义后缀自动机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用-1"><span class="nav-number">1.13.3.</span> <span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本质不同回文串"><span class="nav-number">1.14.</span> <span class="nav-text">本质不同回文串</span></a></li></ol></div>
             
 
           </div>
