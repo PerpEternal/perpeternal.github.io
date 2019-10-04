@@ -218,7 +218,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
 
   </li>
         
@@ -235,7 +235,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>Über</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
 
   </li>
         
@@ -269,7 +269,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
 
   </li>
         
@@ -286,7 +286,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
 
   </li>
 
@@ -297,7 +297,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Suche</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
         </li>
       
     </ul>
@@ -367,780 +367,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/09/21/题解/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="PerpEternal">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="P's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/09/21/题解/" class="post-title-link" itemprop="url">Unbenannt</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-
-              
-                
-              
-
-              <time title="Post created: 2019-09-21 18:50:54" itemprop="dateCreated datePublished" datetime="2019-09-21T18:50:54+08:00">2019-09-21</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Updated at: 2019-09-22 16:00:59" itemprop="dateModified" datetime="2019-09-22T16:00:59+08:00">2019-09-22</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-            <span id="/2019/09/21/题解/" class="leancloud_visitors" data-flag-title>
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Views: </span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>title: 2014ICPC-Anshan<br>date: 2019-09-20 15:52:47<br>categories: icpc<br>tags:  </p>
-<ul>
-<li>dp  </li>
-<li>brute force  </li>
-<li>polya  </li>
-</ul>
-<hr>
-<h2 id="H-NAND"><a href="#H-NAND" class="headerlink" title="H. NAND"></a>H. NAND</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>给一个真值表，问最少使用多少个二输入与非门能够实现这个真值表的功能。</p>
-<p><img src="/2019/09/21/题解/2014ICPC-Anshan/94502453b15742200df7577dd478d4a9.jpeg" alt="94502453b15742200df7577dd478d4a9"></p>
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>初始值 </p>
-<ul>
-<li>$15 - 00001111$</li>
-<li>$51-00110011$</li>
-<li>$85-01010101$</li>
-</ul>
-<p>用一个 $vector$ 表示当前具有的表达式，每次 $dfs$ 都选取两个做与非运算，加入队列再继续 $dfs$ ，有以下几个剪枝</p>
-<ul>
-<li>标记 $vector$ 中的元素，避免重复加入</li>
-<li>$dfs$ 的参数传入上一次的选取的两个值的下标，每次只取上一次右边的数</li>
-</ul>
-<h2 id="J-Square"><a href="#J-Square" class="headerlink" title="J. Square"></a>J. Square</h2><h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>给你一个 $n*n(n\le8)$ 的棋盘，上面有一些格子必须是黑色。其它可以染黑或者染白。对于一个棋盘，定义它的优美度为它上面最大的连续白色子正方形的边长，对于每个 $0\le k\le n$，问有多少种染色方案使得棋盘的优美度为 $k$ ？</p>
-<h3 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h3><p>将问题转化为求优美度小于 $k$ 的染色方案， $dp[i][sta]$ 表示第 $i$ 行状态为 $sta$ 的方案数，状态为一个 $k$ 进制数，第 $j$ 位表示区间 $j\sim j+k-1$ (每行下标从 $0$ 开始)往上延伸都为白色的最大高度，接下来枚举每行的染色方案。</p>
-<h2 id="K-Colorful-Toy"><a href="#K-Colorful-Toy" class="headerlink" title="K. Colorful Toy"></a>K. Colorful Toy</h2><h3 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h3><p>给 $N$ 个点，$M$ 条边，用 $C$ 种颜色给点染色，其中图形旋转后相同的染色方案只算一种，求有多少种不同的染色方案。</p>
-<h3 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h3><p>因为给的点都是整数点，图形只有在旋转 $90^\circ 180^\circ,270^\circ$ 时才可能与原图重合，旋转方案只有四种。</p>
-<h2 id><a href="#" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 2017-ACM-ICPC-Asia-Shenyang<br>date: 2019-04-14 20:56:47<br>categories: icpc<br>tags: </p>
-<h2 id="math"><a href="#math" class="headerlink" title="- math  "></a>- math  </h2><h2 id="A-BBP-Formula"><a href="#A-BBP-Formula" class="headerlink" title="A. BBP Formula"></a>A. BBP Formula</h2><h3 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h3><script type="math/tex; mode=display">
-\pi=\sum_{k=0}^{\infty}\frac 1 {16^k}\left( \frac 4 {8k+1}-\frac 2 {8k+4}-\frac 1 {8k+5}-\frac 1 {8k+6}\right)</script><p>求 $\pi$ 十六进制表达的小数点后第 $n$ 位.</p>
-<h3 id="题解-3"><a href="#题解-3" class="headerlink" title="题解"></a>题解</h3><p>求十进制小数的十六进制形式, 去掉整数部分, 小数部分乘 16 得到的数的整数部分就是小数点后第一位的十六进制值, 以此类推.</p>
-<script type="math/tex; mode=display">
-16^n\sum_{k=0}^{\infty}\frac 1 {16^k} \frac 4 {8k+1}
-=\sum_{k=0}^{n}\frac {4*16^{n-k}\%(8k+1)} {8k+1}+\sum_{k=n+1}^{\infty}\frac 4 {16^{k-n}(8k+1)}</script><h2 id="F-Heron-and-His-Triangle"><a href="#F-Heron-and-His-Triangle" class="headerlink" title="F. Heron and His Triangle"></a>F. Heron and His Triangle</h2><h3 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h3><p>设三角形的三条边为 $t-1,t,t+1$ ，给一个 $n(1\le n\le 1e30)$ ，求大于 $n$ 且三角形面积为整数的最小 $t$</p>
-<h3 id="题解-4"><a href="#题解-4" class="headerlink" title="题解"></a>题解</h3><p>由海伦公式得</p>
-<script type="math/tex; mode=display">
-S=\sqrt {p(p-a)(p-b)(p-c)}\ ,p=\frac {a+b+c}2\\
-S=\frac t 2\sqrt {3\left(\left(\frac t 2\right)^2-1\right)}\\
-assume\qquad  x=\frac t 2\\
-x^2-3y^2=1\\
-x_n=4x_{n-1}-x_{n-2}</script><h2 id="-1"><a href="#-1" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 2018ICPC-Ningxia<br>date: 2019-09-13 16:38:56<br>categories: icpc<br>tags:  </p>
-<ul>
-<li>dp  </li>
-<li>data structure  </li>
-</ul>
-<h2 id="G-Factories"><a href="#G-Factories" class="headerlink" title="G. Factories"></a>G. Factories</h2><h3 id="题意-5"><a href="#题意-5" class="headerlink" title="题意"></a>题意</h3><p>给一棵树，选择 $k(1\le k\le 100)$ 个叶节点，使得两两之间的路径和最小。</p>
-<h3 id="题解-5"><a href="#题解-5" class="headerlink" title="题解"></a>题解</h3><p> $dp[i][j]$ 表示在以 $i$ 为根的子树中选择 $j$ 个叶节点的最小花费，其中不仅包括 $j$ 个节点两两之间的路径，还包括 $j$ 个节点经过节点 $i$ 与另外 $k-j$ 相连的路径和。</p>
-<p>转移方程为 $dp[u][i]=min(dp[u][i],dp[u][i-j]+dp[v][j]+j\times (k-j)\times dis[u][v])$ </p>
-<p>状态转移的时 $i$ 应该从大到小枚举，避免先更新了较小值后面又使用。另外还需要记录一下每个节点的有效值的范围，不然会  $TLE$ </p>
-<h2 id="-2"><a href="#-2" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 2018河北省省赛<br>date: 2019-05-01 20:44:15<br>categories: ccpc<br>tags:  </p>
-<ul>
-<li>dp  </li>
-<li>hash  </li>
-<li>math  </li>
-</ul>
-<hr>
-<h2 id="E-K-Multiple-Longest-Commom-Subsequence"><a href="#E-K-Multiple-Longest-Commom-Subsequence" class="headerlink" title="E. K Multiple Longest Commom Subsequence"></a>E. K Multiple Longest Commom Subsequence</h2><h3 id="题意-6"><a href="#题意-6" class="headerlink" title="题意"></a>题意</h3><p>两个数组 $1\le k,n,m\le 1e3$, 问最长 $k$ 倍公共子序列是多少,  $k$ 倍子序列指的是, 将子序列等分, 每份为 $k$ 个数, 且这 $k$ 个数相同. 如 $1,1,2,2$ 是一个 $2$ 倍子序列</p>
-<h3 id="题解-6"><a href="#题解-6" class="headerlink" title="题解"></a>题解</h3><p>$\text{pre_a[i]}$ 表示从 $i$ 开始往前数, 第 $k$ 个 $a[i]$ 的下标</p>
-<h2 id="F-Defending-Plan-Support"><a href="#F-Defending-Plan-Support" class="headerlink" title="F. Defending Plan Support"></a>F. Defending Plan Support</h2><h3 id="题意-7"><a href="#题意-7" class="headerlink" title="题意"></a>题意</h3><p>给一棵树, 每个点有权值 $\omega(i)$, 每条边有权值 $d(i,j)$, 找一个点 $x$ 使 $F(x)=\sum \omega(i)\times d(x,i)$ 最小</p>
-<h3 id="题解-7"><a href="#题解-7" class="headerlink" title="题解"></a>题解</h3><p>以 $1$ 为根节点画出这棵树, 设 $j$ 的父节点为 $i$, $tot=\sum\omega(i)$, $sum[i]$ 表示以 $i$ 为根节点的子树的权值和</p>
-<script type="math/tex; mode=display">
-F(j)=F(i)+d(i,j)\times(tot-2*sum[j])</script><h2 id="K-Bitmap"><a href="#K-Bitmap" class="headerlink" title="K. Bitmap"></a>K. Bitmap</h2><h3 id="题意-8"><a href="#题意-8" class="headerlink" title="题意"></a>题意</h3><p>给一个 $n\times n(1 \leq n \leq 2000)$, 一个 $m\times m(1 \leq m \leq 1000,m\le n)$ 的矩阵, 值的范围为 $[0,255]$, 问 $A$ 中有几个 $B$, 只要每个元素相差一个定值就视为相同</p>
-<h3 id="题解-8"><a href="#题解-8" class="headerlink" title="题解"></a>题解</h3><p>hash, 枚举 $A$ 中 $B$ 的左上角</p>
-<h2 id="I-Beautiful-Array"><a href="#I-Beautiful-Array" class="headerlink" title="I. Beautiful Array"></a>I. Beautiful Array</h2><h3 id="题意-9"><a href="#题意-9" class="headerlink" title="题意"></a>题意</h3><p>长度为 $y$, 乘积为 $x$ 的序列的个数</p>
-<p>如 $x=2,y=2$, $[1,2],[2,1],[-1,-2],[-2,-1]$</p>
-<h3 id="题解-9"><a href="#题解-9" class="headerlink" title="题解"></a>题解</h3><p>分解 $x$, </p>
-<script type="math/tex; mode=display">
-x=p_1^{a_1}*p_2^{a_2}\cdots p_m^{a_m}</script><p>对方案数来说, 不同素因子是独立的, 对于 $p_i$, 其贡献相当于将 $a_i$ 个相同的球放进不同的盒子, 且允许有空, 为</p>
-<script type="math/tex; mode=display">
-\large C_{a_i+y-1}^{y-1}</script><p>再考虑负数, 负号只能为偶数个, 其贡献为</p>
-<script type="math/tex; mode=display">
-\large C_y^0+C_y^2+C_y^4+\cdots=2^{y-1}</script><h2 id="-3"><a href="#-3" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 2019HDU多校-Day8<br>date: 2019-08-20 18:47:49<br>categories:  hdu<br>tags: </p>
-<h2 id="dp"><a href="#dp" class="headerlink" title="- dp  "></a>- dp  </h2><h2 id="F-Acesrc-and-Travel"><a href="#F-Acesrc-and-Travel" class="headerlink" title="F. Acesrc and Travel"></a>F. Acesrc and Travel</h2><h3 id="题意-10"><a href="#题意-10" class="headerlink" title="题意"></a>题意</h3><p>给一颗树，每个点有两个权值 $a_i,b_i$ ，两个人博弈，交替选择节点，A 获得 $a_i$ ，B 获得 $b_i$ ，每次只能选取与上一个人相邻的节点。</p>
-<h3 id="题解-10"><a href="#题解-10" class="headerlink" title="题解"></a>题解</h3><p>先以任意点为根节点，算出这种情况的结果，再利用换根的方法求出所有节，要注意处理好根节点和叶节点的情况</p>
-<h2 id="-4"><a href="#-4" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 2019ICPC-Nanchang<br>date: 2019-09-20 17:06:22<br>categories: icpc<br>tags:  </p>
-<ul>
-<li>dp  </li>
-<li>data structure  </li>
-</ul>
-<hr>
-<h2 id="C-Hello-2019-cf-705e"><a href="#C-Hello-2019-cf-705e" class="headerlink" title="C. Hello 2019 (cf-705e)"></a>C. Hello 2019 (cf-705e)</h2><h3 id="题意-11"><a href="#题意-11" class="headerlink" title="题意"></a>题意</h3><p>输入一个字符串，区间询问 $[s_l,s_r]$ 中，删去最少的字符，使得出现子序列  $”2019”$ ，而不出现  $”2018”$ </p>
-<h3 id="题解-11"><a href="#题解-11" class="headerlink" title="题解"></a>题解</h3><p> $5$ 个状态：</p>
-<ul>
-<li>0 - $””$</li>
-<li>1 - $”2”$</li>
-<li>2 - $”20”$ </li>
-<li>3 - $”201”$</li>
-<li>4 - $”2019”$ </li>
-</ul>
-<p>使用一个 $5\times5$ 的矩阵来表示每个点的状态转移所需要的代价，区间查询即这个区间的矩阵的乘积，这里的乘积有些不同，有点像 $floyd$ </p>
-<h2 id="-5"><a href="#-5" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 2019ICPC-Shanghai<br>date: 2019-09-16 16:50:00<br>categories: icpc<br>tags:  </p>
-<ul>
-<li>dfs  </li>
-<li>dp  </li>
-<li>fft  </li>
-</ul>
-<hr>
-<h2 id="C-Triple"><a href="#C-Triple" class="headerlink" title="C. Triple"></a>C. Triple</h2><h3 id="题意-12"><a href="#题意-12" class="headerlink" title="题意"></a>题意</h3><p>给三个序列，分别从中选取一个数，输出能够构成一个三角形（线段也算）的方案数。</p>
-<h3 id="题解-12"><a href="#题解-12" class="headerlink" title="题解"></a>题解</h3><p>使用 $FFT$ 减去不符合条件的方案</p>
-<h2 id="D-Counting-Sequences-I"><a href="#D-Counting-Sequences-I" class="headerlink" title="D. Counting Sequences I"></a>D. Counting Sequences I</h2><h3 id="题意-13"><a href="#题意-13" class="headerlink" title="题意"></a>题意</h3><p>输入一个 $n$ ，问长度为 $n$ 的数列，满足 $a_1+a_2+\cdots+a_n=a_1\times a_2\times\cdots\times a_n$ 的方案数。</p>
-<h3 id="题解-13"><a href="#题解-13" class="headerlink" title="题解"></a>题解</h3><p>这样的序列满足 $1$ 的数量为 <strong>非 $1$ 部分的乘积减去非 $1$ 部分的和</strong>，我们只需要枚举非 $1$ 部分就可以了</p>
-<p>设序列有 $k$ 种数，每种数有 $c_i$ 个，则方案数为 $\huge C_{n}^{c_1}\times C_{n-c_1}^{c_2}\times\cdots\times C_{n-c_1-\cdots-c_{i-1}}^{c_i}\times\cdots\times C_{c_k}^{c_k}$ </p>
-<h2 id="F-Rhyme-scheme"><a href="#F-Rhyme-scheme" class="headerlink" title="F. Rhyme scheme"></a>F. Rhyme scheme</h2><h3 id="题意-14"><a href="#题意-14" class="headerlink" title="题意"></a>题意</h3><p>对 $n$ 个元素划分集合，每一种划分对应一个长度为 $n$ 的字符串，对这 $B_n$ 个字符串按字典序排序，问第 $k$ 个是什么。</p>
-<p>如 $n=3$ 时，字符串为 $AAA,AAB,ABA,ABB,ABC$ </p>
-<h3 id="题解-14"><a href="#题解-14" class="headerlink" title="题解"></a>题解</h3><p>设 $dp[n][i][j]$ 表示对于 $n$ 个元素，前 $i$ 个元素被分为了 $j$ 个集合，剩余 $n-i$ 个元素划分集合的方案数。</p>
-<script type="math/tex; mode=display">
-dp[n][i][j]=j*dp[n][i+1][j]+dp[n][i+1][j+1]</script><p>然后再在字典树上查找答案就可以了</p>
-<p><img src="/2019/09/21/题解/2019ICPC-Shanghai/Screen Shot 2019-09-17 at 5.52.09 PM.png" alt="Screen Shot 2019-09-17 at 5.52.09 PM"></p>
-<h2 id="J-Stone-game"><a href="#J-Stone-game" class="headerlink" title="J. Stone game"></a>J. Stone game</h2><h3 id="题意-15"><a href="#题意-15" class="headerlink" title="题意"></a>题意</h3><p> $n(1\le n\le300)$ 堆石子，每堆石子有 $a_i(1\le a_i\le 500)$ 个，问有多少种取法使得取走的数量大于等于剩余的数量而且按这种取法丢弃掉任意一堆都将会小于等于剩余的石子数</p>
-<h3 id="题解-15"><a href="#题解-15" class="headerlink" title="题解"></a>题解</h3><p>对石子数从大到小排序， $dp[i]$ 表示总共取 $i$ 的方案数</p>
-<h2 id="-6"><a href="#-6" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 2019ICPC-Shenyang<br>date: 2019-09-19 20:42:35<br>categories: icpc<br>tags:  </p>
-<h2 id="dp-1"><a href="#dp-1" class="headerlink" title="- dp  "></a>- dp  </h2><h2 id="D-Fish-eating-fruit"><a href="#D-Fish-eating-fruit" class="headerlink" title="D. Fish eating fruit"></a>D. Fish eating fruit</h2><h3 id="题意-16"><a href="#题意-16" class="headerlink" title="题意"></a>题意</h3><p>将树上任意两点之间的距离按取模 $3$ 分类，分别求出三种情况的路径和 </p>
-<h3 id="题解-16"><a href="#题解-16" class="headerlink" title="题解"></a>题解</h3><ul>
-<li><p>解法1:</p>
-<p>   $dp1[u][j]$ 表示以 $u$ 为根节点的树，树上任意两点之间的距离取模 $3$ 为 $j$ 的路径和</p>
-<p>  $dp2[u][j]$ 表示以 $u$ 为根节点的树，树上的点到 $u$ 的距离取模 $3$ 为 $j$ 的路径和 </p>
-<p>  $dp3[u][j]$ 表示以 $u$ 为根节点的树，树上的点到 $u$ 的距离取模 $3$ 为 $j$ 的节点数</p>
-</li>
-<li><p>解法2:</p>
-<p>  根据模 3 的余数设计 dp 方程</p>
-<p>  $dp[i][k]$ 统计距 i 模 3 为 k 的子节点的数目</p>
-<p>  $fp[i][k]$ 统计距 i 模 3 为 k 的非子节点的数目（父节点，兄弟节点，兄弟节点 的子节点）</p>
-<p>  $ans[i][k]$ 统计距 i 模 3 为 k 的子节点到 i 的距离和</p>
-<p>  $fans[i][k]$ 统计距 i 模 3 为 k 的非子节点距离和</p>
-</li>
-</ul>
-<h2 id="-7"><a href="#-7" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 2019牛客多校-Day1<br>date: 2019-08-13 19:16:14<br>categories: 牛客<br>tags: </p>
-<h2 id="math-1"><a href="#math-1" class="headerlink" title="- math  "></a>- math  </h2><h2 id="B-Integration"><a href="#B-Integration" class="headerlink" title="B. Integration"></a>B. Integration</h2><h3 id="题意-17"><a href="#题意-17" class="headerlink" title="题意"></a>题意</h3><p>已知 $\Large \int_{0}^{\infty} \frac{1}{1+x^{2}} \mathrm{d} x=\frac{\pi}{2}$ ，求 $\Large\frac{1}{\pi} \int_{0}^{\infty} \frac{1}{\prod_{i=1}^{n}\left(a_{i}^{2}+x^{2}\right)} \mathrm{d} x$ </p>
-<h3 id="题解-17"><a href="#题解-17" class="headerlink" title="题解"></a>题解</h3><p>由 $\large\frac 1 a\times \frac 1 b=(\frac 1 a-\frac 1 b)\times \frac 1 {(b-a)}$ ，获得启发，化乘为加，令 $\large c_i=\prod\limits_{j\ne i}\frac 1 {a_j^2-a_i^2}$ ，则  $\large\prod \frac 1 {(a_i^2+x^2)}=\sum \frac {c_i}{a_i^2+x^2}$</p>
-<h2 id="C-Euclidean-Distance"><a href="#C-Euclidean-Distance" class="headerlink" title="C. Euclidean Distance"></a>C. Euclidean Distance</h2><h3 id="题意-18"><a href="#题意-18" class="headerlink" title="题意"></a>题意</h3><p>给一个点 $(\frac {a_1} m,\frac {a_2} m,\cdots,\frac {a_n} m)(-m\le a_i\le m)$ ，找到一个点 $P(p_1,p_2,\cdots,p_n)(p_i\ge 0,\sum p_i=1)$ 使得 $\sum (\frac {a_i}m-p_i)^2$ 最小</p>
-<h3 id="题解-18"><a href="#题解-18" class="headerlink" title="题解"></a>题解</h3><p>对 $a_i$ 排序，逐渐减小最大的 $a_i$ ，使得序列的最大值尽可能小</p>
-<h2 id="-8"><a href="#-8" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 2019牛客多校-Day4<br>date: 2019-08-09 17:13:44<br>categories: 牛客<br>tags: </p>
-<h2 id="string"><a href="#string" class="headerlink" title="- string  "></a>- string  </h2><h2 id="I-String"><a href="#I-String" class="headerlink" title="I. String"></a>I. String</h2><h3 id="题意-19"><a href="#题意-19" class="headerlink" title="题意"></a>题意</h3><p>定义两个字符串不等为 $a\ne b \&amp;\&amp; a\ne rev(b) $</p>
-<p>给一个字符串，问由它的子串构成的 <strong>任意两个元素都不等</strong> 的最大集合有多大</p>
-<h3 id="题解-19"><a href="#题解-19" class="headerlink" title="题解"></a>题解</h3><p>显然答案为 $a,rev(a)$ 中本质不同的子串的数量除 2，注意若子串为回文串则只被计了一次，所以还需要加上一个 $a$ 中本质不同回文串的数量再除 2</p>
-<h2 id="-9"><a href="#-9" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 2019-牛客多校-Day5<br>date: 2019-08-08 08:35:54<br>categories: 牛客<br>tags: </p>
-<h2 id="math-2"><a href="#math-2" class="headerlink" title="- math  "></a>- math  </h2><h2 id="C-generator-2"><a href="#C-generator-2" class="headerlink" title="C. generator 2"></a>C. generator 2</h2><h3 id="题意-20"><a href="#题意-20" class="headerlink" title="题意"></a>题意</h3><p>给出 $n, x_{0}, a, b, p \quad\left(1 \leq n \leq 10^{18}, 0 \leq x_{p}, a, b&lt;p \leq 10^{9}+9,\text{p is a prime number}\right)$ ，$q$次询问，问在序列 $x_0,x_1,\cdots,x_{n-1}$ 中最小的 $i$ ，使得 $x_i=v$</p>
-<h3 id="题解-20"><a href="#题解-20" class="headerlink" title="题解"></a>题解</h3><p>需要手写Hash，对于 GSBS 中的 $c_i<em>m-r_i$ ，因为有多组，且 $a,p$ 都不变，我们可以预处理 $\large a^{i</em>m}$ ，每组样例的时间复杂度为 $\frac p m+qm $ ，所以 $m=\sqrt{\frac p q}$ 时，总的时间复杂度最小</p>
-<h2 id="-10"><a href="#-10" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: BZOJ-3992<br>date: 2019-08-30 16:10:20<br>categories: bzoj<br>tags:  </p>
-<ul>
-<li>ntt  </li>
-<li>快速幂  </li>
-</ul>
-<hr>
-<h3 id="题意-21"><a href="#题意-21" class="headerlink" title="题意"></a>题意</h3><p>集合 $S\subseteq \{x|x\in[0,m-1]\}$ ，由这些数组成一个长度为 $N$ 的数列，给定整数 $r(r\in[0,m-1])$，求满足数列中所有数的乘积 $\mod m$ 的值等于 $r$ 的不同的数列的有多少个。 </p>
-<h3 id="题解-21"><a href="#题解-21" class="headerlink" title="题解"></a>题解</h3><p>将 $S$ 和 $x$ 由 $m$ 的原根来表示，这样就可以变乘为加，将集合 $S$ 表示为 $\large f(x)=a_0x^0+a_1x^1+\cdots+a_{m-2}x^{m-2}$ ， $a_i$ 表示 $g^i$ 是否属于 $S$  将 $f(x)$ 看作一个整体，使用快速幂和 $NTT$ 求解 $f(x)^n$  ，答案就为 $x^r$ 的系数</p>
-<h2 id="-11"><a href="#-11" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1062<br>date: 2019-03-02 21:33:31<br>categories: cf<br>tags:  </p>
-<ul>
-<li>math  </li>
-</ul>
-<hr>
-<h2 id="D-Fun-with-Integers"><a href="#D-Fun-with-Integers" class="headerlink" title="D. Fun with Integers"></a>D. Fun with Integers</h2><h3 id="题意-22"><a href="#题意-22" class="headerlink" title="题意"></a>题意</h3><p>You are given a positive integer n​ greater or equal to 2. For every pair of integers a and b (2≤|𝑎|,|𝑏|≤𝑛2≤|a|,|b|≤n), you can transform a into b if and only if there exists an integer x such that 1&lt;|x| and (a⋅x=b or b⋅x=a), where |x| denotes the absolute value of x.</p>
-<p>After such a transformation, your score increases by |x| points and you are <strong>not allowed</strong> to transform a into b nor b into a anymore.</p>
-<p>Initially, you have a score of 0. You can start at any integer and transform it as many times as you like. What is the maximum score you can achieve?</p>
-<h3 id="题解-22"><a href="#题解-22" class="headerlink" title="题解"></a>题解</h3><p>答案为 2~n 每个数的因子( 范围为$[2,n)$ )之和。</p>
-<script type="math/tex; mode=display">
-\Huge\sum s_i</script><h2 id="-12"><a href="#-12" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1076<br>date: 2019-03-02 21:17:02<br>categories: cf<br>tags:  </p>
-<ul>
-<li>data structure  </li>
-</ul>
-<hr>
-<h2 id="D-Edge-Deletion"><a href="#D-Edge-Deletion" class="headerlink" title="D. Edge Deletion"></a>D. Edge Deletion</h2><h3 id="题意-23"><a href="#题意-23" class="headerlink" title="题意"></a>题意</h3><p>the length of the shortest path from vertex 1 to vertex i as $d_i$ .</p>
-<p>You have to erase some edges of the graph so that at most k edges remain. Let’s call a vertex i <strong>good</strong> if there still exists a path from 1 to i with length $d_i$ after erasing the edges.</p>
-<p>Your goal is to erase the edges in such a way that the number of <strong>good</strong> vertices is maximized.</p>
-<h3 id="题解-23"><a href="#题解-23" class="headerlink" title="题解"></a>题解</h3><p>先跑个最短路，再搜索，取最短路上的边。</p>
-<h2 id="E-Vasya-and-a-Tree"><a href="#E-Vasya-and-a-Tree" class="headerlink" title="E. Vasya and a Tree"></a>E. Vasya and a Tree</h2><h3 id="题意-24"><a href="#题意-24" class="headerlink" title="题意"></a>题意</h3><p>给一颗树，将 v 和与 v 距离小于 d 的 v 的子节点的权值加上 x，输出所有节点的权值。</p>
-<h3 id="题解-24"><a href="#题解-24" class="headerlink" title="题解"></a>题解</h3><p>保存每个点每次加权的终点和 x。</p>
-<h2 id="-13"><a href="#-13" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-11<br>mathjax: false<br>date: 2019-03-22 11:24:36<br>categories: cf<br>tags: </p>
-<h2 id="dp-2"><a href="#dp-2" class="headerlink" title="- dp  "></a>- dp  </h2><h2 id="D-A-Simple-Task"><a href="#D-A-Simple-Task" class="headerlink" title="D. A Simple Task"></a>D. A Simple Task</h2><h3 id="题意-25"><a href="#题意-25" class="headerlink" title="题意"></a>题意</h3><p>求出一个n个点m个边的图，求简单环有多少（没有重复点和边）。（n&lt;20）</p>
-<h3 id="题解-25"><a href="#题解-25" class="headerlink" title="题解"></a>题解</h3><p>用S能记录状态（有多少个点在路径中），那么如何找环能确保不重不漏啦，对于一个环，找出他的特异性记录，一个环，如果以最小点为环的“起始点”，则每个环都被记录啦两次。用dp[s][i]表示路径s的当前点为i的次数，枚举下一点，如果形成环就加上答案，否则记录下一边。由于题目求的是超过三个点的简单环，而之前所求两个点也会被记录。减掉就可以啦。</p>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><blockquote>
-<p><a href="https://blog.csdn.net/m0_37953323/article/details/77169608" target="_blank" rel="noopener">https://blog.csdn.net/m0_37953323/article/details/77169608</a></p>
-</blockquote>
-<h2 id="-14"><a href="#-14" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1139<br>date: 2019-03-30 21:00:47<br>categories: cf<br>tags:  </p>
-<ul>
-<li>dp  </li>
-<li>math  </li>
-<li>number theory  </li>
-</ul>
-<hr>
-<h2 id="D-Steps-to-One"><a href="#D-Steps-to-One" class="headerlink" title="D. Steps to One"></a>D. Steps to One</h2><h3 id="题意-26"><a href="#题意-26" class="headerlink" title="题意"></a>题意</h3><p>每次从$1\sim m$从等概率的选择一个数, 直到所有选择的数的 gcd 为 1, 问操作的次数的期望是多少?</p>
-<h3 id="题解1"><a href="#题解1" class="headerlink" title="题解1"></a>题解1</h3><p>设$f[n]$表示当前 gcd 为 n 还需要的步数的期望</p>
-<script type="math/tex; mode=display">
-f[n]=1+\frac {\sum\limits_{i=1}^mf[gcd(i,n)]} m\\
-\sum\limits_{i=1}^mf[gcd(i,n)]=\sum\limits_{d|n}f[d]\sum\limits_{i=1}^me[gcd(i,n)==d]\\
-\sum\limits_{i=1}^me[gcd(i,n)==d]=\sum\limits_{i=1}^{\lfloor \frac m d\rfloor}\epsilon[gcd(i,\frac n d)]
-\\=\sum\limits_{i=1}^{\lfloor \frac m d\rfloor}\sum\limits_{t|gcd(i,\frac n d)}\mu(t)=\sum\limits_{t|\frac n d}\mu(t)\lfloor \frac m {dt}\rfloor\\
-接下来把右边f[n]的项提出来\\
-(m-\lfloor\frac m n\rfloor)f[n]=m+\sum\limits_{d|n,d\ne n}f[d]\sum\limits_{t|\frac n d}\mu(t)\lfloor \frac m {dt}\rfloor\\
-ans=1+\frac {\sum\limits_{i=1}^mf[i]} m</script><h3 id="题解2"><a href="#题解2" class="headerlink" title="题解2"></a>题解2</h3><p>设$E[n|i]$表示 gcd 为 n 的倍数的期望步数</p>
-<script type="math/tex; mode=display">
-k=\lfloor\frac m n\rfloor\\
-E[n|i]=\sum\limits_{j=1}^{\infty}j*\frac {k^j} {m^j}=\frac {\frac k m} {1-\frac k m}=\frac k {m-k}\\
-ans=1+E[i>1]=1+\sum_{j=2}^m-\mu(j)E[j|i]</script><h3 id="引用-1"><a href="#引用-1" class="headerlink" title="引用"></a>引用</h3><blockquote>
-<p><a href="https://www.cnblogs.com/zyt1253679098/p/10584706.html" target="_blank" rel="noopener">https://www.cnblogs.com/zyt1253679098/p/10584706.html</a><br><a href="https://blog.csdn.net/neuq_zsmj/article/details/88830388" target="_blank" rel="noopener">https://blog.csdn.net/neuq_zsmj/article/details/88830388</a></p>
-</blockquote>
-<h2 id="-15"><a href="#-15" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1144<br>date: 2019-04-01 13:58:55<br>categories: cf<br>tags:  </p>
-<ul>
-<li>greedy  </li>
-<li>dp  </li>
-<li>data structure  </li>
-</ul>
-<hr>
-<h2 id="F-Graph-Without-Long-Directed-Paths"><a href="#F-Graph-Without-Long-Directed-Paths" class="headerlink" title="F. Graph Without Long Directed Paths"></a>F. Graph Without Long Directed Paths</h2><h3 id="题意-27"><a href="#题意-27" class="headerlink" title="题意"></a>题意</h3><p>一个严格递增的数列, 一个严格递减的数列, 将它们保持原相对顺序不变合并在一起. 给出合并后的数列. </p>
-<h3 id="题解1-greedy"><a href="#题解1-greedy" class="headerlink" title="题解1 (greedy)"></a>题解1 (greedy)</h3><p>维护一个递增数列 A, 一个递减的数列 B, 当只能插入一个数列的时候插入对应数列, 当两个都不能插入时输出”NO”, 当两个都能插入时, 若下一个数大于当前数, 插入 A, 否则插入 B.</p>
-<h3 id="题解2-dp"><a href="#题解2-dp" class="headerlink" title="题解2 (dp)"></a>题解2 (dp)</h3><p>$dp[ i ][ 0 ]$表示处理完前 $i$ 个， 第 $i$ 个是递增序列序列里的元素，递减序列的最大值。</p>
-<p>$dp[ i ][ 1 ]$表示处理完前 $i$ 个， 第 $i$ 个是递减序列序列里的元素，递增序列的最小值。</p>
-<blockquote>
-<p><a href="https://www.cnblogs.com/CJLHY/p/10634175.html" target="_blank" rel="noopener">https://www.cnblogs.com/CJLHY/p/10634175.html</a></p>
-</blockquote>
-<h2 id="-16"><a href="#-16" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1148E<br>date: 2019-06-04 17:32:04<br>categories: cf<br>tags: </p>
-<h2 id="greedy"><a href="#greedy" class="headerlink" title="- greedy  "></a>- greedy  </h2><h2 id="Earth-Wind-and-Fire"><a href="#Earth-Wind-and-Fire" class="headerlink" title="Earth Wind and Fire"></a>Earth Wind and Fire</h2><h3 id="题意-28"><a href="#题意-28" class="headerlink" title="题意"></a>题意</h3><p>给两个长度为 $n$ 个数组 $a,b$, 如果 $a_i\le a_j$ 可以取一个 $d(0\le 2*d\le a_j-a_i)$ , 然后 $a_i+d,a_j-d$ , 问如何操作可以让 $a$ 变为 $b$</p>
-<h3 id="题解-26"><a href="#题解-26" class="headerlink" title="题解"></a>题解</h3><p>对 $a,b$ 排序, 将 $a_i$ 变为 $b_i$, 用一个 $stack$ 维护 $a$ 中待加值的元素</p>
-<h2 id="-17"><a href="#-17" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1151<br>date: 2019-04-22 19:14:54<br>categories: cf<br>tags: </p>
-<h2 id="dp-3"><a href="#dp-3" class="headerlink" title="- dp  "></a>- dp  </h2><h2 id="E-Number-of-Components"><a href="#E-Number-of-Components" class="headerlink" title="E. Number of Components"></a>E. Number of Components</h2><h3 id="题意-29"><a href="#题意-29" class="headerlink" title="题意"></a>题意</h3><p>一条链, 每个点的权值为 $a_i(1\le a_i\le n)$ , $f(l,r)$ 表示仅保留权值在 $[l,r]$ 之间的点的联通分量</p>
-<p>求 </p>
-<script type="math/tex; mode=display">
-\sum\limits_{l=1}^{n} \sum\limits_{r=l}^{n} f(l, r)</script><h3 id="题解-27"><a href="#题解-27" class="headerlink" title="题解"></a>题解</h3><p>统计每个点的贡献, 只有当取 $a_i$ 不取 $a_{i+1}$ 时, $a_i$ 才有贡献</p>
-<h2 id="F-Sonya-and-Informatics"><a href="#F-Sonya-and-Informatics" class="headerlink" title="F. Sonya and Informatics"></a>F. Sonya and Informatics</h2><h3 id="题意-30"><a href="#题意-30" class="headerlink" title="题意"></a>题意</h3><p>数组 $a$ 有 $n$ 个数, 这些数由 $0,1$ 构成, 等概率交换任意两个数的位置, 问最后得到一个不下降的数列的概率, 答案对 $1e9+7$ 取模</p>
-<h3 id="题解-28"><a href="#题解-28" class="headerlink" title="题解"></a>题解</h3><p>设 $x$ 表示 $0$ 的个数,  $dp[i][j]$ 表示操作 $i$ 次后前 $x$ 个数中 $0$ 的个数为 $j$ 的概率, 答案为 $dp[k][x]$ </p>
-<p>可以发现状态转移方程与 $i$ 无关, 可以用矩阵快速幂做</p>
-<h2 id="-18"><a href="#-18" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1152<br>date: 2019-08-27 20:56:07<br>categories: cf<br>tags: </p>
-<h2 id="dp-4"><a href="#dp-4" class="headerlink" title="- dp  "></a>- dp  </h2><h2 id="D-Neko-and-Aki’s-Prank"><a href="#D-Neko-and-Aki’s-Prank" class="headerlink" title="D. Neko and Aki’s Prank"></a>D. Neko and Aki’s Prank</h2><h3 id="题意-31"><a href="#题意-31" class="headerlink" title="题意"></a>题意</h3><p>将长度为 $2n$ 的所有合法括号匹配放入字典树中，求这棵树的最大的边集，边集里的边两两不相连 </p>
-<h3 id="题解-29"><a href="#题解-29" class="headerlink" title="题解"></a>题解</h3><p>对于括号匹配 $(((),()((,(()($ 来说，其子树是一样的， $dp[i][j]$ 表示深度为 $i$ 的左括号比右括号多 $j$ 的括号匹配的答案，我们直接贪心的取边，能取就取，使用一个 $vis[i][j]$ 来标记点是否取了，$dp[i][j]=dp[i+1][j+1]+dp[i+1][j-1]+(vis[i+1][j+1]==0||vis[i+1][j-1]==0)$，注意判断 $[i][j]$ 是否是合法的节点 </p>
-<h2 id="-19"><a href="#-19" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1154<br>date: 2019-04-19 17:37:00<br>categories: cf<br>tags:  </p>
-<ul>
-<li>dp  </li>
-<li>math  </li>
-</ul>
-<hr>
-<h2 id="E-Two-Teams"><a href="#E-Two-Teams" class="headerlink" title="E. Two Teams"></a>E. Two Teams</h2><h3 id="题意-32"><a href="#题意-32" class="headerlink" title="题意"></a>题意</h3><p>一个 $1\sim n$ 的排列, 从大到小删数, 当删一个数时将其左右的 $k$ 个数也删了, 若某个数是第奇数次删的输出 1, 否则输出 2</p>
-<h3 id="题解-30"><a href="#题解-30" class="headerlink" title="题解"></a>题解</h3><p>维护两个数组 $l[i],r[i] $ 分别表示第 $i$ 个数左边, 右边的数所在的地方</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h2 id="F-Shovels-Shop"><a href="#F-Shovels-Shop" class="headerlink" title="F. Shovels Shop"></a>F. Shovels Shop</h2><h3 id="题意-33"><a href="#题意-33" class="headerlink" title="题意"></a>题意</h3><p>$n$ 个物品, 其价格分别为 $a_i$ , 有 $m$ 种折扣, 买 $x_i$ 件物品, 便宜的 $y_i$ 件免费, 买 $k(\le 2000)$ 件的最小花费</p>
-<h3 id="题解-31"><a href="#题解-31" class="headerlink" title="题解"></a>题解</h3><p>$dp[i]$ 表示买 $i$ 件物品的最小花费</p>
-<p>$dp[i]=min(dp[i-1]+a[i],dp[i-j]+pre[i]-pre[ i-cost[j] ])$</p>
-<p>$cost[i]$ 表示买 $i$ 件物品最小需要支付的物品数</p>
-<h2 id="G-Minimum-Possible-LCM"><a href="#G-Minimum-Possible-LCM" class="headerlink" title="G. Minimum Possible LCM"></a>G. Minimum Possible LCM</h2><h3 id="题意-34"><a href="#题意-34" class="headerlink" title="题意"></a>题意</h3><p>给 $n(2\le n \le 1e6)$ 个数, 求最大的 $lcm(a_i,a_j) (1\le a_i\le 1e7)$</p>
-<h3 id="题解-32"><a href="#题解-32" class="headerlink" title="题解"></a>题解</h3><p>枚举 $gcd(a_i,a_j)$ , 找到最小的 $a_i, a_j$</p>
-<p>时间复杂度 $O(\frac {10^7}1+\frac {10^7}2+\frac {10^7}3+\cdots+\frac {10^7}{10^7})\approx O(10^7log(10^7))$</p>
-<h2 id="-20"><a href="#-20" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1174D<br>date: 2019-06-04 18:09:48<br>categories: cf<br>tags: </p>
-<h2 id="implementation"><a href="#implementation" class="headerlink" title="- implementation  "></a>- implementation  </h2><h2 id="Ehab-and-the-Expected-XOR-Problem"><a href="#Ehab-and-the-Expected-XOR-Problem" class="headerlink" title="Ehab and the Expected XOR Problem"></a>Ehab and the Expected XOR Problem</h2><h3 id="题意-35"><a href="#题意-35" class="headerlink" title="题意"></a>题意</h3><p>给 $n(1\le n\le 18),x(1\le x&lt;2^{18})$ , 构造一个数组 $a(1\le a_i&lt;2^n)$ , 使得这个数组的任意子段的异或和不为 0 或 $x$  </p>
-<h3 id="题解-33"><a href="#题解-33" class="headerlink" title="题解"></a>题解</h3><p>要使得这个数组的任意子段的异或和不为 0, 只需要保证数组的前缀和都不同就可以了. 假设 $A\text^B=x$ , 可以将 $[0,2^n-1]$ 分为两部分, 没部分里面的数两两异或都不为 $x$</p>
-<h2 id="-21"><a href="#-21" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1174E<br>date: 2019-06-06 19:55:53<br>categories: cf<br>tags: </p>
-<h2 id="dp-5"><a href="#dp-5" class="headerlink" title="- dp  "></a>- dp  </h2><h2 id="Ehab-and-the-Expected-GCD-Problem"><a href="#Ehab-and-the-Expected-GCD-Problem" class="headerlink" title="Ehab and the Expected GCD Problem"></a>Ehab and the Expected GCD Problem</h2><h3 id="题意-36"><a href="#题意-36" class="headerlink" title="题意"></a>题意</h3><p>定义 $f(p)$ 表示 一个排列 $p$ 的 $g_1,g_2 \cdots g_n$  的种类数, $g_i$ 表示该排列前 $i $ 个数的 $gcd$</p>
-<p>$f_{max}(n)$ 表示 $n$ 的排列的最大 $f$ 值</p>
-<p>给 $n$ 求 $f(p)=f_{max}(n)$ 的方案数</p>
-<h3 id="题解-34"><a href="#题解-34" class="headerlink" title="题解"></a>题解</h3><p>显然 要让 $f$ 最大, 排列的第一个数为 $2^k$ 或 $2^{k-1}<em>3$ , 设 $dp[i][x][t]$ 表示前 $i$  个数的 $gcd$ 为 $\large 2^{x} </em>3^y$ 的方案数</p>
-<script type="math/tex; mode=display">
-dp[i][x][y]=dp[i-1][x][y]*max(f[x][y]-i+1,0)+\\dp[i-1][x+1][y]*(f[x][y]-f[x+1][y])+dp[i-1][x][y+1]*(f[x][y]-f[x][y+1]</script><p>$f[x][y]$ 表示 $\Large \lfloor \frac n {2^x*3^y}\rfloor$ , 答案为 $dp[n][0][0]$</p>
-<h2 id="-22"><a href="#-22" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1175D<br>date: 2019-06-07 13:33:20<br>categories: cf<br>tags: </p>
-<h2 id="greedy-1"><a href="#greedy-1" class="headerlink" title="- greedy  "></a>- greedy  </h2><h2 id="Array-Splitting"><a href="#Array-Splitting" class="headerlink" title="Array Splitting"></a>Array Splitting</h2><h3 id="题意-37"><a href="#题意-37" class="headerlink" title="题意"></a>题意</h3><p>将一个长度为 $n$ 的序列 $a_i$ 顺序不变的分为非空的 $k$ 部分, 设 $f(i)$ 表示 $a_i$ 在第 $f(i)$ 部分</p>
-<p>求 $\sum\limits_{i=1}^na_i*f(i)$</p>
-<h3 id="题解-35"><a href="#题解-35" class="headerlink" title="题解"></a>题解</h3><p>在 $[1,n]$ 中选 $k$ 个点 $b_i$ (其中一个为 1)将序列分为 $k$ 份, 答案为 $\sum\limits_{i=1}^ksuf[i]$ , $suf[i]$ 表示从 $i$ 开始的后缀和</p>
-<p>所以直接对后缀排序, 取最大的 $k$ 个</p>
-<h2 id="-23"><a href="#-23" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1176D<br>date: 2019-06-12 17:32:51<br>categories: cf<br>tags:  </p>
-<ul>
-<li>greedy  </li>
-<li>sorting  </li>
-<li>number theory  </li>
-</ul>
-<hr>
-<h3 id="题意-38"><a href="#题意-38" class="headerlink" title="题意"></a>题意</h3><p><img src="/2019/09/21/题解/CF-1176D/Screen Shot 2019-06-12 at 5.36.51 PM.png" alt="Screen Shot 2019-06-12 at 5.36.51 PM"></p>
-<h3 id="题解-36"><a href="#题解-36" class="headerlink" title="题解"></a>题解</h3><p>排序, 从大到小处理, 若当前最大的为素数, 那它一定是 $b$, 若当前最大数为合数, 那它一定是 $a$</p>
-<h2 id="-24"><a href="#-24" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1183F<br>date: 2019-06-30 20:10:56<br>categories: cf<br>tags: </p>
-<h2 id="math-3"><a href="#math-3" class="headerlink" title="- math  "></a>- math  </h2><h3 id="题意-39"><a href="#题意-39" class="headerlink" title="题意"></a>题意</h3><p>给 $n$ 个数，选至多 $3$ 个，且两两不为倍数关系，问最大值是多少</p>
-<h3 id="题解-37"><a href="#题解-37" class="headerlink" title="题解"></a>题解</h3><p>排序，若最大值不取 $a_n$，那只有一种可能 $\frac 1 2 a_n ,\frac 1 3 a_n,\frac 1 5 a_n $，因为如果最大值包含不为 a_n 的因子，那么显然取 a_n 更优。易证，若取 $a_n$ ，一定会取 <strong>不为 $a_n$ 因子的最大值</strong>，</p>
-<h2 id="-25"><a href="#-25" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1183G<br>date: 2019-06-28 20:49:30<br>categories: cf<br>tags: </p>
-<h2 id="greedy-2"><a href="#greedy-2" class="headerlink" title="- greedy  "></a>- greedy  </h2><h2 id="G-Candy-Box-hard-version"><a href="#G-Candy-Box-hard-version" class="headerlink" title="G. Candy Box (hard version)"></a>G. Candy Box (hard version)</h2><h3 id="题意-40"><a href="#题意-40" class="headerlink" title="题意"></a>题意</h3><p>$q(1\le q\le 2e5)$ 次询问，每次询问$n(1\le n\le 2e5)$ 个物体，每个物体的种类为 $a_i(1\le a_i\le n)$，喜欢与否为 $f_i(0\le f_i\le1)$，要尽量取多的物体，要求每种物体的数量不同，在保证数量最多的情况下，要让喜欢的最少</p>
-<h3 id="题解-38"><a href="#题解-38" class="headerlink" title="题解"></a>题解</h3><p>按种类数排序，总数记为 $x_i$ ，$f=0$ 的数量为 $y_i$，从 $n-&gt;1$ 扫描，对于当前 $i$，将满足条件的 $y_i$ 加入优先队列</p>
-<h2 id="-26"><a href="#-26" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1189E<br>date: 2019-07-06 14:03:37<br>categories: cf<br>tags: </p>
-<h2 id="number-theory"><a href="#number-theory" class="headerlink" title="- number theory  "></a>- number theory  </h2><h2 id="E-Count-Pairs"><a href="#E-Count-Pairs" class="headerlink" title="E. Count Pairs"></a>E. Count Pairs</h2><h3 id="题意-41"><a href="#题意-41" class="headerlink" title="题意"></a>题意</h3><p>You are given a prime number $p, n$ integers $a_{1}, a_{2}, \ldots, a_{n}(all a_i are different),$ and an integer $k$</p>
-<p>Find the number of pairs of indexes $(i, j)(1 \leq i&lt;j \leq n)$ for which $\left(a_{i}+a_{j}\right)\left(a_{i}^{2}+a_{j}^{2}\right) \equiv k \bmod p$</p>
-<h3 id="题解-39"><a href="#题解-39" class="headerlink" title="题解"></a>题解</h3><script type="math/tex; mode=display">
-(a_i-a_j)(a_i+a_j)(a_i^2+a_j^2)\equiv (a_i-a_j)k\ \bmod p\\
-a_i^4-ka_i\equiv a_j^4-ka_j\bmod p</script><h2 id="-27"><a href="#-27" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1195E<br>date: 2019-07-29 17:00:01<br>categories: cf<br>tags:  </p>
-<ul>
-<li>two pointers  </li>
-<li>data structure  </li>
-</ul>
-<hr>
-<h3 id="题意-42"><a href="#题意-42" class="headerlink" title="题意"></a>题意</h3><p>给一个 $n<em>m(1 \leq n, m \leq 3000)$ 的矩阵，求每一个 $a</em>b$ 的子矩阵中最小值之和</p>
-<h3 id="题解-40"><a href="#题解-40" class="headerlink" title="题解"></a>题解</h3><p>先求出每一行长度为 $b$ 的序列的最小值，再求每一列长度为 $a$ 的序列的最小值</p>
-<h2 id="-28"><a href="#-28" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1203F<br>date: 2019-08-15 17:42:13<br>categories: cf<br>tags:  </p>
-<ul>
-<li>greedy  </li>
-<li>dp  </li>
-</ul>
-<hr>
-<h3 id="题意-43"><a href="#题意-43" class="headerlink" title="题意"></a>题意</h3><p>给两个序列 $a[],b<a href="1\le n\le 100,1\le a_i\le 3e4,-300\le b_i\le 300"></a>$ ，你拥有的技能点为 $r(1\le r\le 3e4)$ ，只有当技能点 $\ge a_i$ 时，才可以做第 $i$ 份工作，技能点加上 $b_i$</p>
-<ol>
-<li>问他能否完成这 $n$ 份工作</li>
-<li>如果不能，最多能完成几份</li>
-</ol>
-<h3 id="题解-41"><a href="#题解-41" class="headerlink" title="题解"></a>题解</h3><ol>
-<li>显然，对于 $b_i\ge 0$ ，我们以 $a_i$ 排序；对于 $b_i&lt; 0$ ，我们以 $a_i+b_i$ 排序。因为对于 $x,y$  两个工作，假设 $xa+xb&lt;ya+yb$ ，如果 $r+xb&lt;ya$ ，那么一定有 $r+yb&lt;ax$ </li>
-<li>对于 $b_i\ge 0$ 容易求解；对于 $b_i&lt; 0$ ，使用 $dp$ 来求解，同样以 $a_i+b_i$ 排序，$dp[i][j]$ 表示前 $i$ 份工作剩余 $j$ 技能点的最大完成数。</li>
-</ol>
-<h2 id="-29"><a href="#-29" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1207<br>date: 2019-08-29 20:28:00<br>categories: cf<br>tags:  </p>
-<ul>
-<li>data structure  </li>
-<li>binary indexed tree  </li>
-<li>dfs  </li>
-<li>ac automation  </li>
-</ul>
-<hr>
-<h2 id="G-Indie-Album"><a href="#G-Indie-Album" class="headerlink" title="G. Indie Album"></a>G. Indie Album</h2><h3 id="题意-44"><a href="#题意-44" class="headerlink" title="题意"></a>题意</h3><p>有 $n$ 个字符串,对于第 $i$ 个字符串通过以下两种方式中的一个给出。</p>
-<ol>
-<li>$1 c$，该字符串只含一个字符 $c$ 。</li>
-<li>$2 x c$ ,该字符串为第 $x(1\le x&lt;i)$ 个字符串末尾添加一个字符 $c$ 得到。</li>
-</ol>
-<p>有 $m$ 次询问，每次询问给出一个字符串 $s$ 和位置编号 $x$,问在上述第 $x$ 个字符串中，字符串 $s$ 出现了几次。</p>
-<h3 id="题解-42"><a href="#题解-42" class="headerlink" title="题解"></a>题解</h3><p>对询问构建 $AC$自动机，因为文本串是树形结构，我们可以跑一个 $dfs$ 枚举所有文本串，每次都添加一个字符，当回溯回去的时候删除这个字符对答案的贡献。</p>
-<p>因为每个匹配串在文本串中出现的次数为将文本串在 $AC$自动机上跑一遍并将走到的位置权值 $+1$，该字符串所对应的 $fail$ 节点的子树权值和。所以我们拎出  $fail$ 树，对其 $dfs$ 序构造树状数组。</p>
-<h2 id="-30"><a href="#-30" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1208<br>date: 2019-08-27 20:23:53<br>categories: cf<br>tags: </p>
-<h2 id="constructive"><a href="#constructive" class="headerlink" title="- constructive  "></a>- constructive  </h2><h2 id="C-Magic-Grid"><a href="#C-Magic-Grid" class="headerlink" title="C. Magic Grid"></a>C. Magic Grid</h2><h3 id="题意-45"><a href="#题意-45" class="headerlink" title="题意"></a>题意</h3><p>给一个 $n(n\%4=0)$ ，将 $0\sim n^2-1$ 填入 $n\times n$ 的矩阵里，使得每行每列的异或和相同。 </p>
-<h3 id="题解-43"><a href="#题解-43" class="headerlink" title="题解"></a>题解</h3><script type="math/tex; mode=display">
-\begin{matrix}
-  0 & 1 & 2&3 \\
-  4 & 5 & 6 &7\\
-   8 & 9&10 &11\\
-   12 & 13&14 &15\\
-\end{matrix}</script><p>因为 $n$ 是 $4$ 的倍数，将这个 $4\times4$ 的矩阵看作一个整体来填充矩阵即可，以为这个矩阵每个元素加上 $16k$ 不会影响结果</p>
-<h2 id="-31"><a href="#-31" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-1215E<br>date: 2019-09-18 15:37:30<br>categories: cf<br>tags: </p>
-<h2 id="dp-6"><a href="#dp-6" class="headerlink" title="- dp  "></a>- dp  </h2><h3 id="题意-46"><a href="#题意-46" class="headerlink" title="题意"></a>题意</h3><p> $n(2\le n\le 4e5)$ 个物品，每个的颜色为 $a_i(1\le a_i\le 20)$ ，仅允许将相邻的物品两两交换，问使得相同颜色的物品聚集到一起的最小花费</p>
-<h3 id="题解-44"><a href="#题解-44" class="headerlink" title="题解"></a>题解</h3><p>预处理 $tran[i][j]$ 表示仅考虑颜色 $i,j$ 时，将所有颜色为 $i$ 的物品移到所有颜色为 $j$ 的物品前面的花费，然后再使用状压 $dp$ </p>
-<h2 id="-32"><a href="#-32" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-675<br>mathjax: false<br>date: 2019-03-22 10:25:05<br>categories: cf<br>tags:  </p>
-<ul>
-<li>greedy  </li>
-<li>data structure  </li>
-</ul>
-<hr>
-<h2 id="C-Money-Transfers"><a href="#C-Money-Transfers" class="headerlink" title="C. Money Transfers"></a>C. Money Transfers</h2><h3 id="题意-47"><a href="#题意-47" class="headerlink" title="题意"></a>题意</h3><p>有n家银行围成一个圈，有个人在有些银行里欠了钱，在一些银行里有存钱，欠的钱总数等于存的钱总数。现在可以有操作，如果两个银行相邻，那么就能在一个银行转任意多的钱到另一个银行。问最少的操作次数，使得在所有银行的存款钱数都为0。</p>
-<h3 id="题解-45"><a href="#题解-45" class="headerlink" title="题解"></a>题解</h3><p>首先我们要发现第一个贪心。如果有一段子串，里面的数字之和等于0，那么在这段子串中移动数字，所需要的代价为子串长度len-1，那么问题就转换成了，我们在这个圈中能找到多少段子串，里面的数字之和等于0，而且段数越多越好，记为k，那么很明显，答案就是n-k，现在问题来了，如何来求满足题意的最大的k。首先，我们考虑用前缀和来存放，如果遇到两个位置，前缀和相等，那么中间那一段数字之和肯定等于0。接下来就是一个跳跃性的思考了，那么如果某个前缀和的值出现了k次，是不是就是我们上述的k呢？答案是正确的！假如有k个位置的前缀和相等，那么中间k-1段子串内数字之和一定都是0，由于总数是0，那么最前面和最后面连着的那一段也肯定是0，所以，我们记录所有的前缀和的值，然后排序。然后用取尺法记录一个数出现的最多次数，就做完了</p>
-<h2 id="-33"><a href="#-33" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: CF-883<br>date: 2019-03-27 20:14:29<br>categories: cf<br>tags:  </p>
-<ul>
-<li>dp  </li>
-<li>binary search  </li>
-</ul>
-<hr>
-<h2 id="I-Photo-Processing"><a href="#I-Photo-Processing" class="headerlink" title="I. Photo Processing"></a>I. Photo Processing</h2><h3 id="题意-48"><a href="#题意-48" class="headerlink" title="题意"></a>题意</h3><p>将 n 个数分堆，要保证每堆不少于 k 个数，每堆的值为这堆数中的最大值减去最小值，取这些值中的最大值，要是这个最大值最小。 </p>
-<h3 id="题解-46"><a href="#题解-46" class="headerlink" title="题解"></a>题解</h3><p>二分答案，$dp$ 判断是否可行。$dp[i]$ 表示将 $1\sim i$ 划分成满足条件的区间，能划分最远的地方。</p>
-<h2 id="-34"><a href="#-34" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: HDU-1024 Max Sum Plus Plus<br>date: 2019-03-21 23:01:40<br>categories: hdu  </p>
-<p>tags: </p>
-<h2 id="dp-7"><a href="#dp-7" class="headerlink" title="- dp  "></a>- dp  </h2><h3 id="题意-49"><a href="#题意-49" class="headerlink" title="题意"></a>题意</h3><p>给你一个序列n个数组成，然后让你在里面找到m个子序列，让这m个子序列的和最大。</p>
-<h3 id="题解-47"><a href="#题解-47" class="headerlink" title="题解"></a>题解</h3><p>$dp[i][j]$表示的是第j个数字在第i个子序列时的当前最优值。<br>$dp[i][j] = maxx(dp[i][j-1] + num[j] ,maxx(dp[i-1][k]) + num[j])$，k是从1到 $j-1$.<br>可以这么理解这个转移方程，对于当前的这个数字，如果把他放到第i个子序列中有两种情况，一个是他作为第i个子序列的第一个数字，另一个就是不作为第一个数字，作为第一个数字的时候是 $max(dp[i-2][k] + num[j]) ,1&lt;=k&lt;i $的意思是从之前的所有中找到 $i-1$ 个子序列的最大值+当前的值，不做为第一个的时候那么他前面的那个数字一定是i序列的，同一个子序列，又不是作为第一个，那么前面的那个货就一定是同一个子序列的，那么当前的值是$dp[i][j-1] + num[j]$,在两种决策中选择一个最有的就行了，还有就是$max(dp[i-1][k]+num[j])$的这个地方可以开一个数组记录下来，不能每次都跑，跑不起，再有就是这个题目没有给m的范围，所以开不了二维数组（目测不是很大，大的话会超时，但是肯定是先超内存在超时，所以为了保险，还是吧$dp[][]$压缩成一维的）那么状态转移就边成这样了$dp[j]$表示的是 j这个人在当前的这个子序列中的最优值，mk[j]表示的是在上一个子序列中1—j的dp的最大值，所以就变成 $dp[j] = maxx(dp[j-1] + num[j] ,mk[j-1]+num[j])$;还是 max(作为i个子序列的第一个元素，不是第一个元素取一个最大值)。在解释下代码的核心部分。</p>
-<h2 id="-35"><a href="#-35" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: HDU-4055 Number String<br>date: 2019-03-22 11:02:29<br>categories: hdu<br>tags: </p>
-<h2 id="dp-8"><a href="#dp-8" class="headerlink" title="- dp  "></a>- dp  </h2><h3 id="题意-50"><a href="#题意-50" class="headerlink" title="题意"></a>题意</h3><p>给你一个字符串s，s[i] = ‘D’表示排列中a[i] &gt; a[i+1]，s[i] = ‘I’表示排列中a[i] &lt; a[i+1]。</p>
-<p>比如排列 {3, 1, 2, 7, 4, 6, 5} 表示为字符串 DIIDID。</p>
-<h3 id="题解-48"><a href="#题解-48" class="headerlink" title="题解"></a>题解</h3><p>很巧妙的DP做法，$dp[i][j]$表示前i个满足字符串条件的结尾为j的 i 的排列，注意是i的排列，前面并没有数大于i。那又是如何往下递推呢？</p>
-<p>如果s[i - 1]是’ I ‘，那么$dp[i][j] = dp[i-1][j-1] + dp[i-1][j-2] + .. + dp[i-1][1]$<br>如果s[i - 1]是‘D’，那么$dp[i][j] = dp[i-1][j] + dp[i-1][j+1] + … + dp[i-1][i]$，因为要令当前位为j，如果前面出现过j，就令前面的所有大于等于j的数+1，就能构造出新的排列了。</p>
-<p>比如{1, 3, 5, 2, 4}，要在第六位插入3,令 &gt;= 3的数都+1，于是就构造出新的 排列{1, 4, 6, 2, 5, 3}。然后代码的话处理出前缀和$sum[i][j]$，就不用$dp[i][j]$了。</p>
-<h3 id="引用-2"><a href="#引用-2" class="headerlink" title="引用"></a>引用</h3><blockquote>
-<p><a href="https://blog.csdn.net/jayye1994/article/details/12361481" target="_blank" rel="noopener">https://blog.csdn.net/jayye1994/article/details/12361481</a></p>
-</blockquote>
-<h2 id="-36"><a href="#-36" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: HDU-4651<br>date: 2019-03-22 11:19:37<br>categories: hdu<br>tags: </p>
-<ul>
-<li>math  </li>
-</ul>
-<hr>
-<h3 id="题意-51"><a href="#题意-51" class="headerlink" title="题意"></a>题意</h3><p>整数拆分，$(1\le n\le 10^5)$</p>
-<h3 id="题解-49"><a href="#题解-49" class="headerlink" title="题解"></a>题解</h3><p>使用五边形定理</p>
-<script type="math/tex; mode=display">
-P(n)=\sum\limits_{k=1}^n(-1)^{k+1}\left [P\left( n-\frac 1 2k(3k-1)\right)+P\left( n-\frac 1 2k(3k+1)\right )\right ]</script><p>其中<script type="math/tex">n-\frac 1 2k(3k-1)>=0 , n-\frac 1 2k(3k+1)>=0</script> ，注意两个条件要分开判断，有大于0的就加上相应的f，不是两个同时成立或者不成立</p>
-<h2 id="-37"><a href="#-37" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: HDU-5970 最大公约数<br>date: 2019-03-22 10:15:43<br>categories: hdu<br>tags: </p>
-<h2 id="math-4"><a href="#math-4" class="headerlink" title="- math  "></a>- math  </h2><h3 id="题意-52"><a href="#题意-52" class="headerlink" title="题意"></a>题意</h3><p>给一个函数</p>
-<p>给出n,m,p，求$\Large\sum\limits_{i=1}^n\sum\limits_{j=1}^m\lfloor\frac {i*j} {f(i,j)}\rfloor$</p>
-<h3 id="题解-50"><a href="#题解-50" class="headerlink" title="题解"></a>题解</h3><script type="math/tex; mode=display">
-ans=\sum\limits_{j=1}^m\sum\limits_{i=1}^j\sum\limits_{k=0}^{i+j*k\le n}\lfloor\frac {j*(i+j*k)} {c*x*x}\rfloor\\=\sum\limits_{j=1}^m\sum\limits_{i=1}^j\sum\limits_{k=0}^{c-1}\sum\limits_{p=0}^{i+j*(k+p*c)\le n}\lfloor\frac {j*(i+j*(k+p*c))} {c*x*x}\rfloor\\
-
-   =\sum\limits_{j=1}^m\sum\limits_{i=1}^j\sum\limits_{k=0}^{c-1}\sum\limits_{p=0}^{i+j*(k+p*c)\le n}\lfloor\frac {j*(i+j*k)} {c*x*x}\rfloor+\frac {p*j*j} {x*x}</script><h2 id="-38"><a href="#-38" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: HDU-6189<br>date: 2019-06-12 21:44:21<br>categories: hdu<br>tags: </p>
-<h2 id="math-5"><a href="#math-5" class="headerlink" title="- math  "></a>- math  </h2><h3 id="题意-53"><a href="#题意-53" class="headerlink" title="题意"></a>题意</h3><p>给出 $n(\le 30), a(1\le a\le 1e9)$ , 求在 $[1,2^n]$ 范围内有多少个 $b$ 能够满足 $a^{b} \equiv b^{a}(\bmod 2^n)$</p>
-<h3 id="题解-51"><a href="#题解-51" class="headerlink" title="题解"></a>题解</h3><blockquote>
-<p> <a href="https://blog.csdn.net/hyesuixin/article/details/77855821" target="_blank" rel="noopener">https://blog.csdn.net/hyesuixin/article/details/77855821</a></p>
-</blockquote>
-<h2 id="-39"><a href="#-39" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: HDU-6223<br>date: 2019-06-18 15:25:19<br>categories: hdu<br>tags: </p>
-<h2 id="greedy-3"><a href="#greedy-3" class="headerlink" title="- greedy  "></a>- greedy  </h2><h3 id="题意-54"><a href="#题意-54" class="headerlink" title="题意"></a>题意</h3><p>长度为 $n(1\le n \le 2e6)$ 的数组 $(0\le a_i\le 9)$,  下标为 $[0,n-1]$ , 你要取 $n$ 个数构成一个长度为 $n$ 的数组 $b$ , 假设第一次选 $a[i]$ , 则 $b[1]=a[i], b[2]=a[(i^2+1)\%n],\cdots$ </p>
-<p>输出字典序最小的 $b$  </p>
-<h3 id="题解-52"><a href="#题解-52" class="headerlink" title="题解"></a>题解</h3><p>显然取的下标序列存在循环节, 由打表可知, 循环节的长度不会超过 $21$, 所以我们只用枚举前 $21*20$ (循环节的最大$lcm$)位就可以找到保证 $b$ 字典序最小的起始点, <del>好像数据太水了,只用枚举前 21​ 位就可以了</del></p>
-<h2 id="-40"><a href="#-40" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: HDU-6284<br>date: 2019-06-04 21:22:51<br>categories: hdu<br>tags: </p>
-<h2 id="dp-9"><a href="#dp-9" class="headerlink" title="- dp  "></a>- dp  </h2><h2 id="Longest-Increasing-Subsequence"><a href="#Longest-Increasing-Subsequence" class="headerlink" title="Longest Increasing Subsequence"></a>Longest Increasing Subsequence</h2><h3 id="题意-55"><a href="#题意-55" class="headerlink" title="题意"></a>题意</h3><p>有一个长度为 $n$ 的数组 $a(0\le a_i\le n)$ ,$f(x)$ 表示把 $0$ 变成 $x$ , 序列的 $LIS(严格递增)$ , 求$\sum\limits_{i=1}^ni\times f(i)$</p>
-<h3 id="题解-53"><a href="#题解-53" class="headerlink" title="题解"></a>题解</h3><p>设 $bg[i], en[i]$ 分别表⽰以点 $i$ 开始、结束的 $LIS$ ⻓度，$L$ 是原来的 $LIS$ ⻓度。对于每个 $i$，找出它下⼀个 $0$ 后⾯的 $a[j]$ 满⾜ $en[i]+bg[j] = L$，那么当 $x$ 在 $[a[i] + 1, a[j] − 1]$ 的区间内时，答案是 $L + 1$.</p>
-<p>从后往前扫, 用一个数组 $\text{max_r[i]}$ 记录扫过的最后一个 $0$ 右边区域的 $bg=i$ 的最大值</p>
-<p>以 $0$ 为分隔, 用一个 $vector$ 存当前分块的 $ \text{max_r}$ 值, 当遇到下一个 $0$ 的时候更新 $\text{max_r}$ , 注意当 $bg=L$ 时要特殊考虑</p>
-<h2 id="-41"><a href="#-41" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: HDU-6285<br>date: 2019-06-03 17:40:22<br>categories: hdu<br>tags:  </p>
-<ul>
-<li>graph  </li>
-<li>combination  </li>
-</ul>
-<hr>
-<h3 id="题意-56"><a href="#题意-56" class="headerlink" title="题意"></a>题意</h3><p>在一个 $n$ 个点的完全图中，第 $i$ 个点的权值为 $2^i$，选择一些边，需要选择一些点使得所有边至少有一个端点被覆盖，同时权值之和最小。<br>在上述情况下，给出选择的点的权值和，问有多少种选择边的方案符合这种选点。</p>
-<h3 id="题解-54"><a href="#题解-54" class="headerlink" title="题解"></a>题解</h3><p>对于每一个选定的点, 总有一条边连着它和权值比它大的未被选的点, 设数量为 $cnt1$, 权值比它小的点可取可不取, 设数量为 $cnt2$, 则该点的贡献为</p>
-<script type="math/tex; mode=display">
-(2^{cnt1}-1)\times2^{cnt2}</script><h2 id="-42"><a href="#-42" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: HDU-6592<br>date: 2019-08-07 08:38:22<br>categories: hdu<br>tags:  </p>
-<ul>
-<li>greedy  </li>
-<li>dp  </li>
-</ul>
-<hr>
-<h3 id="题意-57"><a href="#题意-57" class="headerlink" title="题意"></a>题意</h3><p>给一个序列 $a[]$ ，找出最长的单峰序列，输出该序列的下标，输出字典序最大和最小的情况</p>
-<h3 id="题解-55"><a href="#题解-55" class="headerlink" title="题解"></a>题解</h3><p>易证，当取第一个峰的时候字典序最小，当取最后一个峰的时候字典序最大。</p>
-<h2 id="-43"><a href="#-43" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: HDU-6635<br>date: 2019-08-08 18:08:18<br>categories: hdu<br>tags:  </p>
-<ul>
-<li>dp  </li>
-<li>期望  </li>
-</ul>
-<hr>
-<h3 id="题意-58"><a href="#题意-58" class="headerlink" title="题意"></a>题意</h3><p>给两个排列 $a , b$ ，$a$  一开始全都封闭，从左到右遍历 $b$ ，每次释放一个 $\Large a_{b_i}$ ，问每个时刻，释放后的序列 $a$ 的 $LIS$</p>
-<h3 id="题解-56"><a href="#题解-56" class="headerlink" title="题解"></a>题解</h3><p>考虑时间倒流， 看作一个完整的排列按照一定顺序依次删除每个数， 然后每次需要计算 $LIS$ 的长度。 首先在 $O(n log n) $ 的时间内求出 $LIS$，并找到任意一个 $LIS$。当删除 x 时，如果 x 不在之前找 到的那个 LIS 中，那么显然 LIS 的长度是不会变化的，否则暴力重新计算出新的 LIS 即可。因为数据随机，因此 LIS 的期望长度是 $O( \sqrt n)$，删除的 x 位于 LIS 中的概率是 $\frac 1 {\sqrt n}$ ，也就是说期望时间复杂度为$O(n \sqrt n log n)$。</p>
-<h2 id="-44"><a href="#-44" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: LightOJ-1197 Help Hanzo<br>mathjax: false<br>date: 2019-03-22 11:00:23<br>categories: lightoj<br>tags: </p>
-<h2 id="math-6"><a href="#math-6" class="headerlink" title="- math  "></a>- math  </h2><h3 id="题意-59"><a href="#题意-59" class="headerlink" title="题意"></a>题意</h3><p>求a~b间素数个数(1 ≤ a ≤ b &lt; 2^31, b - a ≤ 100000).</p>
-<h3 id="题解-57"><a href="#题解-57" class="headerlink" title="题解"></a>题解</h3><p>b-a这个区间比较小，所以可以用区间素数筛选的办法解决这个题目。</p>
-<h2 id="-45"><a href="#-45" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: POJ-1050 To the Max<br>mathjax: false<br>date: 2019-03-21 23:07:02<br>categories: poj<br>tags: </p>
-<h2 id="data-structure"><a href="#data-structure" class="headerlink" title="- data structure  "></a>- data structure  </h2><h3 id="题意-60"><a href="#题意-60" class="headerlink" title="题意"></a>题意</h3><p>求最大子矩阵和。</p>
-<h3 id="题解-58"><a href="#题解-58" class="headerlink" title="题解"></a>题解</h3><p>枚举列区间，将该区间的值压缩到一起，转化成求一维最大字段。</p>
-<h2 id="-46"><a href="#-46" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: POJ-2559 Largest Rectangle in a Histogram<br>date: 2019-03-21 22:42:01<br>mathjax: false<br>categories: poj<br>tags:  </p>
-<h2 id="data-structure-1"><a href="#data-structure-1" class="headerlink" title="- data structure  "></a>- data structure  </h2><h3 id="题意-61"><a href="#题意-61" class="headerlink" title="题意"></a>题意</h3><p><img src="/2019/09/21/题解/POJ-2559/45660aba95464e61adfbbcc7cea2c44c.gif" alt="45660aba95464e61adfbbcc7cea2c44c"></p>
-<p>求柱形图中的最大矩形面积。</p>
-<h3 id="题解-59"><a href="#题解-59" class="headerlink" title="题解"></a>题解</h3><p>法一: 求每个点左边连续比它大的最左边的下标，保存在 $l[]$ 数组里,求每个点右边连续比它大的最右边的下标，保存在 $r[]$ 数组里</p>
-<p>法二: 维护一个单调栈, 如果 $h$ 大于栈顶元素，则入栈, 否则，将栈内元素出栈，直到满足上面的条件。出栈时，我们要将出栈元素对之后问题的影响全部考虑进行处理，才能保证做法的正确性。</p>
-<h2 id="-47"><a href="#-47" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: POJ-3167 Cow Patterns<br>date: 2019-03-22 10:28:52<br>categories: poj<br>tags:  </p>
-<ul>
-<li>data structure  </li>
-<li>string  </li>
-</ul>
-<hr>
-<h3 id="题意-62"><a href="#题意-62" class="headerlink" title="题意"></a>题意</h3><p>一个农场主有 N 头牛，每个牛都以它身上的斑点数作为标志，以斑点数作为标准对牛进行 rank 排序，定义牛的序列的相同性为第 i 头牛及其之前的牛的比他 rank 小的数量和与他 rank 相同的数量，比如：<br>1 4 4 3 2 1 和 2 10 10 7 3 2 是一样的模式串<br>要求数有多少个符合要求的模式串，并输出每个符合要求的子串的起始位置。</p>
-<h3 id="题解-60"><a href="#题解-60" class="headerlink" title="题解"></a>题解</h3><p>定义一个函数 $getval(ch,str,l,r)$，返回的值为 $ch$ 在 $str[l~r]$ 中的真实值，即将 $str[l~r]$ 中的值排序离散化后 $ch$ 的值。则题意即为：在a串中找出一段长为m的区间[l,r]，使对任意的1≤i≤m，getval(a[l+i-1],a,l,r)均等于getval(b[i],b,1,m)getval的值，其实是返回某个数(数跟字符其实是一样的)在某堆数中的排名。是什么决定了一个数x的排名？是小于x的数的个数，等于x的数的个数。如果这两个个数与另一个y的两个个数都相等，那么x跟y在各自字符串的各自区间内的getval值就相等了 </p>
-<p><img src="/2019/09/21/题解/POJ-3167/Image-7800823.tiff" alt="Image-7800823"></p>
-<h2 id="-48"><a href="#-48" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 农场阳光<br>mathjax: false<br>date: 2019-04-23 14:30:14<br>categories: 蓝桥杯<br>tags: </p>
-<h2 id="geometry"><a href="#geometry" class="headerlink" title="- geometry  "></a>- geometry  </h2><h3 id="题意-63"><a href="#题意-63" class="headerlink" title="题意"></a>题意</h3><p>求多个圆和一个矩形的面积并</p>
-<h3 id="题解-61"><a href="#题解-61" class="headerlink" title="题解"></a>题解</h3><p>使用自适应 Simpson 求解</p>
-<h2 id="-49"><a href="#-49" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 包子凑数<br>date: 2019-03-23 23:09:26<br>categories: 蓝桥杯<br>tags:  </p>
-<h2 id="math-7"><a href="#math-7" class="headerlink" title="- math  "></a>- math  </h2><h3 id="题意-64"><a href="#题意-64" class="headerlink" title="题意"></a>题意</h3><p>给 $n(1\le n\le 100)$ 个数$(1\le a_i\le 100)$，问由它们不能组合(加法)成的数(正整数)的个数，若有无穷个输出”INF”。</p>
-<h3 id="题解-62"><a href="#题解-62" class="headerlink" title="题解"></a>题解</h3><p>若它们的公共 gcd 不为1，输出 INF，构造一个小顶堆，每次新加的值为堆顶的值加$a_i$ ，弹出堆顶，可证最大不可表示的值不会超过1e4，所以当堆顶大于1e4的时候跳出循环。</p>
-<h2 id="-50"><a href="#-50" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 国王的烦恼<br>date: 2019-03-20 21:45:27<br>categories: 蓝桥杯<br>tags:  </p>
-<h2 id="dsu"><a href="#dsu" class="headerlink" title="- dsu  "></a>- dsu  </h2><h3 id="题意-65"><a href="#题意-65" class="headerlink" title="题意"></a>题意</h3><p>n 个点 m 条边，每条边有一个权值表示该边消失的时间，求有新的点不联通的时刻的数量。</p>
-<h3 id="题解-63"><a href="#题解-63" class="headerlink" title="题解"></a>题解</h3><p>以时间从大到小排序，用并查集反向建图，注意同时刻只能计一次。</p>
-<h2 id="-51"><a href="#-51" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 图形排版<br>date: 2019-03-20 23:07:51<br>categories: 蓝桥杯<br>tags:  </p>
-<h2 id="data-structure-2"><a href="#data-structure-2" class="headerlink" title="- data structure  "></a>- data structure  </h2><h3 id="题意-66"><a href="#题意-66" class="headerlink" title="题意"></a>题意</h3><p>小明需要在一篇文档中加入 N 张图片，其中第 i 张图片的宽度是 Wi，高度是 Hi。假设纸张的宽度是 M，小明使用的文档编辑工具会用以下方式对图片进行自动排版：</p>
-<ol>
-<li><p>该工具会按照图片顺序，在宽度 M 以内，将尽可能多的图片排在一行。该行的高度是行内最高的图片的高度。例如在 M=10 的纸张上依次打印 3x4, 2x2, 3x3 三张图片，则效果如下图所示，这一行高度为4。(分割线以上为列标尺，分割线以下为排版区域；数字组成的矩形为第x张图片占用的版面)<br><img src="/2019/09/21/题解/图形排版/RequireFile-20190320231343264.do" alt="img"></p>
-</li>
-<li><p>如果当前行剩余宽度大于0，并且小于下一张图片，则下一张图片会按比例缩放到宽度为当前行剩余宽度(高度向上取整)，然后放入当前行。例如再放入一张4x9的图片，由于剩余宽度是2，这张图片会被压缩到2x5，再被放入第一行的末尾。此时该行高度为5：<br><img src="/2019/09/21/题解/图形排版/RequireFile-20190320231329922.do" alt="img"></p>
-</li>
-<li><p>如果当前行剩余宽度为0，该工具会从下一行开始继续对剩余的图片进行排版，直到所有图片都处理完毕。此时所有行的总高度和就是这 N 张图片的排版高度。例如再放入11x1, 5x5, 3x4 的图片后，效果如下图所示，总高度为11：<br><img src="/2019/09/21/题解/图形排版/RequireFile.do" alt="img"></p>
-<p>现在由于排版高度过高，图片的先后顺序也不能改变，小明只好从 N 张图片中选择一张删除掉以降低总高度。他希望剩余N-1张图片按原顺序的排版高度最低，你能求出最低高度是多少么？</p>
-</li>
-</ol>
-<h3 id="题解-64"><a href="#题解-64" class="headerlink" title="题解"></a>题解</h3><p>预处理以第 i 张图为行首的最低高度，然后枚举删图。</p>
-<h2 id="-52"><a href="#-52" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 城市建设<br>date: 2019-03-21 21:53:53<br>categories: 蓝桥杯<br>tags: </p>
-<h2 id="graph"><a href="#graph" class="headerlink" title="- graph  "></a>- graph  </h2><h3 id="题意-67"><a href="#题意-67" class="headerlink" title="题意"></a>题意</h3><p>n 个城市，m 条道路，每条道路有一个权值(可能为负)，每个点有一个权值，表示修建码头的费用(为-1时表示不可以修建码头)。</p>
-<h3 id="题解-65"><a href="#题解-65" class="headerlink" title="题解"></a>题解</h3><p>ans1不修建码头的最小生成树<br>ans2额外添加一个0号城市，将可建立码头的城市与它相连，求出的最小生成树<br>当不建码头也能联通时，答案为min(ans1,ans2)，否则答案为 ans2</p>
-<h2 id="-53"><a href="#-53" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 填字母游戏<br>date: 2019-04-21 19:16:03<br>categories: 蓝桥杯<br>tags:  </p>
-<h2 id="brute-force"><a href="#brute-force" class="headerlink" title="- brute force  "></a>- brute force  </h2><h3 id="题意-68"><a href="#题意-68" class="headerlink" title="题意"></a>题意</h3><p>一个 $1*N$ 个格子, 上面已有一些 L 和 O, 两人博弈, 谁先拼出 LOL 谁获胜, 空格数&lt;14</p>
-<h3 id="题解-66"><a href="#题解-66" class="headerlink" title="题解"></a>题解</h3><p>状态标记搜索</p>
-<h2 id="-54"><a href="#-54" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 小朋友排队<br>mathjax: false<br>date: 2019-03-23 01:20:00<br>categories: 蓝桥杯<br>tags:  </p>
-<ul>
-<li>data structure  </li>
-<li>binary indexed tree  </li>
-</ul>
-<hr>
-<h3 id="题意-69"><a href="#题意-69" class="headerlink" title="题意"></a>题意</h3><p>n 个小朋友站成一排。现在要把他们按身高从低到高的顺序排列，但是每次只能交换位置相邻的两个小朋友。<br>每个小朋友都有一个不高兴的程度。开始的时候，所有小朋友的不高兴程度都是0。<br>如果某个小朋友第一次被要求交换，则他的不高兴程度增加1，如果第二次要求他交换，则他的不高兴程度增加2（即不高兴程度为3），依次类推。当要求某个小朋友第k次交换时，他的不高兴程度增加k。<br>请问，要让所有小朋友按从低到高排队，他们的不高兴程度之和最小是多少。<br>如果有两个小朋友身高一样，则他们谁站在谁前面是没有关系的。</p>
-<h3 id="题解-67"><a href="#题解-67" class="headerlink" title="题解"></a>题解</h3><p>每个人的不高兴度为它的逆序对数(在它前面大于它的，在它后面小于它的)，使用树状数组从前从后分别跑一次。</p>
-<h2 id="-55"><a href="#-55" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 斐波那契<br>date: 2019-03-20 23:20:36<br>categories: 蓝桥杯<br>tags:  </p>
-<h2 id="math-8"><a href="#math-8" class="headerlink" title="- math  "></a>- math  </h2><h3 id="题意-70"><a href="#题意-70" class="headerlink" title="题意"></a>题意</h3><p>$f(x)$为斐波那契数列，求$\large\left(\sum\limits_{i=1}^nf(i)\right) mod f(m) mod  p$</p>
-<p>$0&lt;n,m,p&lt;1e18$</p>
-<h3 id="题解-68"><a href="#题解-68" class="headerlink" title="题解"></a>题解</h3><script type="math/tex; mode=display">
-f(n+m)=f(n+1)f(m)+f(n)f(m-1) \\
-
-f(n)\ mod\ f(m)=f(n-m)f(m-1)\ mod\ f(m)\\
-f(n)\ mod \ f(m)=f(m-1)^{\frac n m}f(n\%m)\ mod\ f(m)\\
-f(n)^2=(-1)^{n+1}+f(n-1)f(n+1)\\
-f(m-1)^2\ mod\ f(m)=(-1)^m</script><ol>
-<li><p>m 为偶数</p>
-<ul>
-<li>$\frac n m$为偶数，$f(n) mod f(m)=f(n\%m)$</li>
-<li>$\frac n m$为奇数，$f(n) mod f(m)=f(m-1)f(n\%m) mod f(m)$</li>
-</ul>
-</li>
-<li><p>m 为奇数</p>
-<ul>
-<li>$\frac n m$为偶数，$\frac n {2m}$为偶数，$f(n) mod f(m)=f(n\%m)$</li>
-<li>$\frac n m$为偶数，$\frac n {2m}$为奇数，$f(n) mod f(m)=f(m)-f(n\%m)$</li>
-<li>$\frac n m$为奇数，$\frac n {2m}$为偶数，$f(n) mod f(m)=f(m-1)f(n\%m) mod f(m)$</li>
-<li>$\frac n m$为奇数，$\frac n {2m}$为奇数，$f(n) mod f(m)=f(m)-f(m-1)f(n\%m) mod f(m)$</li>
-</ul>
-</li>
-<li><p>简化$f(m-1)f(n\%m) mod f(m)$</p>
-<p>性质：若$n\ge1,r\ge2$，则$f(n)f(n+r-1)-f(n+1)f(n+r-2)=(-1)^{n+1}f(r-2)$</p>
-<p>令$k=n\%m,k=n+1,m-1=n+r-2$，则$f(n)f(k-1)-f(m-1)f(k)=(-1)^kf(m-k)$</p>
-<p>所以$f(m-1)f(k) mod  f(m)=(-1)^{k+1}f(m-k) mod f(m)$</p>
-<ul>
-<li>当$k$为奇时，$f(m-1)f(n\%m) mod f(m)=f(m-k)$</li>
-<li>当$k$为偶时，$f(m-1)f(n\%m) mod f(m)=f(m)-f(m-k)$</li>
-</ul>
-</li>
-</ol>
-<h3 id="引用-3"><a href="#引用-3" class="headerlink" title="引用"></a>引用</h3><blockquote>
-<p><a href="https://blog.csdn.net/acdreamers/article/details/21822165" target="_blank" rel="noopener">https://blog.csdn.net/acdreamers/article/details/21822165</a></p>
-</blockquote>
-<h2 id="-56"><a href="#-56" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 杂题<br>date: 2019-03-22 11:07:35<br>categories: 其他<br>tags:  </p>
-<ul>
-<li>math  </li>
-</ul>
-<hr>
-<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><h4 id="题意-71"><a href="#题意-71" class="headerlink" title="题意"></a>题意</h4><p>将整数n拆分为m个数的和，输出这m个数or的最小值。</p>
-<h4 id="题解-69"><a href="#题解-69" class="headerlink" title="题解"></a>题解</h4><p>要想使或值最小，那么m个二进制数中的最高位应尽量小，假如存在k使$(2^k-1)<em>m &gt; n &gt; (2^{k-1}</em>-1)*m$，所以m个二进制数中至少有一个数的最高位为k。因为是取各位取或，所以此时应让尽量多的数的第k位为1，$ans += 2^k$，从高位向低位递推，直到n变为0。</p>
-<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><h4 id="题意-72"><a href="#题意-72" class="headerlink" title="题意"></a>题意</h4><script type="math/tex; mode=display">
-\Large\sum\limits_{i=1}^n\lfloor\frac n i\rfloor</script><p>#</p>
-<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><h4 id="题意-73"><a href="#题意-73" class="headerlink" title="题意"></a>题意</h4><p>设一个排列，当i为奇数，a[i]&gt;a[i-1]，求满足条件的长度为n的数量</p>
-<h4 id="题解-70"><a href="#题解-70" class="headerlink" title="题解"></a>题解</h4><p>设答案是 $f(n)$<br>考虑最⼤大的数的位置是 i，则变成一个长度为 i-1 的数列列和一个长度为 n-i 的数列列<br>所以 $f(n)=\sum\frac {f(i)f(n-i-1)} n$<br>所以 $f(x)’=f(x)^2+1$<br>解得 $f(x)=tan(x)$</p>
-<h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><h4 id="题解-71"><a href="#题解-71" class="headerlink" title="题解"></a>题解</h4><p>n+1个数由1-n 组成，只有一个重复的，找出来。</p>
-<p>#</p>
-<h2 id="5"><a href="#5" class="headerlink" title="5"></a>5</h2><p>  <img src="/2019/09/21/题解/杂题/Image.tiff" alt="Image"></p>
-<p>   法一: 求每个点左边连续比它大的最左边的下标，保存在l[]数组里,求每个点右边连续比它大的最右边的下标，保存在r[]数组里</p>
-<p>   法二: 维护一个单调栈, 如果h大于栈顶元素，则入栈, 否则，将栈内元素出栈，直到满足上面的条件。出栈时，我们要将出栈元素对之后问题的影响全部考虑进行处理，才能保证做法的正确性。</p>
-<h2 id="6"><a href="#6" class="headerlink" title="6"></a>6</h2><p><img src="/2019/09/21/题解/杂题/Image-7800795.tiff" alt="Image-7800795"></p>
-<p>只需n+m-1个就可以填满,</p>
-<p>当插入点(x1,y1) 时有关系x1&lt;=&gt;y1</p>
-<p>当插入点(x2,y1) 时有关系 x2&lt;=&gt;y1&lt;=&gt;x1</p>
-<p>当插入点(x1,y2) 时有关系 y2&lt;=&gt;x1&lt;=&gt;y1&lt;=&gt;x2</p>
-<p>用并查集来连接</p>
-<h2 id="7"><a href="#7" class="headerlink" title="7"></a>7</h2><p>给你一个序列n个数组成，然后让你在里面找到m个子序列，让这m个子序列的和最大。</p>
-<h2 id="8"><a href="#8" class="headerlink" title="8"></a>8</h2><p>给一个函数</p>
-<p>给出n,m,p，求$\Large\sum\limits_{i=1}^n\sum\limits_{j=1}^m\lfloor\frac {i*j} {f(i,j)}\rfloor$</p>
-<script type="math/tex; mode=display">
-ans=\sum\limits_{j=1}^m\sum\limits_{i=1}^j\sum\limits_{k=0}^{i+j*k\le n}\lfloor\frac {j*(i+j*k)} {c*x*x}\rfloor\\=\sum\limits_{j=1}^m\sum\limits_{i=1}^j\sum\limits_{k=0}^{c-1}\sum\limits_{p=0}^{i+j*(k+p*c)\le n}\lfloor\frac {j*(i+j*(k+p*c))} {c*x*x}\rfloor\\
-=\sum\limits_{j=1}^m\sum\limits_{i=1}^j\sum\limits_{k=0}^{c-1}\sum\limits_{p=0}^{i+j*(k+p*c)\le n}\lfloor\frac {j*(i+j*k)} {c*x*x}\rfloor+\frac {p*j*j} {x*x}</script><h2 id="9"><a href="#9" class="headerlink" title="9"></a>9</h2><p>有n家银行围成一个圈，有个人在有些银行里欠了钱，在一些银行里有存钱，欠的钱总数等于存的钱总数。现在可以有操作，如果两个银行相邻，那么就能在一个银行转任意多的钱到另一个银行。问最少的操作次数，使得在所有银行的存款钱数都为0。</p>
-<p>首先我们要发现第一个贪心。如果有一段子串，里面的数字之和等于0，那么在这段子串中移动数字，所需要的代价为子串长度len-1，那么问题就转换成了，我们在这个圈中能找到多少段子串，里面的数字之和等于0，而且段数越多越好，记为k，那么很明显，答案就是n-k，现在问题来了，如何来求满足题意的最大的k。首先，我们考虑用前缀和来存放，如果遇到两个位置，前缀和相等，那么中间那一段数字之和肯定等于0。接下来就是一个跳跃性的思考了，那么如果某个前缀和的值出现了k次，是不是就是我们上述的k呢？答案是正确的！假如有k个位置的前缀和相等，那么中间k-1段子串内数字之和一定都是0，由于总数是0，那么最前面和最后面连着的那一段也肯定是0，所以，我们记录所有的前缀和的值，然后排序。然后用取尺法记录一个数出现的最多次数，就做完了</p>
-<h2 id="10"><a href="#10" class="headerlink" title="10"></a>10</h2><p>将整数n拆分为m个数的和，输出这m个数or的最小值。</p>
-<p>要想使或值最小，那么m个二进制数中的最高位应尽量小，假如存在k使$(2^k-1)<em>m &gt; n &gt; (2^{k-1}</em>-1)*m$，所以m个二进制数中至少有一个数的最高位为k。因为是取各位取或，所以此时应让尽量多的数的第k位为1，$ans += 2^k$，从高位向低位递推，直到n变为0。</p>
-<h2 id="11"><a href="#11" class="headerlink" title="11"></a>11</h2><p>求a~b间素数个数(1 ≤ a ≤ b &lt; 2^31, b - a ≤ 100000).</p>
-<h2 id="12"><a href="#12" class="headerlink" title="12"></a>12</h2><p>求和</p>
-<script type="math/tex; mode=display">
-\Large\sum\limits_{i=1}^n\lfloor\frac n i\rfloor</script><h2 id="13"><a href="#13" class="headerlink" title="13"></a>13</h2><p>设一个排列，当i为奇数，a[i]&gt;a[i-1]，求满足条件的长度为n的数量</p>
-<p>设答案是 f(n)</p>
-<p>考虑最⼤大的数的位置是 i，则变成⼀一个⻓长度为 i-1 的数列列和一个⻓长度为 n-i 的数列列</p>
-<p>所以 f(n)=sum(f(i)f(n-i-1))/n</p>
-<p>所以 f(x)’=f(x)^2+1</p>
-<p>解得 f(x)=tan(x)</p>
-<h2 id="14"><a href="#14" class="headerlink" title="14"></a>14</h2><p>n+1个数由1-n 组成，只有一个重复的，找出来。</p>
-<h2 id="-57"><a href="#-57" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 格子刷油漆<br>date: 2019-03-20 22:35:25<br>categories: 蓝桥杯<br>tags:  </p>
-<ul>
-<li>dp  </li>
-</ul>
-<hr>
-<h3 id="题意-74"><a href="#题意-74" class="headerlink" title="题意"></a>题意</h3><p>给一个$2*N$的矩阵，可以从任意一个格子刷起，但只能移动到和它相邻的格子（可以对角），求总的方案数，对$1e9+7$取模。</p>
-<h3 id="题解-72"><a href="#题解-72" class="headerlink" title="题解"></a>题解</h3><p>设a[n]为起点为某一角落长度为n终点任意的情况数，b[n]为起点为某一角落长度为n终点必须同列的情况数。</p>
-<ol>
-<li>$b[i]=2^{i-1}$ </li>
-<li>当起点在四个角落，以左上角为例<ul>
-<li>情况一，先向下移动，再向右移动某个位置，情况数相当于 <strong>做长度为i-1的终点任意的情况数*2</strong> 因为不需要在回到第一列，而且到第二列的时候可能是第一行或者第二行，即$a[i-1]*2$</li>
-<li>情况二，从起点出发最终回到第一列的第二行，那么情况数就是b[i]。</li>
-<li>先进入第二列，然后返回第一列另一个位置，然后再回第二列，即$2<em>2</em>a[i-2]$</li>
-</ul>
-</li>
-<li>当起点在中间<ul>
-<li>情况一，向左运动后回到第i列然后向右运动</li>
-<li>情况二，向右运动后回到第i列然后向左运动</li>
-</ul>
-</li>
-</ol>
-<script type="math/tex; mode=display">
-\sum\limits_{i=2}^{n-1}2*(b[i+1]*a[n-i]+b[n-i+2]*a[i-1])</script><ol>
-<li>$a[1]=1,a[2]=6$</li>
-</ol>
-<h3 id="引用-4"><a href="#引用-4" class="headerlink" title="引用"></a>引用</h3><blockquote>
-<p><a href="https://blog.csdn.net/qq_35078631/article/details/54730870" target="_blank" rel="noopener">https://blog.csdn.net/qq_35078631/article/details/54730870</a></p>
-</blockquote>
-<h2 id="-58"><a href="#-58" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 波动数列<br>date: 2019-03-22 23:59:14<br>categories: 蓝桥杯<br>tags: </p>
-<ul>
-<li>dp  </li>
-</ul>
-<hr>
-<h3 id="题意-75"><a href="#题意-75" class="headerlink" title="题意"></a>题意</h3><p>长度为 n 和为 s 而且后一项总是比前一项增加 a 或者减少 b 的整数数列可能有多少种。<br>$1&lt;=n&lt;=1e3，-1e9&lt;=s&lt;=1e9，1&lt;=a, b&lt;=1e6$</p>
-<h3 id="题解-73"><a href="#题解-73" class="headerlink" title="题解"></a>题解</h3><p>设数列首项为$a_1$，增量为$d_1,d_2,\cdots,d_{n-1}$，则$\large na_1+\sum\limits_{i=1}^{n-1}(n-i-1)d_i=s$<br>因为$a_1$可以取任意值，所以$\large \sum\limits_{i=1}^{n-1}(n-i-1)d_i\equiv s (mod n)$<br>$dp[i][j]$表示长度为$i$，$\large \sum\limits_{k=1}^{i-1}(n-k-1)d_k mod n=j$ 的方案数。</p>
-<h2 id="-59"><a href="#-59" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 蓝桥杯-车轮轴迹<br>date: 2019-09-04 14:44:05<br>categories: 蓝桥杯<br>tags: </p>
-<h2 id="geometry-1"><a href="#geometry-1" class="headerlink" title="- geometry  "></a>- geometry  </h2><h3 id="题意-76"><a href="#题意-76" class="headerlink" title="题意"></a>题意</h3><p><img src="/2019/09/21/题解/蓝桥杯-车轮轴迹/20170220101824_36663.png" alt="img"></p>
-<p>求圆心轨迹的总长度。</p>
-<h3 id="题解-74"><a href="#题解-74" class="headerlink" title="题解"></a>题解</h3><p>圆有两种状态，一是在线段上，二是在端点上。平移或旋转时可能会被线段阻挡，也可能会被端点阻挡。</p>
-<h2 id="-60"><a href="#-60" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 蚂蚁感冒<br>mathjax: false<br>date: 2019-03-22 17:20:23<br>categories: 蓝桥杯<br>tags: </p>
-<h2 id="similar"><a href="#similar" class="headerlink" title="- similar  "></a>- similar  </h2><h3 id="题意-77"><a href="#题意-77" class="headerlink" title="题意"></a>题意</h3><p>长100厘米的细长直杆子上有n只蚂蚁。它们的头有的朝左，有的朝右。<br>每只蚂蚁都只能沿着杆子向前爬，速度是1厘米/秒。<br>当两只蚂蚁碰面时，它们会同时掉头往相反的方向爬行。<br>这些蚂蚁中，有1只蚂蚁感冒了。并且在和其它蚂蚁碰面时，会把感冒传染给碰到的蚂蚁。<br>请你计算，当所有蚂蚁都爬离杆子时，有多少只蚂蚁患上了感冒。</p>
-<h3 id="题解-75"><a href="#题解-75" class="headerlink" title="题解"></a>题解</h3><p>首先明白两只蚂蚁碰撞之后掉头和穿行过去是一样的，可以把穿行看做碰撞后掉头了，然后两个蚂蚁交换了，而是哪一只蚂蚁对结果不影响。<br>那么，假如第一只感冒蚂蚁向右走，那么碰到所有想左走的都会被感染，而感染后的蚂蚁必定是向左走的，那么他会把左边向右走的都感染了。<br>向左走的也是这样。<br>所以 ans = 左边向右走的  + 右边向左走的 + 1（本身）。</p>
-<h3 id="引用-5"><a href="#引用-5" class="headerlink" title="引用"></a>引用</h3><blockquote>
-<p><a href="https://blog.csdn.net/y990041769/article/details/21941711" target="_blank" rel="noopener">https://blog.csdn.net/y990041769/article/details/21941711</a></p>
-</blockquote>
-<h2 id="-61"><a href="#-61" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 计蒜客-LIS<br>date: 2019-06-17 21:21:09<br>categories: 计蒜客<br>tags:  </p>
-<ul>
-<li>binary indexed tree  </li>
-<li>dp  </li>
-</ul>
-<hr>
-<h3 id="题意-78"><a href="#题意-78" class="headerlink" title="题意"></a>题意</h3><p>从长度为 $n(\le 5e5)$ 的数组中等概率的取出一个最长上升子序列, 求每个数被选中的概率</p>
-<h3 id="题解-76"><a href="#题解-76" class="headerlink" title="题解"></a>题解</h3><p>$bg[i]$ 是以 $a[i]$ 为起点的 $LIS$ 的长度, $g[i]$ 是以 $a[i]$ 为起点的 $LIS$ 的数量</p>
-<p>$en[i]$ 是以 $a[i]$ 为终点的 $LIS$ 的长度, $h[i]$ 是以 $a[i]$ 为终点的 $LIS$ 的数量</p>
-<p>$\text{len_a}[i]$ 是以 $i$ 为起点或终点的 $LIS$ 的长度, $\text{cnt_a}[i]$ 是以 $i$ 为起点或终点的 $LIS$ 的数量</p>
-<p>$\text{len_h}[i],\text{cnt_h}[i] $ 是树状数组的辅助数组 </p>
-<h2 id="-62"><a href="#-62" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 计蒜客-MaxAnswer<br>date: 2019-08-08 10:23:51<br>categories:<br>tags:  </p>
-<h2 id="stack"><a href="#stack" class="headerlink" title="- stack"></a>- stack</h2><h3 id="题意-79"><a href="#题意-79" class="headerlink" title="题意"></a>题意</h3><p>求数组的一个子区间，使得 <strong>子区间之和</strong> 乘以 <strong>子区间最小值</strong> 最大，求最大值</p>
-<h3 id="题解-77"><a href="#题解-77" class="headerlink" title="题解"></a>题解</h3><p>权值可能为负，分别考虑正负，正数使用但单调栈，负数求出最小连续子段和乘以该子段的最小值</p>
-<h2 id="-63"><a href="#-63" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 计蒜客-数组<br>date: 2019-06-12 13:17:58<br>categories: 计蒜客<br>tags: </p>
-<h2 id="data-structure-3"><a href="#data-structure-3" class="headerlink" title="- data structure  "></a>- data structure  </h2><h3 id="题意-80"><a href="#题意-80" class="headerlink" title="题意"></a>题意</h3><p>给出长度为 $N$ 的数组 $A$, 定义</p>
-<script type="math/tex; mode=display">
-f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \cdot[l \leq x \leq r]\right)</script><p>求</p>
-<script type="math/tex; mode=display">
-\sum_{i=1}^{n} \sum_{j=i}^{n} f(i, j) \bmod 10^{9}+7</script><h3 id="题解-78"><a href="#题解-78" class="headerlink" title="题解"></a>题解</h3><p>从后往前枚举 $i$ , 用一个单调栈来存在固定 $i$ 的时候, $j\in[i,n]$ , 不同 $j$ 的 $x$ 的取值 </p>
-<h2 id="-64"><a href="#-64" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 邮局<br>date: 2019-04-26 20:31:39<br>categories: 蓝桥杯<br>tags:  </p>
-<h2 id="brute-force-1"><a href="#brute-force-1" class="headerlink" title="- brute force  "></a>- brute force  </h2><h3 id="题意-81"><a href="#题意-81" class="headerlink" title="题意"></a>题意</h3><p>$n(1\le n\le50)$ 个人, $m(1\le m \le 25)$ 个车站, 选 $k(1\le k\le 10)$ 个车站, 每个人去离他最近的车站, 输出路径和最短的方案.</p>
-<h3 id="题解-79"><a href="#题解-79" class="headerlink" title="题解"></a>题解</h3><p>搜索剪枝, 从后往前搜索, 若对于当前状态, 某一点无法对任意一个人松弛, 就标记这个点, 之后的搜索都不再访问.</p>
-<h2 id="-65"><a href="#-65" class="headerlink" title></a><div style="page-break-after: always;"></div></h2><p>title: 高僧斗法<br>date: 2019-03-20 22:01:44<br>categories: 蓝桥杯<br>tags:  </p>
-<h2 id="game"><a href="#game" class="headerlink" title="- game  "></a>- game  </h2><h3 id="题意-82"><a href="#题意-82" class="headerlink" title="题意"></a>题意</h3><p>n 个物品放在阶梯，向上移动物品，不能越过挡在前面的物品，最后物品都挤在高段台阶，不能移动的输。</p>
-<h3 id="题解-80"><a href="#题解-80" class="headerlink" title="题解"></a>题解</h3><p>两两一组，当移动上面的，可以移动下面的相同距离，所以可以把每组之间的间距看作一堆石子，转化为 Nim 博弈。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/09/20/2019ICPC-Nanchang/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1179,14 +405,14 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Post created: 2019-09-20 17:06:22" itemprop="dateCreated datePublished" datetime="2019-09-20T17:06:22+08:00">2019-09-20</time>
+              <time title="Created: 2019-09-20 17:06:22" itemprop="dateCreated datePublished" datetime="2019-09-20T17:06:22+08:00">2019-09-20</time>
             
 
             
@@ -1203,7 +429,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2019-09-21 18:13:35" itemprop="dateModified" datetime="2019-09-21T18:13:35+08:00">2019-09-21</time>
+                <time title="Modified: 2019-09-21 18:13:35" itemprop="dateModified" datetime="2019-09-21T18:13:35+08:00">2019-09-21</time>
               
             
           </span>
@@ -1217,7 +443,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/icpc/" itemprop="url" rel="index"><span itemprop="name">icpc</span></a></span>
@@ -1272,7 +498,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
           
             <div class="post-button text-center">
               <a class="btn" href="/2019/09/20/2019ICPC-Nanchang/#more" rel="contents">
-                Weiterlesen &raquo;
+                Read more &raquo;
               </a>
             </div>
           
@@ -1369,14 +595,14 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Post created: 2019-09-20 15:52:47 / Updated at: 23:00:28" itemprop="dateCreated datePublished" datetime="2019-09-20T15:52:47+08:00">2019-09-20</time>
+              <time title="Created: 2019-09-20 15:52:47 / Modified: 23:00:28" itemprop="dateCreated datePublished" datetime="2019-09-20T15:52:47+08:00">2019-09-20</time>
             
 
             
@@ -1395,7 +621,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/icpc/" itemprop="url" rel="index"><span itemprop="name">icpc</span></a></span>
@@ -1452,7 +678,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
           
             <div class="post-button text-center">
               <a class="btn" href="/2019/09/20/2014ICPC-Anshan/#more" rel="contents">
-                Weiterlesen &raquo;
+                Read more &raquo;
               </a>
             </div>
           
@@ -1549,14 +775,14 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Post created: 2019-09-19 20:42:35 / Updated at: 20:44:25" itemprop="dateCreated datePublished" datetime="2019-09-19T20:42:35+08:00">2019-09-19</time>
+              <time title="Created: 2019-09-19 20:42:35 / Modified: 20:44:25" itemprop="dateCreated datePublished" datetime="2019-09-19T20:42:35+08:00">2019-09-19</time>
             
 
             
@@ -1575,7 +801,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/icpc/" itemprop="url" rel="index"><span itemprop="name">icpc</span></a></span>
@@ -1646,7 +872,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
           
             <div class="post-button text-center">
               <a class="btn" href="/2019/09/19/2019ICPC-Shenyang/#more" rel="contents">
-                Weiterlesen &raquo;
+                Read more &raquo;
               </a>
             </div>
           
@@ -1743,14 +969,14 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Post created: 2019-09-18 15:37:30" itemprop="dateCreated datePublished" datetime="2019-09-18T15:37:30+08:00">2019-09-18</time>
+              <time title="Created: 2019-09-18 15:37:30" itemprop="dateCreated datePublished" datetime="2019-09-18T15:37:30+08:00">2019-09-18</time>
             
 
             
@@ -1767,7 +993,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2019-09-20 23:30:36" itemprop="dateModified" datetime="2019-09-20T23:30:36+08:00">2019-09-20</time>
+                <time title="Modified: 2019-09-20 23:30:36" itemprop="dateModified" datetime="2019-09-20T23:30:36+08:00">2019-09-20</time>
               
             
           </span>
@@ -1781,7 +1007,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/cf/" itemprop="url" rel="index"><span itemprop="name">cf</span></a></span>
@@ -1836,7 +1062,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
           
             <div class="post-button text-center">
               <a class="btn" href="/2019/09/18/CF-1215E/#more" rel="contents">
-                Weiterlesen &raquo;
+                Read more &raquo;
               </a>
             </div>
           
@@ -1933,14 +1159,14 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Post created: 2019-09-16 16:50:00" itemprop="dateCreated datePublished" datetime="2019-09-16T16:50:00+08:00">2019-09-16</time>
+              <time title="Created: 2019-09-16 16:50:00" itemprop="dateCreated datePublished" datetime="2019-09-16T16:50:00+08:00">2019-09-16</time>
             
 
             
@@ -1957,7 +1183,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2019-09-20 23:06:48" itemprop="dateModified" datetime="2019-09-20T23:06:48+08:00">2019-09-20</time>
+                <time title="Modified: 2019-09-20 23:06:48" itemprop="dateModified" datetime="2019-09-20T23:06:48+08:00">2019-09-20</time>
               
             
           </span>
@@ -1971,7 +1197,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/icpc/" itemprop="url" rel="index"><span itemprop="name">icpc</span></a></span>
@@ -2026,7 +1252,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
           
             <div class="post-button text-center">
               <a class="btn" href="/2019/09/16/2019ICPC-Shanghai/#more" rel="contents">
-                Weiterlesen &raquo;
+                Read more &raquo;
               </a>
             </div>
           
@@ -2123,14 +1349,14 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Post created: 2019-09-13 16:38:56" itemprop="dateCreated datePublished" datetime="2019-09-13T16:38:56+08:00">2019-09-13</time>
+              <time title="Created: 2019-09-13 16:38:56" itemprop="dateCreated datePublished" datetime="2019-09-13T16:38:56+08:00">2019-09-13</time>
             
 
             
@@ -2147,7 +1373,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2019-09-20 23:05:19" itemprop="dateModified" datetime="2019-09-20T23:05:19+08:00">2019-09-20</time>
+                <time title="Modified: 2019-09-20 23:05:19" itemprop="dateModified" datetime="2019-09-20T23:05:19+08:00">2019-09-20</time>
               
             
           </span>
@@ -2161,7 +1387,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/icpc/" itemprop="url" rel="index"><span itemprop="name">icpc</span></a></span>
@@ -2216,7 +1442,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
           
             <div class="post-button text-center">
               <a class="btn" href="/2019/09/13/2018ICPC-Ningxia/#more" rel="contents">
-                Weiterlesen &raquo;
+                Read more &raquo;
               </a>
             </div>
           
@@ -2313,14 +1539,14 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Post created: 2019-09-04 14:44:05 / Updated at: 14:57:32" itemprop="dateCreated datePublished" datetime="2019-09-04T14:44:05+08:00">2019-09-04</time>
+              <time title="Created: 2019-09-04 14:44:05 / Modified: 14:57:32" itemprop="dateCreated datePublished" datetime="2019-09-04T14:44:05+08:00">2019-09-04</time>
             
 
             
@@ -2339,7 +1565,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/蓝桥杯/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a></span>
@@ -2395,7 +1621,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
           
             <div class="post-button text-center">
               <a class="btn" href="/2019/09/04/蓝桥杯-车轮轴迹/#more" rel="contents">
-                Weiterlesen &raquo;
+                Read more &raquo;
               </a>
             </div>
           
@@ -2492,14 +1718,14 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Post created: 2019-08-30 16:10:20" itemprop="dateCreated datePublished" datetime="2019-08-30T16:10:20+08:00">2019-08-30</time>
+              <time title="Created: 2019-08-30 16:10:20" itemprop="dateCreated datePublished" datetime="2019-08-30T16:10:20+08:00">2019-08-30</time>
             
 
             
@@ -2516,7 +1742,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2019-09-20 23:08:01" itemprop="dateModified" datetime="2019-09-20T23:08:01+08:00">2019-09-20</time>
+                <time title="Modified: 2019-09-20 23:08:01" itemprop="dateModified" datetime="2019-09-20T23:08:01+08:00">2019-09-20</time>
               
             
           </span>
@@ -2530,7 +1756,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/bzoj/" itemprop="url" rel="index"><span itemprop="name">bzoj</span></a></span>
@@ -2585,7 +1811,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
           
             <div class="post-button text-center">
               <a class="btn" href="/2019/08/30/BZOJ-3992/#more" rel="contents">
-                Weiterlesen &raquo;
+                Read more &raquo;
               </a>
             </div>
           
@@ -2682,14 +1908,14 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Post created: 2019-08-29 20:28:00" itemprop="dateCreated datePublished" datetime="2019-08-29T20:28:00+08:00">2019-08-29</time>
+              <time title="Created: 2019-08-29 20:28:00" itemprop="dateCreated datePublished" datetime="2019-08-29T20:28:00+08:00">2019-08-29</time>
             
 
             
@@ -2706,7 +1932,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2019-08-31 17:05:01" itemprop="dateModified" datetime="2019-08-31T17:05:01+08:00">2019-08-31</time>
+                <time title="Modified: 2019-08-31 17:05:01" itemprop="dateModified" datetime="2019-08-31T17:05:01+08:00">2019-08-31</time>
               
             
           </span>
@@ -2720,7 +1946,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/cf/" itemprop="url" rel="index"><span itemprop="name">cf</span></a></span>
@@ -2780,7 +2006,197 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
           
             <div class="post-button text-center">
               <a class="btn" href="/2019/08/29/CF-1207/#more" rel="contents">
-                Weiterlesen &raquo;
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://perpeternal.github.io/2019/08/27/CF-1152/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="PerpEternal">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="P's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/27/CF-1152/" class="post-title-link" itemprop="url">CF-1152</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-08-27 20:56:07" itemprop="dateCreated datePublished" datetime="2019-08-27T20:56:07+08:00">2019-08-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-09-20 21:59:57" itemprop="dateModified" datetime="2019-09-20T21:59:57+08:00">2019-09-20</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/cf/" itemprop="url" rel="index"><span itemprop="name">cf</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+            <span id="/2019/08/27/CF-1152/" class="leancloud_visitors" data-flag-title="CF-1152">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="D-Neko-and-Aki’s-Prank"><a href="#D-Neko-and-Aki’s-Prank" class="headerlink" title="D. Neko and Aki’s Prank"></a>D. Neko and Aki’s Prank</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>将长度为 $2n$ 的所有合法括号匹配放入字典树中，求这棵树的最大的边集，边集里的边两两不相连 </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/27/CF-1152/#more" rel="contents">
+                Read more &raquo;
               </a>
             </div>
           
@@ -2874,7 +2290,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                   <a href="/archives/">
                 
                     <span class="site-state-item-count">81</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -2911,7 +2327,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                       
                     
                     <span class="site-state-item-count">12</span>
-                    <span class="site-state-item-name">Kategorien</span>
+                    <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
               
@@ -2978,7 +2394,7 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
                       
                     
                     <span class="site-state-item-count">27</span>
-                    <span class="site-state-item-name">Tags</span>
+                    <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
               
@@ -3584,9 +3000,9 @@ f(l, r)=\max \left(\max \left(A_{l}, A_{l+1} \ldots A_{x}\right) \cdot(r-x+1) \c
   
     
       
-    
-      
         
+      
+    
       
     
       
